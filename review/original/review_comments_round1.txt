@@ -1,0 +1,190 @@
+16-Oct-2025
+
+Dear Mx. SANO:
+
+I am writing to you regarding manuscript # Access-2025-38261 entitled "Classification of postures of people with hand movement working in office environment by LiDAR sensor network" which you submitted to IEEE Access.
+
+Your article was peer reviewed with interest but has not been recommended for publication in its current form.  We strongly encourage you to address the reviewers’ concerns, which can be found at the bottom of this letter, and resubmit your article to IEEE Access once you have updated it accordingly.
+ 
+Please note that IEEE Access has a binary peer review process. Therefore, to uphold quality to IEEE standards, an article is rejected even if it requires minor edits.
+ 
+When updating your manuscript, you should elaborate on your points and clarify with references, examples, data, etc. If you disagree with any technical points the reviewers have made, please include your counterarguments in your response to the reviewers (more information detailed below) and work this into the updated manuscript. 
+
+Also, note that if a reviewer suggested references, you should only add those that are relevant to your work if you feel they strengthen your article. Recommending references to specific publications is not appropriate for reviewers and you should report excessive cases to ieeeaccessEIC@ieee.org.  Authors are not obligated to cite articles that are recommended by the reviewers, and the final decision on the article will not be influenced by whether or not authors cite these suggested references.
+ 
+IEEE Access allows one opportunity to resubmit. If the updated manuscript is determined not to have addressed all of the previous reviewers’ concerns, or if the Associate Editor still has substantial technical concerns, the article will be rejected and no further resubmissions will be allowed.
+ 
+When you are ready to resubmit your updated article, you can do so in the IEEE Author Portal.  When you log into the IEEE Author Portal you will see the title of the rejected article and the option to “Start Resubmission”.  
+ 
+Upon resubmission you will be asked to upload the following 3 files:
+
+1) A document containing your response to reviewers from the previous peer review.  The “response to reviewers” document (template attached) should have the following regarding each comment: a) Reviewer’s concern, b) your response to the concern, c) your action to remedy the concern. The document should be uploaded with your manuscript files under "Author's Response Files.”
+
+2) Your updated manuscript with all your individual changes highlighted, including grammatical changes (e.g. preferably with the yellow highlight tool within the pdf file). This file should be uploaded with your manuscript files as “Highlighted PDF.”
+
+3) A clean copy of the final manuscript (without highlighted changes) submitted as a Word or LaTeX file, and as a PDF, both submitted as the “Main Manuscript.”
+
+**IMPORTANT: Please see the attached Resubmission Checklist that details all the items listed above.  Please utilize this checklist to ensure you have made the necessary edits to your manuscript, and to ensure you have all the necessary files prepared prior to resubmission.
+
+*** AUTHOR LIST CHANGES: If your revised manuscript has an updated author list, you will need to submit a formal request to the Editor by completing the attachment labelled ‘Request for Byline Change,’ and uploading it as 'Request for byline change form.' This should include a DETAILED justification explaining each author’s contribution(s) to the work. You will also need to provide the justification for the author change during the submission process.  Change in the author list is considered rare and exceptional, and the decision to allow such changes rests with the Editor. Once the list and order of authors has been established, the list and order of authors should not be altered without permission of all living authors of that article.
+
+We sincerely hope you will update your manuscript and resubmit soon. Please contact me if you have any questions.
+
+Thank you for your interest in IEEE Access.
+
+Sincerely,
+
+Dr. Salvatore Surdo
+Associate Editor, IEEE Access
+surdo.salvatore@gmail.com
+
+Reviewers' Comments to Author:
+
+Reviewer: 1
+
+Comments:
+After reviewing this article, unfortunately this has to be rejected and not re-submitted due to the below reasons despite the references listed and further scope provided. May be this can be classified for other types of article(topic review etc.) submissions that IEEE Access offers.
+-Lack of motivation behind the article and too descriptive
+-Lack of novelty in the manuscript despite the article suggesting otherwise and mostly contained cited ones that were novel
+-Parts of the article are vague particularly in the discussion area with minimal presence of any form of visualizations
+-Certain portions of article are more theoretical and lengthy in general
+
+Additional Questions:
+Please confirm that you have reviewed all relevant files, including supplementary files and any author response files, which can be found in the "View Author's Response" link above (author responses will only appear for resubmissions): Yes, all files have been reviewed
+
+1) Does the paper contribute to the body of knowledge?: No
+
+2) Is the paper technically sound?: No
+
+3) Is the subject matter presented in a comprehensive manner?: No
+
+4) Are the references provided applicable and sufficient?: No
+
+5) Are there references that are not appropriate for the topic being discussed?: No
+
+5a) If yes, then please indicate which references should be removed.:
+
+
+Reviewer: 2
+
+Comments:
+1.The paper’s methodology relies on a very limited number of participants: only three for training and nine for testing. This small sample size undermines the statistical power and generalizability of the study's results. A broader sample including more subjects from varied backgrounds is necessary to make findings applicable to typical office settings. The absence of demographic reporting further limits the scope and relevance. Consequently, overall conclusions may not reliably extend to diverse populations.​
+
+2. The rationale for choosing between DBSCAN, k-means, or no clustering is inadequately discussed. The criteria guiding these methodological choices are not transparent, and there is no comparison with alternative clustering methods or parameter tuning strategies. Without evidence or literature support for the selection process, reproducibility suffers. More thorough explanations and comparative analyses are required. The current approach leaves readers unclear about how clustering impacts classification results.​
+
+3. Manual selection of regions to trim point clouds introduces uncontrolled subjectivity and possible bias. The lack of standardized, automated segmentation means results may vary depending on the operator’s choices. This undermines both reproducibility and scientific rigor. The authors fail to validate whether this human-driven preprocessing affects performance metrics. Automated, algorithmic region selection should be considered for future work.​
+
+4. Accuracy is used almost exclusively to evaluate the deep learning classifier, yet it is insufficient for multi-class tasks. The paper ignores essential metrics such as precision, recall, and F1-score, which would reveal more about model strengths and weaknesses. Reporting only overall accuracy risks obscuring important class-level deficiencies. The results section should present confusion matrices and more granular analysis. Inclusion of complementary metrics would provide much richer validation.​
+
+5. Despite apparent recurring misclassification, such as confusion between typing and pad operation, the paper does not analyze the causes. Persistent errors suggest underlying flaws in feature extraction or data representation. The discussion lacks proposals for remedying these weaknesses, such as refining features or adjusting sensor placement. Failure to explore and address error sources impedes overall model improvement. Readers are left without guidance for resolving similar misclassifications.​
+
+6. The calculation of baseline accuracy is misleading and lacks grounding in the actual class distribution present in the dataset. The assumption of uniformity (i.e., 25% for each posture) may not reflect reality, thus skewing interpretation of performance. If class imbalance exists, reported accuracies may be inflated. The baseline should be empirically justified and adjusted according to true class proportions. Clarifying this would prevent misrepresentation of findings.​
+
+7. LiDAR deployment in the study is limited to two sensors in a static environment, which is not representative of varied real-world office conditions. The lack of experiments in diverse, dynamic office environments restricts external validity. No attempts were made to test robustness across sensor configurations or locations. Expansion to multi-room or open-plan settings would yield more convincing results. Without this, claims of generalizability remain unsupported.​
+
+8. The use of PointCutmix for data augmentation is described, but the paper provides no comparative results to prove its effectiveness. There is no empirical evidence that augmentation substantially improves classification performance or model robustness. The absence of statistical comparison with non-augmented datasets diminishes confidence. Augmentation techniques should be validated and analyzed, showing before/after effects on model metrics. This gap undermines the contribution of the augmentation strategy.​
+
+9. The literature review omits prominent technologies and recent studies using radar, higher-resolution sensors, or multi-modal fusion for posture classification. This leaves the paper lacking in contextual depth and critical comparison. Without considering state-of-the-art alternatives, the authors cannot convincingly argue for LiDAR as the optimal solution. A thorough, comparative review of sensor modalities would add scientific rigor. The current survey is not sufficient to justify system choices.​
+
+10. References to broader concerns such as privacy, scalability, and actual workplace integration are absent from the discussion. For office monitoring applications, these aspects are critically important but were not addressed. This limits the scope of the paper and its potential impact on industry practice or policy. Addressing these larger issues would substantially increase its relevance. The omission weakens the overall contribution to the field.​
+
+11. The manuscript repeatedly claims “nearly 100%” accuracy but does not present comprehensive raw data to back these assertions. Details in confusion matrices show substantial misclassification rates for some classes. Without full tables and error breakdowns, high-level claims risk misleading readers and stakeholders. Accurate, transparent reporting is essential to avoid overstating success. More detailed and honest result presentation is required for credibility.​
+
+12. The paper lacks any form of statistical testing, such as t-tests, ANOVA, or confidence intervals, to demonstrate the significance and reliability of performance differences. Statistical evaluation is a standard expectation for experimental validation in machine learning research. By omitting this, the reported results may not withstand robust scrutiny. Incorporation of statistical analysis would greatly strengthen the scientific soundness of the conclusions. The current absence constitutes a critical gap.​
+
+Additional Questions:
+Please confirm that you have reviewed all relevant files, including supplementary files and any author response files, which can be found in the "View Author's Response" link above (author responses will only appear for resubmissions): Yes, all files have been reviewed
+
+1) Does the paper contribute to the body of knowledge?: yes
+
+2) Is the paper technically sound?: yes
+
+3) Is the subject matter presented in a comprehensive manner?: yes
+
+4) Are the references provided applicable and sufficient?: paper needs revision
+
+5) Are there references that are not appropriate for the topic being discussed?: No
+
+5a) If yes, then please indicate which references should be removed.:
+
+
+Reviewer: 3
+
+Comments:
+Strengths:
+
+Novel extension of LiDAR-based classification to detailed hand-movement recognition.
+
+Excellent experimental rigor, including multiple preprocessing variants and rich quantitative results.
+
+Thorough related work review that situates the study in current 3D computer vision literature.
+
+Clear, reproducible system design applicable to real-world smart environments.
+
+Suggestions for Minor Improvement:
+
+Discuss potential scalability to dynamic or multi-person scenarios (e.g., overlapping LiDAR fields).
+
+Add quantitative data on runtime performance and latency to validate real-time feasibility.
+
+Summarize key results graphically (e.g., bar chart comparing feature–clustering accuracy).
+
+Slightly condense repetitive parts in the conclusion for better focus.
+
+Improve visual readability of figures (larger fonts and simplified confusion matrices).
+
+Additional Questions:
+Please confirm that you have reviewed all relevant files, including supplementary files and any author response files, which can be found in the "View Author's Response" link above (author responses will only appear for resubmissions): Yes, all files have been reviewed
+
+1) Does the paper contribute to the body of knowledge?: Yes.
+This paper presents a novel LiDAR-based edge computing system for classifying human postures—including fine hand movements—in an office environment. The authors propose a multi-LiDAR sensor network with a data preprocessing pipeline (trimming, feature estimation, clustering, normalization) combined with deep learning classification using PointNet++.
+
+Key contributions include:
+
+Extending prior LiDAR posture recognition to handle fine-grained hand motion.
+
+A multi-sensor fusion architecture enabling spatially complete posture reconstruction.
+
+Comprehensive evaluation across multiple features (normals, dimensionality features, variance proportion, FPFH) and clustering strategies (DBSCAN, K-means).
+
+2) Is the paper technically sound?: Yes, with minor limitations.
+
+The methodology is well designed and experimentally validated on multi-subject datasets (9 participants, 4 posture categories).
+
+Results consistently show above-baseline classification accuracy (>60–99%) across feature–clustering combinations, demonstrating robustness.
+
+Confusion matrices are detailed and provide insight into feature sensitivity (e.g., hand-position confusion between typing vs. pad use).
+
+The system design (sensor fusion, edge processing, GPU-based classification) is clearly explained and reproducible.
+
+Minor weaknesses:
+
+Limited subject diversity (9 participants) and constrained office setting reduce generalization potential.
+
+No runtime or latency benchmarks for real-time performance are presented.
+
+The experimental focus is static postures rather than dynamic transitions, which would be relevant for practical monitoring.
+
+3) Is the subject matter presented in a comprehensive manner?: Yes.
+The manuscript is well structured and clear.
+
+Figures and tables (especially Figs. 4–8, Tables 2–4) effectively illustrate feature generation, system setup, and results.
+
+Related work is thoroughly reviewed, situating the study among existing 3D point-cloud classification frameworks (PointNet, PointCNN, ShellNet, A-CNN).
+
+The experiment setup section is detailed and transparent, supporting reproducibility.
+
+Minor improvements could enhance readability:
+
+Some figure labels (e.g., confusion matrices) are dense and could be visually simplified.
+
+The conclusion section repeats earlier discussions; conciseness would improve clarity.
+
+4) Are the references provided applicable and sufficient?: Yes.
+The reference list (44 items) is extensive and relevant, covering both classical and recent works (2017–2025) in LiDAR sensing, 3D feature extraction, clustering, and neural network-based classification. All major frameworks (PointNet++, FPFH, DBSCAN, K-means) are properly cited.
+
+5) Are there references that are not appropriate for the topic being discussed?: No
+
+5a) If yes, then please indicate which references should be removed.:
+
+If you have any questions, please contact article administrator: Mr. Dharmendra Sharma dharmendra.sharma@ieee.org

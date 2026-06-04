@@ -1,0 +1,101 @@
+%点群を分類するディープラーニングの関連研究
+
+% \begin{spverbatim}
+%1st paragraph
+%1分類について
+Classification estimates which category a given data sample belongs to. 
+  %1-1
+  Probabilities that a given data sample belongs to each category are estimated and the data is then associated with the category with the highest probability. 
+  %1-2
+  Machine learning is widely utilized for such estimation, and recently, classification from point cloud data using deep learning models has been attracting interest \cite{grandini2020metrics}.
+  % Machine learning is widely utilized for such estimation \cite{grandini2020metrics}, and recently, classification from point cloud data has been studied. 
+  %1-3
+  The difference of our study from the related works introduced below is that we address an edge system that captures detailed movements of hands using multiple LiDAR sensors. 
+%2
+% Recently, classification from point cloud data using deep learning models has been attracting interest. 
+  %2-1
+  % As machine learning models for point cloud data, deep learning models for point cloud data have attracted attention from researchers.
+
+%2nd paragraph
+%1PointNet以前の点群の分類
+Although there are some models that process voxelization, until recently there have been no models that directly process point clouds \cite{Wu_2015_CVPR,7353481,Qi_2016_CVPR}.
+%2PointNet
+Qi et al. presented a network called PointNet, which is a deep learning model capable of directly classifying point clouds. 
+    %2-1
+    Machine learning for such estimation has been widely used \cite{grandini2020metrics}. 
+    %2-2
+    PointNet transforms the point clouds, uses a multilayer perceptron (MLP) to process the transformed point clouds, and then implements max pooling to process the features that are extracted by the MLP. 
+    %2-3
+    PointNet can process point clouds directly by considering the permutation invariance of the input points. 
+
+%3rd paragraph
+%1CNNを使った点群の分類
+Point cloud-based classification models are typically based on deep learning using convolutional neural networks (CNNs). 
+  %1-1PointCNN
+  Li et al. presented PointCNN, which addresses the challenges of convolution on point clouds by implementing an efficient end-to-end permutation-invariant convolution for point cloud deep learning \cite{NEURIPS2018_f5f8590c}.
+    %1-1-1
+    This method uses point cloud coordinates and point features as input data and implements a technique called X-Conv to process the input data hierarchically. 
+      %1-1-1-1
+      X-Conv moves the point cloud from the input data and uses a MLP to process the moved point clouds. 
+      %1-1-1-2
+      It then concatenates the processed point clouds with the point features from the input data and generates an X-transformation matrix from the point clouds processed using a MLP by utilizing the concatenated features and the X-transform matrix to weight and permute, respectively. 
+      %1-1-1-3
+      Finally, it processes the weighted features using typical convolution. 
+  %1-2ShellNet
+  Zhang et al. presented a model called ShellNet that performs classification while converting point clouds and extracting features from the relationships between points and their neighbors using CNN \cite{Zhang_2019_ICCV}. 
+    %1-2-1
+    This model utilizes point cloud coordinates as input data and implements a technique called ShellConv to process the input data hierarchically. 
+      %1-2-1-1
+      ShellConv selects a few points from the entire point cloud and creates a point set consisting of adjacent points centered around the selected points. 
+      %1-2-1-2
+      It then transforms the coordinates of each point using the center of the point set as the origin. 
+      %1-2-1-3
+      It utilizes a multilayer perceptron (MLP) to process the transformed point clouds and concatenates the processed point cloud with the point features from a previous level. 
+      %1-2-1-4
+      It then separates each point set into multiple shells and performs max pooling on the points within each shell. 
+      %1-2-1-5
+      Finally, it concatenates the features from all shells and performs convolution. 
+  %1-3A-CNN
+  Komarichev et al. presented a method called A-CNN as a classification model using CNN \cite{Komarichev_2019_CVPR}. 
+    %1-3-1
+    A-CNN is a type of machine learning model that directly convolutes a 3D point cloud. 
+    %1-3-2
+    It takes the normals and coordinates of point cloud data as input data and then implements farthest point sampling and a technique called annular convolutions to process the input data hierarchically. 
+      %1-3-2-1
+      Annular convolutions uses k-nearest neighbor search to create a group of adjacent points around each point selected in the FPS. 
+      %1-3-2-2
+      It sets a plane on each group based on the normal of the center point, and rearranges the points within the plane. 
+      %1-3-2-3
+      It then performs a convolution on each point group. 
+      %1-3-2-4
+      Finally, it performs max pooling on the features from the convolution. 
+
+%3rd paragraph
+%1点群の分類におけるその他のアプローチ
+While there are several machine learning models that process point clouds directly, other approaches are attracting interest as well. 
+  %1-1SO-Net
+  Li et al. proposed a method called SO-Net, a non-point cloud based approach that encodes point clouds into a one-dimensional array and processes the array through a multilayer perceptron (MLP) \cite{Li_2018_CVPR}. 
+    %1-1-1
+    SO-Net utilizes the coordinates of point cloud data as input data and models a spatial distribution of the point clouds by constructing a self-organizing map (SOM) \cite{58325}. 
+    %1-1-2
+    SO-Net represents the input point cloud with a single feature vector and operates while systematically adjusting the overlap of receptive fields by searching for the k-nearest neighbor algorithm between nodes on the SOM. 
+    %1-1-3
+    It then normalizes the features from the k-nearest neighbor algorithm and processes the normalized features through fully connected layers with a k-nearest neighbor algorithm using max pooling. 
+    %1-1-7
+    % SO-Net processes the normalized features through fully connected layers. 
+    %1-1-8
+    % SO-Net processes the features from the fully connected layers with a k-nearest neighbor algorithm. 
+    %1-1-9
+    % SO-Net processes features from the k-nearest neighbor algorithm using max pooling. 
+  %1-2Kd-Network
+  Klokov et al. proposed a deep learning architecture called Kd-network that transforms point clouds and then performs machine learning \cite{8237361}. 
+    %1-2-1
+    Kd-network utilizes Kd-tree to obtain features and pass them through an MLP to classify objects. 
+    %1-2-2
+    It uses point coordinates as input data and constructs a kd-tree to partition each point cloud. 
+    %1-2-3
+    Finally, it performs affine transformation on the pairwise vectors of two adjacent nodes for each node. 
+    %1-2-4
+    Unlike convolutional architectures that require rasterization on a uniform two-dimensional or three-dimensional grid, which is currently mainstream, Kd-network does not rely on a grid at all. 
+
+% \end{spverbatim}

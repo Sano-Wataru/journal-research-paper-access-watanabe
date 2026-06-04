@@ -1,0 +1,91 @@
+%1テストデータについて
+\begin{deletedblock}
+Test data were acquired for the four types of postures: mouse operation, pad operation, sitting still, and typing, as for training data.
+
+%2マウス操作の取得方法
+As for mouse operation, the posture of the subjects was captured for 30 seconds as they manipulated a mouse to write the alphabet in order from ``A'' to ``Z''. The capturing was performed only once to acquire test data.
+
+%3パッド操作の取得方法
+As for pad operation, the posture of the subjects was captured for 30 seconds as they performed a pad operation on the PC to write the alphabet in order from ``A'' to ``Z''. The capturing was performed only once to acquire test data.
+
+%4静止状態の取得方法
+As for sitting still, the posture of the subjects was captured for ten seconds as they sat still without moving and did not touch the PC. The capturing was performed only once to acquire test data.
+
+%5タイピングの取得方法
+As for typing, the posture of the subjects was captured for 30 seconds as they typed the alphabet in order from ``A'' to ``Z''. The capturing was performed only once to acquire test data.
+\end{deletedblock}
+
+\begin{revisedblock}
+Test data were acquired for the four posture classes under the conditions summarized in Table~\ref{testacquisition}; each capture was performed once per subject.
+
+\begin{table}[b]
+  \centering
+  \caption{Test data acquisition conditions for each posture class.}
+  \label{testacquisition}
+  \scalebox{0.9}{
+  \begin{tabular}{l|l|c|c}
+    \hline
+    Posture class & Task & Duration & Captures \\ \hline
+    Mouse operation & Write alphabet A--Z using mouse & 30 s & 1 \\
+    Pad operation & Write alphabet A--Z using trackpad & 30 s & 1 \\
+    Sitting still & Sit still without moving or touching PC & 10 s & 1 \\
+    Typing & Type alphabet A--Z on keyboard & 30 s & 1 \\
+    \hline
+  \end{tabular}
+  }
+\end{table}
+\end{revisedblock}
+
+%6テストデータの被験者
+\deleted{The nine subjects in this study are denoted as subjects A to I.}
+\revised{The twenty-eight subjects in this study are denoted as subjects A to AB.}
+    % Training data with subjects A, B, and C is called training data A, B, and C, and test data with subjects A, B, and C is called test data A, B, and C. 
+    %6-1テストデータの名称
+    \deleted{Test data with subjects A to I is called test data A to I.}
+    \revised{Test data with subjects A to AB is called test data A to AB.}
+
+% \end{spverbatim}
+ 
+% \begin{figure}[ht]
+%   \centering
+%   \subfloat[Left LiDAR sensor]{
+%     \includegraphics[width=.6\linewidth]{img/pcleft.png}
+%     \label{pcleft}
+%   }
+%   \\
+%   \subfloat[Right LiDAR sensor]{
+%     \includegraphics[width=.6\linewidth]{img/pcright.png}
+%     \label{pcright}
+%   }
+%   \\
+%   \subfloat[Both LiDAR sensors]{
+%     \includegraphics[width=.6\linewidth]{img/pcmerge.png}
+%     \label{pcmerged}
+%   }
+%   \caption{Visualization of data from each LiDAR.}
+%   \label{eachlidar}
+% \end{figure} 
+ 
+%6/27 tb ⇒ t
+\begin{figure}[t]
+  \centering
+  \subfloat[Mouse operation]{
+    \includegraphics[width=.45\linewidth]{img/mouse.png}
+    \label{pcmouse}
+  }
+  \subfloat[Pad operation]{
+    \includegraphics[width=.45\linewidth]{img/pat.png}
+    \label{pcpad}
+  }
+  \\
+  \subfloat[Sitting still]{
+    \includegraphics[width=.45\linewidth]{img/stay.png}
+    \label{pcstay}
+  }
+  \subfloat[Typing]{
+    \includegraphics[width=.45\linewidth]{img/typing.png}
+    \label{pctyp}
+  }
+  \caption{Visualization of data showing each label.}
+  \label{labels}
+\end{figure} 

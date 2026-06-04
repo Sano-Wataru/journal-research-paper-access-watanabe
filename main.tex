@@ -1,0 +1,147 @@
+\documentclass{ieeeaccess}
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[normalem]{ulem}
+\usepackage{environ}
+\input{tex/macros/revision.tex}
+\usepackage{algorithm}
+\usepackage{array}
+\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{stfloats}
+\usepackage[hyphens]{url}
+\usepackage{verbatim}
+\usepackage{spverbatim}
+\usepackage{bm}
+\usepackage[font=footnotesize,labelfont=sf,textfont=sf]{subcaption}
+\usepackage{booktabs}
+
+
+% 追加で必要なもの
+\usepackage{wrapfig}       % 図の回り込み
+\usepackage{multirow}      % 表の複数行セル
+\usepackage[normalem]{ulem} % 下線等を使う場合（emphと併用注意）
+
+% 色付きテキスト用
+\usepackage{color}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+
+\definecolor{accessblue}{cmyk}{1,0.5,0,0}
+\makeatletter
+\long\def\@makecaption#1#2{
+\ifx\@captype\ftype@table%
+\begin{flushleft}
+\vspace*{5pt}
+\parbox{\columnwidth}{\vss{\color{accessblue}\tablecapheadfont #1. \ }\raggedright\tablecapfont#2\vss}%
+\end{flushleft}
+\else%
+\begin{flushleft}
+\vspace*{5pt}
+\parbox{\columnwidth}{\vss{\color{accessblue}\figcapheadfont #1. \ }\raggedright\figcapfont#2\vss}%
+\end{flushleft}
+\fi}
+\makeatother
+
+\makeatletter
+\AtBeginDocument{\DeclareMathVersion{bold}
+\SetSymbolFont{operators}{bold}{T1}{times}{b}{n}
+\SetSymbolFont{NewLetters}{bold}{T1}{times}{b}{it}
+\SetMathAlphabet{\mathrm}{bold}{T1}{times}{b}{n}
+\SetMathAlphabet{\mathit}{bold}{T1}{times}{b}{it}
+\SetMathAlphabet{\mathbf}{bold}{T1}{times}{b}{n}
+\SetMathAlphabet{\mathtt}{bold}{OT1}{pcr}{b}{n}
+\SetSymbolFont{symbols}{bold}{OMS}{cmsy}{b}{n}
+\renewcommand\boldmath{\@nomath\boldmath\mathversion{bold}}}
+\makeatother
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+%Your document starts from here ___________________________________________________
+\begin{document}
+\history{Date of publication xxxx 00, 0000, date of current version xxxx 00, 0000.}
+\doi{10.1109/ACCESS.2024.0429000}
+
+\title{Classification of postures of people with hand movement working in office environment by LiDAR sensor network}
+\author{
+  \uppercase{Wataru Sano}\authorrefmark{1},
+  \uppercase{Jumpei Watanabe}\authorrefmark{2},
+  \uppercase{Haruma Shiraishi}\authorrefmark{3},
+  \uppercase{Ryusei Sugano}\authorrefmark{4}, \IEEEmembership{Graduate Student Member, IEEE},
+  \uppercase{Ryoichi Shinkuma}\authorrefmark{5, 6}, \IEEEmembership{Senior Member, IEEE},
+  \uppercase{Gabriele Trovato}\authorrefmark{7}, \IEEEmembership{Associate Member, IEEE}
+}
+
+
+\address[1]{Shibaura Institute of Technology, Tokyo, Japan}
+\address[2]{Hyper Digital Twins Co., Ltd., Tokyo, Japan}
+
+\tfootnote{This work was supported in part by JSPS KAKENHI, Japan, under Grant Nos. 23H00464 and 25H01124.}
+
+\markboth
+{J.Watanabe \headeretal: Classification of postures of people with hand movement working in office environment by LiDAR sensor network}
+{J.Watanabe \headeretal: Classification of postures of people with hand movement working in office environment by LiDAR sensor network}
+
+\corresp{Corresponding author: Wataru Sano (e-mail: al20104@shibaura-it.ac.jp).}
+
+
+\begin{abstract}
+  \input{tex/abstract.tex}
+\end{abstract}
+
+\begin{keywords}
+posture classification, light detection and ranging, point cloud, deep learning. 
+\end{keywords}
+
+\titlepgskip=-21pt
+
+\maketitle
+\bstctlcite{IEEEexample:BSTcontrol}  % ← ここ！
+
+
+\section{Introduction}
+\label{sec:introduction}
+\input{tex/introduction.tex}
+
+\section{Related works}
+\label{sec:related}
+\input{tex/related-works/main.tex}
+
+\section{Proposed system}
+\label{sec:proposed}
+
+\subsection{System model}
+\label{sec:system}
+\input{tex/proposed-system/system-model.tex}
+
+\subsection{Methodology}
+\label{sec:method}
+\input{tex/proposed-system/methodology.tex}
+
+\section{Experiment setup}
+\label{sec:experiment}
+\input{tex/experiment-setup/main.tex}
+            
+\section{Evaluation}
+\label{sec:evaluation}
+\input{tex/evaluation/main.tex}
+
+\section{Conclusion}
+\label{sec:conclusion}
+\input{tex/conclusion.tex}
+
+\bibliographystyle{IEEEtran}
+\bibliography{ref}
+
+\vspace{11pt}
+
+\input{tex/author-bios.tex}
+
+\EOD
+
+\end{document}

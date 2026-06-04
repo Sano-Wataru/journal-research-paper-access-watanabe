@@ -1,0 +1,40 @@
+% \begin{spverbatim}
+%1
+% We evaluated the classification models trained using the data from one subject and the test data from one of the other subjects. 
+%   %1-1
+%   For example, we evaluated the classification model for A data using the B or C test data. 
+%   %1-2
+%   As shown in the Table~\ref{pattern}, there are six different evaluation patterns for the combination of one person's classification model and another person's test data. 
+
+%1評価方法
+\deleted{We evaluated the classification models trained using the augmented data from three subjects and the test data from nine subjects.}
+\revised{The classification models trained using the augmented data from three subjects were evaluated using the test data from twenty-eight subjects.} 
+
+%2精度計算
+Accuracy was utilized to evaluate the classification models, defined as
+  %2-1s
+  % We defined accuracy used in the evaluation as follows:
+  \begin{equation}
+    \begin{split}
+      \frac{TM+TP+TS+TT}{TM+TP+TS+TT+FM+FP+FS+FT}, 
+    \end{split}
+  \end{equation}
+where $TM$ is the number of correctly classified point clouds that actually indicate the mouse operation, $TP$, $TS$, and $TT$ are the number of correctly classified point clouds that actually indicate the pad operation, the sitting still without moving, and the typing, respectively, and $FM$, $FP$, $FS$, and $FT$ are the number of point clouds that were not correctly classified. 
+% \end{spverbatim}
+
+% \begin{table}[b]
+%   \centering
+% 	\caption{Combination of training and test data for evaluation.}
+% 	\label{pattern}
+% 	\begin{tabular}{c|c|c|}
+%     \hline
+%     & \textbf{Training} & \textbf{Test}\\ \hline
+%     1 & A & B\\
+%     2 & A & C\\
+%     3 & B & A\\
+%     4 & B & C\\
+%     5 & C & A\\
+%     6 & C & B\\
+%     \hline
+%  \end{tabular}
+% \end{table}

@@ -1,0 +1,74 @@
+%2nd paragraphの階層
+%表の説明
+%|-表から読み取れること
+%|-考察
+
+% 1段落目ではどのような形式、結果の見方の説明を行う。概要でない。2段落目は結果の高い低いの説明をする。3段落目に考察を行う。
+
+% \noindent{\red{Todo:6組の精度の結果を示し、どの手法が精度が高いか、低いかを説明する。どの組み合わせ、使用したLiDAR、特徴、クラスタリング、各視点からその傾向について説明する。}} \\
+
+%6/27 tb ⇒ t
+\begin{figure}[t]
+    \centering
+    \subfloat[Normals]{
+      \includegraphics[width=.45\linewidth]{img/Accuracies_of_validation_normals.png}
+      \label{valnormal}
+    }
+    \subfloat[Dimensionality features]{
+      \includegraphics[width=.45\linewidth]{img/Accuracies_of_validation_DF.png}
+      \label{valdim}
+    }
+    \\
+    \subfloat[Proportion of variances]{
+      \includegraphics[width=.45\linewidth]{img/Accuracies_of_validation_POV.png}
+      \label{valproportion}
+    }
+    \subfloat[FPFH]{
+      \includegraphics[width=.45\linewidth]{img/Accuracies_of_validation_FPFH.png}
+      \label{valfpfh}
+    }
+    \caption{Classification accuracies of validation.}
+    \label{valacc}
+  \end{figure} 
+
+
+% \begin{spverbatim}
+%1st paragraph
+%1概要
+Fig.~\ref{valacc} show graphs of the validation per epoch when using each feature. 
+%2各表の折れ線グラフの説明
+% \blue{For example, Figure~\ref{valacc}(\subref{valnormal}) shows the graphs when using the normals. }
+Each figure has three line graphs, each with no clustering, with DBSCAN, and with k-means. 
+
+%2nd paragraph
+%1法線を使った分類モデル
+Fig.~\ref{valacc}\subref{valnormal} shows the accuracies of three types classification models when the normals were used. 
+    %1-1
+    As shown, the overall accuracies are nearly 100\%. 
+%   \blue{All models kept generally 90\% accuracies. }
+  %1-2
+%   \blue{This is because the distribution of points was not much affected by the clustering due to the normals show only one direction. }
+%2The dimensionality featuresを使った分類モデル
+Fig.~\ref{valacc}\subref{valdim} shows the accuracies of three types classification models when the dimensionality features were used. 
+    %2-1
+    As shown, the overall accuracies are nearly 100\%. 
+%   \blue{The accuracy of the classification model using k-means was slightly lower than the other models. }
+%   %2-2
+%   \blue{This is because k-means also removed important points, which affected classification using the dimensionality features for multiple orientations. }
+%3The proportion of varianceを使った分類モデル
+Fig.~\ref{valacc}\subref{valproportion} shows the accuracies of three types classification models when the proportion of variance was used. 
+  %3-1
+  As shown, the overall accuracies are nearly 100\%. 
+%   \blue{The accuracy of the classification model using k-means also was slightly lower than the other models. }
+%   %3-2
+%   \blue{This is because the k-means also removed important points, which affected classification using the proportion of variance for multiple orientations. }
+%4FPFHの分類モデル
+Fig.~\ref{valacc}\subref{valfpfh} shows the accuracies of three types classification models when the FPFH was used. 
+  %4-1
+  As shown, the overall accuracies are nearly 100\%. 
+%   \blue{The change in accuracy of the classification model using DBSCAN is more pronounced than other models. }
+%   %1-2
+%   \blue{This is because the shape of the point clouds changed slightly and affected the classification due to the number of clusters changes for each point cloud processed by DBSCAN. }
+
+%5エポック数の決定
+The training epochs for each classification model were set so that after updating the best accuracy in validation, training would be terminated if there were no updates within 15 epochs. 

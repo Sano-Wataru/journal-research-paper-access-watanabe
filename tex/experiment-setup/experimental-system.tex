@@ -1,0 +1,45 @@
+% \noindent{\red{Todo:Specification of experimentに被験者の人数を追加}} \\
+
+% \begin{spverbatim}
+%1システムモデルに基づいた実験システム
+We developed an experimental system based on the proposed system shown in Fig.~\ref{system}. 
+
+%2実験に使用した機具
+% The experimental system consisted of two sets of LiDAR units (Mid-70 \cite{Mid70} units), two edge devices (Jetson nano \cite{Jetsonnano} units), an edge computer (Jetson Xavier NX \cite{JetsonNX}), and a regular keyboard. 
+%blue
+The experimental system consisted of two sets of LiDAR units (Mid-70 units), two edge devices (Jetson nano units), an edge computer (Jetson Xavier NX and Jetson Orin nano), and a regular keyboard \cite{Mid70,Jetsonnano,JetsonNX,Jetsonorinnano}.
+  %3-1/実験機器の表
+  Table~\ref{experiment} lists the specifications of the experiment. 
+% \end{spverbatim}
+
+\begin{table}[b]
+	\caption{Specifications of experiment.}
+	\label{experiment}
+    \scalebox{0.9}{
+	\begin{tabular}{l|l}
+        \hline
+        Parameter & Value \\ \hline
+        Place & 14Q32, 14F, Shibaura Institute \\
+        &of Technology, Toyosu, Koto-ku, \\ 
+        &Tokyo \\
+        Date of training data \\
+        and test data A, B, \\
+        and C acquisition & 9 December 2022 \\
+        Date of test data \\
+        A to AB acquisition & 12 December 2024 \\
+        LiDAR units & Livox Mid-70 \\
+        No. of LiDAR units & 2 \\
+        Edge devices & NVIDIA Jetson nano \\
+        No. of edge devices & 2 \\
+        Edge computer for training data \\ 
+        and test data A, B, \\
+        and C acquisition & NVIDIA Jetson Xavier NX \\
+        Edge computer for test data \\ 
+        A to AB acquisition & NVIDIA Jetson Orin nano \\
+        Frame rate of sensor & 10 fps \\
+        No. of contributors for training data & 3 \\
+        No. of contributors for test data & 28 \\
+        \hline
+ \end{tabular}
+ }
+\end{table}

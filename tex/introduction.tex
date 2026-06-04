@@ -1,0 +1,100 @@
+%1 現状の監視システム
+\PARstart{T}{he} office-efficiency monitoring has been attracting people \cite{officemonitoring1,officemonitoring2,officemonitoring3,officemonitoring4,officemonitoring5,officemonitoring6}.
+  %1-1
+  A recent report indicates that the main functions of office-efficiency monitoring include productivity monitoring, project tracking, and employee monitoring \cite{officemonitoring1}.
+%2 現状の監視システムの課題1
+One popular system for analyzing the activities of workers in an office utilizes sensory data collected from the office environment as input data and implements fuzzy finite state machines to model the behavior of the office workers \cite{6891825}. 
+%3 現状の監視システムの課題2
+In another system, environmental variables and the personal physical and mental parameters of employees in different office environments are measured and compared to determine their correlation with productivity \cite{7106905}. 
+  %3-1
+  This system captures biometric data and workplace environmental data through micro-surveys on mobile and web applications. 
+
+\begin{revisedblock}
+%1 オフィス効率モニタリングで記録したいもの
+The office-efficiency monitoring requires recording activities of workers in an office that change over time.
+%2 姿勢推定の不十分性
+It is insufficient to monitor only gross postures or presence.
+%3 手元分類の必要性
+Hand-movement classification is necessary for recording the office activities.
+  %3-1
+  Desk work is central to the office activities.
+  %3-2
+  The desk work is performed through hand-involved movements.
+  %3-3
+  The hand-involved movements cannot be distinguished by the gross postures or presence alone.
+%3 手元分類の有用性
+Fine-grained classification of hand movements distinguishes hand-involved work states.
+  %3-1
+  The hand-movement classification can distinguish elements of the office activities as follows.
+    %3-1-1 タスク切り替え
+    The distinction supports identification of task switching.
+    %3-1-2 実際の仕事時間
+    The distinction supports estimation of actual work duration.
+\end{revisedblock}
+
+%Prior works
+%1 先行研究の取り組み
+\begin{revisedblock}
+Prior works focused on identifying human body orientation and general human postures.
+\end{revisedblock}
+%2 姿勢認識や身体の向き推定の研究
+Katayama et al. reported that point clouds can be utilized to classify human posture and presented a system for posture recognition and tracking \cite{9767292}. 
+    %2-1
+    Their system used a small light detection-and-ranging (LiDAR) to acquire point cloud data and then classified posture from the point cloud data using machine learning. 
+    %2-2
+    In their study, they acquired point cloud data from a sitting person and evaluated human orientation estimation utilizing 2D-CNN. 
+    %2-3
+    However, their experiments were limited in that only one participant was included. 
+%3 歩行者の姿勢推定の研究
+Glandon et al. reported that point clouds can be utilized for human identification and presented a system for posture estimation using data captured from walking people \cite{8852370}. 
+    %3-1
+    Their system extracted a silhouette from a point cloud and then estimates the joints of a body from the silhouette. 
+    %3-2
+    Features from each joint are extracted and utilized to classify human posture. 
+    %3-3
+    Although they used 3D LiDAR videos of human subjects walking around a room to perform the human posture classification, the study did not specify that the data was actually captured using LiDAR. 
+    %2-4
+    % This study does not mention that data was actually captured using LiDAR. 
+%4 先行研究の課題
+The weakness of the prior works \deleted{above is that they might not work for distinguishing differences in hand movements.} \revised{is that they cannot perform the hand-movement classification necessary to distinguish elements of the office activities.}
+  %4-1
+  This is because a classification model is needed to extract the details of the point cloud, as well as to handle multiple people. 
+  %3-2
+  % The classification model is also needed to handle multiple people. 
+
+%Proposed system
+%1st paragraph  Figs.~
+%1提案
+In light of this background, we propose an edge computing system that classifies the postures of people with hand movement in an office by using a LiDAR sensor network. 
+    %1-1取得対象とデータの扱い
+    Specifically, the proposed system captures human postures with hand movement using the LiDAR sensor network, stores the data, and classifies the data that exhibits human posture. 
+    %1-2
+    % The system stores data from the LiDAR sensor network. 
+    %1-3
+    % The system classifies the data that shows human posture. 
+%2評価実験についての概要
+% NOTE: revision markup is kept for style unification.
+The proposed system is evaluated through experiments in which multiple LiDAR sensors were utilized to capture multiple patterns of human posture with hand movement.
+  %2-1前処理
+%   We performed preprocessing (trimming, calibration, feature estimation, clustering, and normalization) before classification and then implemented deep learning to perform classification while varying the data type, LiDAR placement, features used, and clustering method. 
+    Preprocessing, i.e., trimming, feature estimation, clustering, and normalization, was performed before classification, and deep learning was then implemented to perform classification while varying the data type, LiDAR placement, features used, and clustering method.
+    %2-2分類
+    Classification models were trained for each of the conditions and then evaluated in terms of their classification accuracy.
+%3評価基準について
+The evaluation metric here is the ratio of samples correctly classified. 
+%4混合行列について
+The confusion matrices of a part of the models are presented to clarify the number of correct labels and any biases of the inferred labels.
+
+%2nd paragraph
+%1 Section 2:Related work
+This paper is organized as follows. Section~\ref{sec:related} provides a brief overview of research related to the methods used in the proposed system. 
+%2 Section 3:Proposed system
+In Section~\ref{sec:proposed}, we introduce the proposed system model and its methodology. 
+%3 Section 4:Experiment setup
+Section~\ref{sec:experiment} describes the data acquisition experiments for evaluation, the data processing parameters, and the evaluation methods. 
+    %1-3-1
+    % The data processing parameters, and the evaluation methods are also described. 
+%4 Section 5:Evaluation
+In Section~\ref{sec:evaluation}, we report the experimental results and discuss their implications. 
+%5 Section 6:Conclusion
+We conclude in Section~\ref{sec:conclusion} with a brief summary.

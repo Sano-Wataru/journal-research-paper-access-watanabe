@@ -3,27 +3,21 @@
 % |-表から読み取れること
 % |-考察
 
-% \noindent{\red{Todo:左LiDARの6組について、テストデータからStayをなしにした3分類での精度表とマトリクスを示し、精度が上がる/下がるかを考察する。}}\\
 
 % NOTE:
 % - Tables are generated into tex/evaluation/confusion-matrices/table.tex
 
 % Confusion matrices (text only; tables are in confusion-matrices-tables.tex)
 
-Tables~\ref{normalnonematrix} and \ref{normalkmeansmatrix} present \deleted{confusion matrices for each subject} \revised{representative confusion matrices for test subjects A to AB}.
+Tables~\ref{normalnonematrix} and \ref{normalkmeansmatrix} present representative confusion matrices for test subjects A to AB.
 %
 The rows represent the ground truth labels, and the columns represent the inferred labels.
 %
-\deleted{Table~\ref{normalnonematrix} and Table~\ref{normalkmeansmatrix} correspond to the results shown in Table~\ref{accresults}(a) and Table~\ref{accresults}(i), respectively.}
-%
-\begin{revisedblock}
 We compare two conditions to examine the effect of clustering.
   %
   The conditions are: normals without clustering and normals with k-means.
-\end{revisedblock}
 %
-\deleted{Both of these used normals as features; however, Table~\ref{accresults}(a) exhibited high accuracy, while Table~\ref{accresults}(i) showed lower accuracy.}
-\revised{Both of the used normals as features; however, the normals without clustering tended to show higher accuracy, while the normals with k-means tended to show lower accuracy in Table~\ref{accresults}.}
+Both of the used normals as features; however, the normals without clustering tended to show higher accuracy, while the normals with k-means tended to show lower accuracy in Table~\ref{accresults}.
 %
 In Table~\ref{normalnonematrix}, the diagonal elements from the top-left to the bottom-right are large, indicating that the inferred labels largely agreed with the ground truth. 
 %

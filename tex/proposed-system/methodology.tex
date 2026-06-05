@@ -13,9 +13,9 @@ The point cloud of each frame of the aggregated 3D data is trimmed.
   %2-1 トリミングの方法
   Here, the coordinates of the vertices of a region where a person is located are determined manually, and the region is cut out. 
     %2-1-1 手動決定の前提
-    \revised{The manual determination assumes a fixed-seating office environment, where the location of each person's workspace is pre-determined and known in advance.}
+    The manual determination assumes a fixed-seating office environment, where the location of each person's workspace is pre-determined and known in advance.
   %2-2トリミング前（rawdata）と後（trimdata）の画像
-  Fig.~\ref{rawdata} and \ref{trimdata} show examples of a raw point cloud and a trimmed point cloud.
+  Fig.\ref{trimdata} shows examples of \deleted{a raw point cloud and} a trimmed point cloud.
 
 % %3  
 % Next, we calibrate the training and the test data in the trimmed point cloud. 
@@ -38,7 +38,6 @@ Four types of features are extracted from the trimmed point clouds: normals, dim
   \textit{Normals.} 
     %3-1-1KNNのパラメータ
     The k-nearest neighbor algorithm (KNN) is implemented using the determined parameters. 
-    \begin{revisedblock}
       %3-1-1-1探索半径
       The search radius was 100. 
       %3-1-1-2近傍点数の上限
@@ -47,7 +46,6 @@ Four types of features are extracted from the trimmed point clouds: normals, dim
       % Open3D hybrid KD-tree search estimated normals at each point. 
       % %3-1-1-4共分散推定
       % Open3D hybrid KD-tree search estimated covariance matrices at each point. 
-    \end{revisedblock}
     %3-1-2共分散作成
     Covariance matrices are generated from each point in the point cloud based on KNN. 
     %3-1-3共分散の固有ベクトルを利用
@@ -95,12 +93,10 @@ Four types of features are extracted from the trimmed point clouds: normals, dim
       The FPFH is generated from combinations of a center point and the surrounding points in the point cloud and then several FPFHs are concatenated. 
     %3-4-5 次元削減
     PCA is used to reduce the dimensions of the FPFH. 
-    \begin{revisedblock}
       %3-4-5-1主成分数・次元削減内容
       PCA is used to reduce the 33-dimensional FPFH to three dimensions.
       %3-4-5-2SVDソルバ
       The randomized SVD solver is used. 
-    \end{revisedblock}
     %3-4-6特徴が点の色で表している点
     Fig.~\ref{features}\subref{fpfh} shows the data with the FPFH. 
 
@@ -109,7 +105,6 @@ Next, clustering is performed for the point clouds using the point features.
 
   %4-1 DBSCAN
   DBSCAN is used to determine the parameters for DBSCAN so as to remove noise in the point cloud and then align circles to each point in the point cloud on the basis of the parameters \cite{ester1996density}.
-    \begin{revisedblock}
     %4-1-1 パラメータ設定
     The parameters for DBSCAN are set as follows:
       %4-1-1-1 近傍半径
@@ -118,7 +113,6 @@ Next, clustering is performed for the point clouds using the point features.
       The minimum number of points is 10. 
       %4-1-1-3 適用座標
       DBSCAN is applied to the three-dimensional coordinates of each point. 
-    \end{revisedblock}
     %4-1-2コア点と到達可能点
     Points that have more than a certain number of points in the circle centered at the point are defined as ``core'' and points within the radii of the circles that the cores have are defined as ``reachable points''. 
     %4-1-3外れ値
@@ -129,7 +123,7 @@ Next, clustering is performed for the point clouds using the point features.
   %4-2k-means
   k-means is used to determine the number of clusters for k-means so as to remove noise in the point cloud \cite{hartigan1979algorithm}. 
     %4-2-1クラスタ数
-    \revised{The number of clusters $k$ was 3. }
+    The number of clusters $k$ was 3.
     %4-2-2初期化とそのあとの処理
     Each point in the point cloud is randomly assigned to a cluster, and as long as the cluster changes, the following process is repeated. 
       %4-2-2-1終了までに繰り返す処理
@@ -161,12 +155,12 @@ Classification is performed for the normalized point clouds utilizing PointNet++
   
 % \end{spverbatim}
 %6/27 tb ⇒ t
-\begin{figure}[t]
-  \centering
-  {\includegraphics[width=\linewidth]{img/rawdata.png}}
-  \caption{Raw LiDAR data.}
-  \label{rawdata}
-\end{figure}
+% \begin{figure}[t]
+%   \centering
+%   {\includegraphics[width=\linewidth]{img/rawdata.png}}
+%   \caption{Raw LiDAR data.}
+%   \label{rawdata}
+% \end{figure}
 
 %6/27 tb ⇒ t
 \begin{figure}[t]

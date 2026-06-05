@@ -1,8 +1,8 @@
-% Revision markup: deleted = red + strikethrough, revised = blue
+% Revision markup: deleted = red, revised = blue
 \newcommand{\revised}[1]{{\color[rgb]{0,0,1}#1}}
 \newcommand{\deleted}[1]{{\color[rgb]{1,0,0}#1}}
 
-% Block deletions: red text (strikethrough is not compatible with floats/citations)
+% Block markup: color only (strikethrough is not compatible with floats/citations)
 \NewEnviron{revisedblock}{%
   \begingroup
   \color[rgb]{0,0,1}%
@@ -15,6 +15,3 @@
   \BODY
   \endgroup
 }
-
-% \newcommand{\deletedsubsection}[1]{\subsection*{{\color[rgb]{1,0,0}#1}}}
-% \newcommand{\deletedsubsubsection}[1]{\subsubsection*{{\color[rgb]{1,0,0}#1}}}

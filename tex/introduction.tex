@@ -9,7 +9,6 @@ In another system, environmental variables and the personal physical and mental 
   %3-1
   This system captures biometric data and workplace environmental data through micro-surveys on mobile and web applications. 
 
-\begin{revisedblock}
 %1 オフィス効率モニタリングで記録したいもの
 The office-efficiency monitoring requires recording activities of workers in an office that change over time.
 %2 姿勢推定の不十分性
@@ -30,13 +29,10 @@ Fine-grained classification of hand movements distinguishes hand-involved work s
     The distinction supports identification of task switching.
     %3-1-2 実際の仕事時間
     The distinction supports estimation of actual work duration.
-\end{revisedblock}
 
 %Prior works
 %1 先行研究の取り組み
-\begin{revisedblock}
 Prior works focused on identifying human body orientation and general human postures.
-\end{revisedblock}
 %2 姿勢認識や身体の向き推定の研究
 Katayama et al. reported that point clouds can be utilized to classify human posture and presented a system for posture recognition and tracking \cite{9767292}. 
     %2-1
@@ -56,7 +52,7 @@ Glandon et al. reported that point clouds can be utilized for human identificati
     %2-4
     % This study does not mention that data was actually captured using LiDAR. 
 %4 先行研究の課題
-The weakness of the prior works \deleted{above is that they might not work for distinguishing differences in hand movements.} \revised{is that they cannot perform the hand-movement classification necessary to distinguish elements of the office activities.}
+The weakness of the prior works is that they cannot perform the hand-movement classification necessary to distinguish elements of the office activities.
   %4-1
   This is because a classification model is needed to extract the details of the point cloud, as well as to handle multiple people. 
   %3-2
@@ -73,7 +69,6 @@ In light of this background, we propose an edge computing system that classifies
     %1-3
     % The system classifies the data that shows human posture. 
 %2評価実験についての概要
-% NOTE: revision markup is kept for style unification.
 The proposed system is evaluated through experiments in which multiple LiDAR sensors were utilized to capture multiple patterns of human posture with hand movement.
   %2-1前処理
 %   We performed preprocessing (trimming, calibration, feature estimation, clustering, and normalization) before classification and then implemented deep learning to perform classification while varying the data type, LiDAR placement, features used, and clustering method. 

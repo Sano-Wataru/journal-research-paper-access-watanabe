@@ -1,20 +1,19 @@
 %システムモデルと処理の手順の解説
 
-% \begin{spverbatim}
-%1st paragraph システム図の解説
-
+%1st paragraph
 %1システム図にある、大きなモジュールの紹介
 Fig.~\ref{system} shows the system model of the proposed system, which comprises sensor devices, an edge computer, and a GPU server. 
-    %1-1Sensor device
-    The sensor device includes a LiDAR unit and an edge device. 
-    %1-2Edge computer
-    The edge computer consists of a receiver and a merger. 
-    %1-3GPU server
-%   The GPU server comprises a trimmer, a calibrator, a feature estimator, and a processor for classification. 
-    The GPU server comprises a trimmer, a feature estimator, and processors for classification. 
-        %1-3-1The processor for classification
-        The processors for classification consist of a clustering part, downsampling part, normalizing part, and classifying part. 
+    \deleted{%1-1Sensor device
+    The sensor device includes a LiDAR unit and an edge device.}
+    \deleted{%1-2Edge computer
+    The edge computer consists of a receiver and a merger.}
+    \deleted{%1-3GPU server
+    The GPU server comprises a trimmer, a feature estimator, and processors for classification.}
+    \deleted{        %1-3-1The processor for classification
+        The processors for classification consist of a clustering part, downsampling part, normalizing part, and classifying part.}
+    \revised{Each sensor device has a LiDAR unit and an edge device; the edge computer has a receiver and a merger; the GPU server has a trimmer, a feature estimator, and classification processors with clustering, downsampling, normalizing, and classifying parts.}
 
+\begin{deletedblock}
 %2nd paragraph
 %1LiDARによるデータ取得
 In the sensor device, the LiDAR unit acquires a stream of 3D data. 
@@ -28,9 +27,7 @@ The merger aggregates the received 3D data into an aggregated 3D data.
 The GPU server processes the aggregated 3D data. 
 %6点群のトリミング
 The trimmer performs trimming for a region where a person exists from the point cloud of each frame of the aggregated 3D data. 
-% The calibrator aligns the coordinates of the training data and the test data of the trimmed point clouds. 
 %7点特徴の抽出
-% The feature estimator extracts point features from the calibrated point clouds. 
 The feature estimator extracts point features from the trimmed point clouds. 
 %8クラスタリング
 In the GPU server, the clustering part removes the extra points in the calibrated point clouds. 
@@ -40,44 +37,13 @@ The downsampling part reduces the number of points in the clustered point clouds
 The normalizing part performs normalization for the coordinates of the downsampled point clouds. 
 %11ディープラーニングによる分類
 The classifying part performs the classification for the normalized point clouds using the extracted point features. 
-% \end{spverbatim}
+\end{deletedblock}
+%2
+\revised{3D data are acquired by each LiDAR unit, stored on the edge device, received and merged by the edge computer, and processed on the GPU server through trimming, feature extraction, clustering, downsampling, normalization, and classification.}
 
-%6/27 tb ⇒ t
 \begin{figure}[t]
   \centering
   {\includegraphics[width=\linewidth]{img/journal_system8.drawio.png}}
   \caption{System model.}
   \label{system}
 \end{figure}
-
-% \begin{table}[b]
-% 	\caption{Specifications of experiment.}
-% 	\label{experiment}
-%     \scalebox{0.9}{
-% 	\begin{tabular}{l|l}
-%         \hline
-%         Parameter & Value \\ \hline
-%         Place & 14Q32, 14F, Shibaura Institute \\
-%         &of Technology, Toyosu, Koto-ku, \\ 
-%         &Tokyo \\
-%         Date of training data \\
-%         and test data A, B, \\
-%         and C acquisition & 9 December 2022 \\
-%         Date of test data \\
-%         A to I acquisition & 12 December 2024 \\
-%         LiDAR units & Livox Mid-70 \\
-%         No. of LiDAR units & 2 \\
-%         Edge devices & NVIDIA Jetson nano \\
-%         No. of edge devices & 2 \\
-%         Edge computer for training data \\ 
-%         and test data A, B, \\
-%         and C acquisition & NVIDIA Jetson Xavier NX \\
-%         Edge computer for test data \\ 
-%         A to I acquisition & NVIDIA Jetson Orin nano \\
-%         Frame rate of sensor & 10 fps \\
-%         No. of contributors for training data & 3 \\
-%         No. of contributors for test data & 9 \\
-%         \hline
-%  \end{tabular}
-%  }
-% \end{table}

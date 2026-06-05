@@ -1,7 +1,37 @@
 \subsection{Model architecture}
 \label{sec:model}
+\begin{deletedblock}
 \input{tex/related-works/model-architecture.tex}
+\end{deletedblock}
+
+%1st paragraph
+%1.
+\revised{Classification associates each data sample with the category of highest estimated probability.}
+%2.
+\revised{Deep learning models for point cloud classification have attracted interest \cite{grandini2020metrics}.}
+%3.
+\revised{Early approaches relied on voxelization \cite{Wu_2015_CVPR,7353481,Qi_2016_CVPR}.}
+%4.
+\revised{Qi et al. presented PointNet, which applies shared multilayer perceptrons (MLPs) to each point and aggregates features with max pooling under permutation invariance \cite{grandini2020metrics}.}
+%5.
+\revised{Subsequent models such as PointCNN \cite{NEURIPS2018_f5f8590c}, ShellNet \cite{Zhang_2019_ICCV}, A-CNN \cite{Komarichev_2019_CVPR}, SO-Net \cite{Li_2018_CVPR}, and Kd-network \cite{8237361} learn hierarchical local structure from point coordinates.}
+%6.
+\revised{The existing research comprises direct classification architectures and spatial modeling using local relationships.}
+%7.
+\revised{The present study targets fine-grained hand-movement classification in a multi-person office environment, unlike macro-posture or static object classification.}
 
 \subsection{Improvement for object detection}
 \label{sec:improvement}
+\begin{deletedblock}
 \input{tex/related-works/improvement-for-object-detection.tex}
+\end{deletedblock}
+
+%1st paragraph
+%1.
+\revised{Point features encode inter-point relationships and local shape and are used with point coordinates as machine-learning inputs.}
+%2.
+\revised{Eigenvalue-based features from neighborhood covariance matrices include entropy and omnivariance \cite{rs9030277, 9132746, 8490990}.}
+%3.
+\revised{Convex-hull descriptors \cite{9353594} and higher-dimensional descriptors such as signature of histograms of orientations (SHOT) \cite{SALTI2014251} and position and orientation distribution (POD) \cite{10.1145/2671188.2749380} capture object shape for recognition and retrieval.}
+%4.
+\revised{The present study applies point feature preprocessing to hand-movement classification in a multi-person office environment.}

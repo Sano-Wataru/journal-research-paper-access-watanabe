@@ -1,10 +1,3 @@
-%2nd paragraphの階層
-%表の説明
-%|-表から読み取れること
-%|-考察
-
-% 1段落目ではどのような形式、結果の見方の説明を行う。概要でない。2段落目は結果の高い低いの説明をする。3段落目に考察を行う。
-
 %6/27 tb ⇒ t
 \begin{figure}[t]
     \centering
@@ -29,44 +22,35 @@
     \label{valacc}
   \end{figure} 
 
-
-% \begin{spverbatim}
 %1st paragraph
 %1概要
-Fig.~\ref{valacc} show graphs of the validation per epoch when using each feature. 
-%2各表の折れ線グラフの説明
-% For example, Figure~\ref{valacc}(\subref{valnormal}) shows the graphs when using the normals.
-Each figure has three line graphs, each with no clustering, with DBSCAN, and with k-means. 
-
+\deleted{Fig.~\ref{valacc} show graphs of the validation per epoch when using each feature.}
+\deleted{%2各表の折れ線グラフの説明
+Each figure has three line graphs, each with no clustering, with DBSCAN, and with k-means.}
+\revised{Fig.~\ref{valacc} plots validation accuracy per epoch for each feature with no clustering, DBSCAN, and k-means.}
+\begin{deletedblock}
 %2nd paragraph
 %1法線を使った分類モデル
 Fig.~\ref{valacc}\subref{valnormal} shows the accuracies of three types classification models when the normals were used. 
     %1-1
     As shown, the overall accuracies are nearly 100\%. 
-%   All models kept generally 90\% accuracies.
-  %1-2
-%   This is because the distribution of points was not much affected by the clustering due to the normals show only one direction.
 %2The dimensionality featuresを使った分類モデル
 Fig.~\ref{valacc}\subref{valdim} shows the accuracies of three types classification models when the dimensionality features were used. 
     %2-1
     As shown, the overall accuracies are nearly 100\%. 
-%   The accuracy of the classification model using k-means was slightly lower than the other models.
-%   %2-2
-%   This is because k-means also removed important points, which affected classification using the dimensionality features for multiple orientations.
 %3The proportion of varianceを使った分類モデル
 Fig.~\ref{valacc}\subref{valproportion} shows the accuracies of three types classification models when the proportion of variance was used. 
   %3-1
   As shown, the overall accuracies are nearly 100\%. 
-%   The accuracy of the classification model using k-means also was slightly lower than the other models.
-%   %3-2
-%   This is because the k-means also removed important points, which affected classification using the proportion of variance for multiple orientations.
 %4FPFHの分類モデル
 Fig.~\ref{valacc}\subref{valfpfh} shows the accuracies of three types classification models when the FPFH was used. 
   %4-1
   As shown, the overall accuracies are nearly 100\%. 
-%   The change in accuracy of the classification model using DBSCAN is more pronounced than other models.
-%   %1-2
-%   This is because the shape of the point clouds changed slightly and affected the classification due to the number of clusters changes for each point cloud processed by DBSCAN.
+\end{deletedblock}
+%2
+\revised{All four features achieved nearly 100\% validation accuracy across clustering methods.}
 
+%2nd paragraph
 %5エポック数の決定
-The training epochs for each classification model were set so that after updating the best accuracy in validation, training would be terminated if there were no updates within 15 epochs. 
+\deleted{The training epochs for each classification model were set so that after updating the best accuracy in validation, training would be terminated if there were no updates within 15 epochs.}
+\revised{Training was terminated after 15 epochs without validation-accuracy improvement beyond the best value.}

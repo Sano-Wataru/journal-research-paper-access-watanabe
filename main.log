@@ -1,0 +1,1032 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.6.27)  5 JUN 2026 17:36
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-05-26>
+(./ieeeaccess.cls (./IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen148
+\@IEEEtrantmpdimenB=\dimen149
+\@IEEEtrantmpdimenC=\dimen150
+\@IEEEtrantmpcountA=\count275
+\@IEEEtrantmpcountB=\count276
+\@IEEEtrantmpcountC=\count277
+\@IEEEtrantmptoksA=\toks17
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
+03.
+(c:/texlive/2025/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen151
+-- This is a 10 point document.
+LaTeX Encoding Info:    Redeclaring text command \textunderscore (encoding ?) o
+n input line 937.
+\CLASSINFOnormalsizebaselineskip=\dimen152
+\CLASSINFOnormalsizeunitybaselineskip=\dimen153
+\IEEEnormaljot=\dimen154
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen155
+\IEEEquantizedlengthdiff=\dimen156
+\IEEEquantizedtextheightdiff=\dimen157
+\IEEEilabelindentA=\dimen158
+\IEEEilabelindentB=\dimen159
+\IEEEilabelindent=\dimen160
+\IEEEelabelindent=\dimen161
+\IEEEdlabelindent=\dimen162
+\IEEElabelindent=\dimen163
+\IEEEiednormlabelsep=\dimen164
+\IEEEiedmathlabelsep=\dimen165
+\IEEEiedtopsep=\skip49
+\c@section=\count278
+\c@subsection=\count279
+\c@subsubsection=\count280
+\c@paragraph=\count281
+\c@IEEEsubequation=\count282
+\abovecaptionskip=\skip50
+\belowcaptionskip=\skip51
+\c@figure=\count283
+\c@table=\count284
+\@IEEEeqnnumcols=\count285
+\@IEEEeqncolcnt=\count286
+\@IEEEsubeqnnumrollback=\count287
+\@IEEEquantizeheightA=\dimen166
+\@IEEEquantizeheightB=\dimen167
+\@IEEEquantizeheightC=\dimen168
+\@IEEEquantizeprevdepth=\dimen169
+\@IEEEquantizemultiple=\count288
+\@IEEEquantizeboxA=\box53
+\@IEEEtmpitemindent=\dimen170
+\IEEEPARstartletwidth=\dimen171
+\c@IEEEbiography=\count289
+\@IEEEtranrubishbin=\box54
+) (c:/texlive/2025/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+
+(c:/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+(c:/texlive/2025/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(c:/texlive/2025/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(c:/texlive/2025/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks18
+\XKV@tempa@toks=\toks19
+
+(c:/texlive/2025/texmf-dist/tex/generic/xkeyval/keyval.tex))
+\XKV@depth=\count290
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)){c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{t1-times.map}{
+t1-formata.map}{t1-giovannistd.map}
+\@draftversionrule=\dimen172
+ (c:/texlive/2025/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
+
+(c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+
+(c:/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+)
+(c:/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (./spotcolor.sty
+Package: spotcolor 2006/11/15 v1.2 Package for adding Spot Color support to pdf
+LaTeX.
+(c:/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(c:/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+)
+\thecolorprofile=\count291
+\thecolor=\count292
+)
+\PANTONE=\toks20
+Package color Info: Redefining color black on input line 287.
+\figbox=\box55
+\titlewidth=\skip52
+\abstractwidth=\skip53
+\c@addrCtr=\count293
+\abstractbox=\box56
+\indexbox=\box57
+\absht=\dimen173
+\kwdht=\dimen174
+\@tempcntc=\count294
+\titlepgskip=\skip54
+\maketitlebox=\box58
+)
+(c:/texlive/2025/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/06/16 v2.17y AMS math features
+\@mathmargin=\skip55
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks21
+\ex@=\dimen175
+))
+(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen176
+)
+(c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count295
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count296
+\leftroot@=\count297
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count298
+\DOTSCASE@=\count299
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box59
+\strutbox@=\box60
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen177
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count300
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count301
+\dotsspace@=\muskip17
+\c@parentequation=\count302
+\dspbrk@lvl=\count303
+\tag@help=\toks22
+\row@=\count304
+\column@=\count305
+\maxfields@=\count306
+\andhelp@=\toks23
+\eqnshift@=\dimen178
+\alignsep@=\dimen179
+\tagshift@=\dimen180
+\tagwidth@=\dimen181
+\totwidth@=\dimen182
+\lineht@=\dimen183
+\@envbody=\toks24
+\multlinegap=\skip56
+\multlinetaggap=\skip57
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2949.
+LaTeX Info: Redefining \] on input line 2950.
+)
+(c:/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(c:/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(c:/texlive/2025/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+
+(c:/texlive/2025/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+\c@ALC@unique=\count307
+\c@ALC@line=\count308
+\c@ALC@rem=\count309
+\c@ALC@depth=\count310
+\ALC@tlm=\skip58
+\algorithmicindent=\skip59
+)
+(c:/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen184
+\Gin@req@width=\dimen185
+)
+(c:/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+)
+(c:/texlive/2025/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box61
+\UL@hyphenbox=\box62
+\UL@skip=\skip60
+\UL@hook=\toks26
+\UL@height=\dimen186
+\UL@pe=\count311
+\UL@pixel=\dimen187
+\ULC@box=\box63
+Package: ulem 2019/11/18
+\ULdepth=\dimen188
+)
+(c:/texlive/2025/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(c:/texlive/2025/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+(./tex/macros/revision.tex)
+(c:/texlive/2025/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count312
+\float@exts=\toks27
+\float@box=\box64
+\@float@everytoks=\toks28
+\@floatcapt=\box65
+)
+\@float@every@algorithm=\toks29
+\c@algorithm=\count313
+)
+(c:/texlive/2025/texmf-dist/tex/latex/tools/array.sty
+Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
+\col@sep=\dimen189
+\ar@mcellbox=\box66
+\extrarowheight=\dimen190
+\NC@list=\toks30
+\extratabsurround=\skip61
+\backup@length=\skip62
+\ar@cellbox=\box67
+)
+(c:/texlive/2025/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(c:/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen191
+\captionmargin=\dimen192
+\caption@leftmargin=\dimen193
+\caption@rightmargin=\dimen194
+\caption@width=\dimen195
+\caption@indent=\dimen196
+\caption@parindent=\dimen197
+\caption@hangindent=\dimen198
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \begin {flushleft} \vspace *{5pt} {\vss \color {accessblue}\tablecaph
+eadfont #1. \ }{\raggedright \tablecapfont #2\vss }\end {flushleft} \@IEEEtable
+captionsepspace \else \@IEEEfigurecaptionsepspace \setbox \@tempboxa \hbox {\st
+rut {\color {accessblue}\figcapheadfont #1. \ }\raggedright \figcapfont #2\stru
+t }\ifdim \wd \@tempboxa <\columnwidth \setbox \@tempboxa \hbox {{\color {acces
+sblue}\figcapheadfont #1. \ }}\mbox {}\hfill \begin {tabular}{@{}l@{}}\noindent
+ \raggedright \unhbox \@tempboxa \figcapfont #2\end {tabular}\hfill \mbox {}\el
+se \setbox \@tempboxa \hbox {{\color {accessblue}\figcapheadfont #1. \ }}{\vss 
+\raggedright \noindent \unhbox \@tempboxa \figcapfont #2\vss }\fi \fi \vskip 1p
+t plus 1pt minus 1pt on input line 1175.
+)
+\c@KVtest=\count314
+\sf@farskip=\skip63
+\sf@captopadj=\dimen199
+\sf@capskip=\skip64
+\sf@nearskip=\skip65
+\c@subfigure=\count315
+\c@subfigure@save=\count316
+\c@lofdepth=\count317
+\c@subtable=\count318
+\c@subtable@save=\count319
+\c@lotdepth=\count320
+\sf@top=\skip66
+\sf@bottom=\skip67
+)
+(c:/texlive/2025/texmf-dist/tex/latex/sttools/stfloats.sty
+Package: stfloats 2017/03/27 v3.3 Improve float mechanism and baselineskip sett
+ings
+\@dblbotnum=\count321
+\c@dblbotnumber=\count322
+)
+(c:/texlive/2025/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(c:/texlive/2025/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks31
+\verbatim@line=\toks32
+\verbatim@in@stream=\read2
+)
+(c:/texlive/2025/texmf-dist/tex/latex/spverbatim/spverbatim.sty
+Package: spverbatim 2009/08/10 v1.0 Verbatim with breakable spaces
+)
+(c:/texlive/2025/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2023/12/19 v1.2f Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+)
+(c:/texlive/2025/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+
+(c:/texlive/2025/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count323
+\c@continuedfloat=\count324
+Package caption Info: float package is loaded.
+)
+LaTeX Info: Redefining \subref on input line 189.
+Package subcaption Info: The counter `subfigure' was already defined by
+(subcaption)             \newsubfloat (offered by the subfig package) on input 
+line 238.
+Package subcaption Info: The counter `subtable' was already defined by
+(subcaption)             \newsubfloat (offered by the subfig package) on input 
+line 238.
+) (c:/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen256
+\lightrulewidth=\dimen257
+\cmidrulewidth=\dimen258
+\belowrulesep=\dimen259
+\belowbottomsep=\dimen260
+\aboverulesep=\dimen261
+\abovetopsep=\dimen262
+\cmidrulesep=\dimen263
+\cmidrulekern=\dimen264
+\defaultaddspace=\dimen265
+\@cmidla=\count325
+\@cmidlb=\count326
+\@aboverulesep=\dimen266
+\@belowrulesep=\dimen267
+\@thisruleclass=\count327
+\@lastruleclass=\count328
+\@thisrulewidth=\dimen268
+)
+(c:/texlive/2025/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen269
+\WF@size=\dimen270
+\c@WF@wrappedlines=\count329
+\WF@box=\box68
+\WF@everypar=\toks33
+Package: wrapfig 2003/01/31  v 3.6
+)
+(c:/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip68
+\multirow@cntb=\count330
+\multirow@dima=\skip69
+\bigstrutjot=\dimen271
+)
+Package color Info: Redefining color accessblue on input line 31.
+
+(c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2025-04-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count331
+)
+(./main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+
+-- Lines per column: 56 (exact).
+\symNewLetters=\mathgroup9
+\symxsymbols=\mathgroup10
+LaTeX Font Info:    Redeclaring math symbol \ddagger on input line 63.
+LaTeX Font Info:    Redeclaring math symbol \dagger on input line 63.
+\c@mv@regular=\count332
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `operators' in the math version `regular' on input line 63.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `regular'
+(Font)                  OT1/cmr/m/n --> T1/formata/n/n on input line 63.
+LaTeX Font Info:    Overwriting symbol font `NewLetters' in version `regular'
+(Font)                  T1/times/n/it --> T1/formata/n/it on input line 63.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `regular'
+(Font)                  T1/formata/n/n --> T1/formata/n/n on input line 63.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `regular'
+(Font)                  OT1/cmr/m/it --> T1/formata/n/it on input line 63.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `regular'
+(Font)                  OT1/cmr/bx/n --> T1/formata/m/n on input line 63.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `regular'
+(Font)                  OT1/cmtt/m/n --> OT1/pcr/m/n on input line 63.
+\c@mv@medium=\count333
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `operators' in the math version `medium' on input line 63.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `medium'
+(Font)                  OT1/cmr/m/n --> T1/formata/m/n on input line 63.
+LaTeX Font Info:    Overwriting symbol font `NewLetters' in version `medium'
+(Font)                  T1/times/n/it --> T1/formata/m/it on input line 63.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `medium'
+(Font)                  > T1/formata/m/n on input line 63.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `medium'
+(Font)                  OT1/cmr/m/it --> T1/formata/m/it on input line 63.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `medium'
+(Font)                  > T1/formata/b/n on input line 63.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `medium'
+(Font)                  OT1/cmtt/m/n --> OT1/pcr/b/n on input line 63.
+\c@mv@black=\count334
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `operators' in the math version `black' on input line 63.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `black'
+(Font)                  OT1/cmr/m/n --> T1/formata/b/n on input line 63.
+LaTeX Font Info:    Overwriting symbol font `NewLetters' in version `black'
+(Font)                  T1/times/n/it --> T1/formata/b/it on input line 63.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `black'
+(Font)                  > T1/formata/b/n on input line 63.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `black'
+(Font)                  OT1/cmr/m/it --> T1/formata/b/it on input line 63.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `black'
+(Font)                  > T1/formata/b/n on input line 63.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `black'
+(Font)                  OT1/cmtt/m/n --> OT1/pcr/b/n on input line 63.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 63
+.
+(c:/texlive/2025/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+LaTeX Font Info:    Trying to load font information for T1+times on input line 
+63.
+ (./t1times.fd)
+(c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count335
+\scratchdimen=\dimen272
+\scratchbox=\box69
+\nofMPsegments=\count336
+\nofMParguments=\count337
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count338
+\MPscratchDim=\dimen273
+\MPnumerator=\count339
+\makeMPintoPDFobject=\count340
+\everyMPtoPDFconversion=\toks35
+) (c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Redeclaring math version `bold' on input line 63.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `operators' in the math version `bold' on input line 63.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/m/n --> T1/times/b/n on input line 63.
+LaTeX Font Info:    Overwriting symbol font `NewLetters' in version `bold'
+(Font)                  T1/times/n/it --> T1/times/b/it on input line 63.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  > T1/times/b/n on input line 63.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/m/it --> T1/times/b/it on input line 63.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  > T1/times/b/n on input line 63.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/pcr/b/n on input line 63.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/m/n --> OMS/cmsy/b/n on input line 63.
+<bullet.png, id=3, 12.045pt x 35.38219pt>
+File: bullet.png Graphic file (type png)
+<use bullet.png>
+Package pdftex.def Info: bullet.png  used on input line 90.
+(pdftex.def)             Requested size: 5.0pt x 14.6871pt.
+
+(./tex/abstract.tex)
+File: bullet.png Graphic file (type png)
+<use bullet.png>
+Package pdftex.def Info: bullet.png  used on input line 94.
+(pdftex.def)             Requested size: 5.0pt x 14.6871pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 100
+.
+ (c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 100
+.
+
+(c:/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Calculating math sizes for size <9.9> on input line 100.
+LaTeX Font Info:    Calculating math sizes for size <6.6> on input line 100.
+
+Overfull \hbox (9.2679pt too wide) in paragraph at lines 100--100
+[]  
+ []
+
+
+Overfull \hbox (9.2679pt too wide) in paragraph at lines 100--100
+[]  
+ []
+
+(./tex/introduction.tex
+Underfull \hbox (badness 4967) in paragraph at lines 23--44
+[]\T1/times/n/n/10 Office-efficiency mon-i-tor-ing re-quires record-ing time-
+ []
+
+
+
+) (./tex/related-works/main.tex
+
+<logo.png, id=4, 206.27063pt x 53.44969pt>
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 22.
+(pdftex.def)             Requested size: 91.32pt x 23.66309pt.
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[1
+
+
+ <./logo.png> <./bullet.png>]) (./tex/proposed-system/system-model.tex
+<img/journal_system8.drawio.png, id=18, 834.11626pt x 432.61626pt>
+File: img/journal_system8.drawio.png Graphic file (type png)
+<use img/journal_system8.drawio.png>
+Package pdftex.def Info: img/journal_system8.drawio.png  used on input line 46.
+
+(pdftex.def)             Requested size: 242.67355pt x 125.85817pt.
+)
+(./tex/proposed-system/methodology.tex
+
+<img/cutdata.png, id=20, 1927.2pt x 977.6525pt>
+File: img/cutdata.png Graphic file (type png)
+<use img/cutdata.png>
+Package pdftex.def Info: img/cutdata.png  used on input line 243.
+(pdftex.def)             Requested size: 242.67355pt x 123.10132pt.
+<img/normal.png, id=21, 1927.2pt x 977.6525pt>
+File: img/normal.png Graphic file (type png)
+<use img/normal.png>
+Package pdftex.def Info: img/normal.png  used on input line 253.
+(pdftex.def)             Requested size: 109.20235pt x 55.38962pt.
+<img/dim.png, id=22, 1927.2pt x 977.6525pt>
+File: img/dim.png Graphic file (type png)
+<use img/dim.png>
+Package pdftex.def Info: img/dim.png  used on input line 257.
+(pdftex.def)             Requested size: 109.20235pt x 55.38962pt.
+<img/proportion.png, id=23, 1927.2pt x 977.6525pt>
+File: img/proportion.png Graphic file (type png)
+<use img/proportion.png>
+Package pdftex.def Info: img/proportion.png  used on input line 262.
+(pdftex.def)             Requested size: 109.20235pt x 55.38962pt.
+<img/fpfh.png, id=24, 1927.2pt x 977.6525pt>
+File: img/fpfh.png Graphic file (type png)
+<use img/fpfh.png>
+Package pdftex.def Info: img/fpfh.png  used on input line 266.
+(pdftex.def)             Requested size: 109.20235pt x 55.38962pt.
+) (./tex/experiment-setup/main.tex
+(./tex/experiment-setup/experimental-system.tex)
+(./tex/experiment-setup/lidar-deployment.tex
+Underfull \vbox (badness 4479) has occurred while \output is active []
+
+
+
+<notaglinelogo.png, id=25, 169.38281pt x 42.91031pt>
+File: notaglinelogo.png Graphic file (type png)
+<use notaglinelogo.png>
+Package pdftex.def Info: notaglinelogo.png  used on input line 9.
+(pdftex.def)             Requested size: 91.32pt x 23.1352pt.
+
+LaTeX Font Warning: Font shape `T1/formata/m/sl' undefined
+(Font)              using `T1/formata/m/it' instead on input line 9.
+
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[2 <./notaglinelogo.png> <./img/journal_system8.drawio.png> <./img/cutdata.png>
+]
+<img/experimentsite2.jpg, id=38, 1685.54718pt x 1120.185pt>
+File: img/experimentsite2.jpg Graphic file (type jpg)
+<use img/experimentsite2.jpg>
+Package pdftex.def Info: img/experimentsite2.jpg  used on input line 12.
+(pdftex.def)             Requested size: 242.67355pt x 161.2689pt.
+<img/ld_journal5.drawio.png, id=39, 968.61874pt x 172.645pt>
+File: img/ld_journal5.drawio.png Graphic file (type png)
+<use img/ld_journal5.drawio.png>
+Package pdftex.def Info: img/ld_journal5.drawio.png  used on input line 19.
+(pdftex.def)             Requested size: 242.67355pt x 43.25334pt.
+) (./tex/experiment-setup/data-acquisition/main.tex
+(./tex/experiment-setup/data-acquisition/training-data-acquisition.tex)
+(./tex/experiment-setup/data-acquisition/test-data-acquisition.tex
+
+
+Overfull \hbox (18.50453pt too wide) in paragraph at lines 29--29
+ [][] 
+ []
+
+<img/mouse.png, id=40, 1927.2pt x 977.6525pt>
+File: img/mouse.png Graphic file (type png)
+<use img/mouse.png>
+Package pdftex.def Info: img/mouse.png  used on input line 65.
+(pdftex.def)             Requested size: 109.20235pt x 55.38962pt.
+<img/pat.png, id=41, 1927.2pt x 977.6525pt>
+File: img/pat.png Graphic file (type png)
+<use img/pat.png>
+Package pdftex.def Info: img/pat.png  used on input line 69.
+(pdftex.def)             Requested size: 109.20235pt x 55.38962pt.
+<img/stay.png, id=42, 1927.2pt x 977.6525pt>
+File: img/stay.png Graphic file (type png)
+<use img/stay.png>
+Package pdftex.def Info: img/stay.png  used on input line 74.
+(pdftex.def)             Requested size: 109.20235pt x 55.38962pt.
+<img/typing.png, id=43, 1927.2pt x 977.6525pt>
+File: img/typing.png Graphic file (type png)
+<use img/typing.png>
+Package pdftex.def Info: img/typing.png  used on input line 78.
+(pdftex.def)             Requested size: 109.20235pt x 55.38962pt.
+)) (./tex/experiment-setup/processing-of-proposed-system.tex)
+
+
+LaTeX Font Warning: Font shape `T1/formata/m/sl' undefined
+(Font)              using `T1/formata/m/it' instead on input line 13.
+
+File: notaglinelogo.png Graphic file (type png)
+<use notaglinelogo.png>
+Package pdftex.def Info: notaglinelogo.png  used on input line 13.
+(pdftex.def)             Requested size: 91.32pt x 23.1352pt.
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[3 <./img/normal.png> <./img/dim.png> <./img/proportion.png> <./img/fpfh.png> <
+./img/experimentsite2.jpg> <./img/ld_journal5.drawio.png>]
+(./tex/experiment-setup/evaluation-metric.tex)) (./tex/evaluation/main.tex
+(./tex/evaluation/validation-results.tex
+<img/Accuracies_of_validation_normals.png, id=48, 651.8754pt x 412.6617pt>
+File: img/Accuracies_of_validation_normals.png Graphic file (type png)
+<use img/Accuracies_of_validation_normals.png>
+Package pdftex.def Info: img/Accuracies_of_validation_normals.png  used on inpu
+t line 7.
+(pdftex.def)             Requested size: 109.20235pt x 69.12518pt.
+<img/Accuracies_of_validation_DF.png, id=49, 664.1613pt x 412.6617pt>
+File: img/Accuracies_of_validation_DF.png Graphic file (type png)
+<use img/Accuracies_of_validation_DF.png>
+Package pdftex.def Info: img/Accuracies_of_validation_DF.png  used on input lin
+e 11.
+(pdftex.def)             Requested size: 109.20235pt x 67.84695pt.
+<img/Accuracies_of_validation_POV.png, id=50, 651.8754pt x 412.6617pt>
+File: img/Accuracies_of_validation_POV.png Graphic file (type png)
+<use img/Accuracies_of_validation_POV.png>
+Package pdftex.def Info: img/Accuracies_of_validation_POV.png  used on input li
+ne 16.
+(pdftex.def)             Requested size: 109.20235pt x 69.12518pt.
+<img/Accuracies_of_validation_FPFH.png, id=51, 651.8754pt x 412.6617pt>
+File: img/Accuracies_of_validation_FPFH.png Graphic file (type png)
+<use img/Accuracies_of_validation_FPFH.png>
+Package pdftex.def Info: img/Accuracies_of_validation_FPFH.png  used on input l
+ine 20.
+(pdftex.def)             Requested size: 109.20235pt x 69.12518pt.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 56--3
+[]\T1/times/n/n/10 Training was ter-mi-nated af-ter 15 epochs with-out
+ []
+
+
+
+(./tex/evaluation/accuracy/main.tex (./tex/evaluation/accuracy/table.tex)))
+(./tex/conclusion.tex) (./main.bbl
+LaTeX Font Info:    Calculating math sizes for size <7.61> on input line 28.
+
+
+File: notaglinelogo.png Graphic file (type png)
+<use notaglinelogo.png>
+Package pdftex.def Info: notaglinelogo.png  used on input line 89.
+(pdftex.def)             Requested size: 91.32pt x 23.1352pt.
+
+LaTeX Font Warning: Font shape `T1/formata/m/sl' undefined
+(Font)              using `T1/formata/m/it' instead on input line 89.
+
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[4 <./img/mouse.png> <./img/pat.png> <./img/stay.png> <./img/typing.png> <./img
+/Accuracies_of_validation_normals.png> <./img/Accuracies_of_validation_DF.png> 
+<./img/Accuracies_of_validation_POV.png> <./img/Accuracies_of_validation_FPFH.p
+ng>]
+
+
+
+
+LaTeX Font Warning: Font shape `T1/formata/m/sl' undefined
+(Font)              using `T1/formata/m/it' instead on input line 187.
+
+File: notaglinelogo.png Graphic file (type png)
+<use notaglinelogo.png>
+Package pdftex.def Info: notaglinelogo.png  used on input line 187.
+(pdftex.def)             Requested size: 91.32pt x 23.1352pt.
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[5]
+Underfull \hbox (badness 1389) in paragraph at lines 261--265
+\T1/times/m/n/7.61 vel-oper,'' ac-cessed on June 23 2025. [On-line]. Avail-
+ []
+
+) (./tex/author-bios.tex
+<img/sano2.jpg, id=64, 2043.635pt x 2702.095pt>
+File: img/sano2.jpg Graphic file (type jpg)
+<use img/sano2.jpg>
+Package pdftex.def Info: img/sano2.jpg  used on input line 1.
+(pdftex.def)             Requested size: 68.32265pt x 90.33623pt.
+File: img/sano2.jpg Graphic file (type jpg)
+<use img/sano2.jpg>
+Package pdftex.def Info: img/sano2.jpg  used on input line 1.
+(pdftex.def)             Requested size: 68.32265pt x 90.33623pt.
+
+
+<img/Watanabe.jpg, id=67, 677.53125pt x 903.375pt>
+File: img/Watanabe.jpg Graphic file (type jpg)
+<use img/Watanabe.jpg>
+Package pdftex.def Info: img/Watanabe.jpg  used on input line 4.
+(pdftex.def)             Requested size: 67.74675pt x 90.329pt.
+File: img/Watanabe.jpg Graphic file (type jpg)
+<use img/Watanabe.jpg>
+Package pdftex.def Info: img/Watanabe.jpg  used on input line 4.
+(pdftex.def)             Requested size: 67.74675pt x 90.329pt.
+<img/pic_2025.jpg, id=70, 421.575pt x 562.1pt>
+File: img/pic_2025.jpg Graphic file (type jpg)
+<use img/pic_2025.jpg>
+Package pdftex.def Info: img/pic_2025.jpg  used on input line 9.
+(pdftex.def)             Requested size: 67.74927pt x 90.33237pt.
+File: img/pic_2025.jpg Graphic file (type jpg)
+<use img/pic_2025.jpg>
+Package pdftex.def Info: img/pic_2025.jpg  used on input line 9.
+(pdftex.def)             Requested size: 67.74927pt x 90.33237pt.
+<img/rsugano.jpg, id=73, 451.6875pt x 602.25pt>
+File: img/rsugano.jpg Graphic file (type jpg)
+<use img/rsugano.jpg>
+Package pdftex.def Info: img/rsugano.jpg  used on input line 16.
+(pdftex.def)             Requested size: 67.7502pt x 90.33359pt.
+File: img/rsugano.jpg Graphic file (type jpg)
+<use img/rsugano.jpg>
+Package pdftex.def Info: img/rsugano.jpg  used on input line 16.
+(pdftex.def)             Requested size: 67.7502pt x 90.33359pt.
+<img/RShinkuma.jpg, id=76, 910.40125pt x 1074.0125pt>
+File: img/RShinkuma.jpg Graphic file (type jpg)
+<use img/RShinkuma.jpg>
+Package pdftex.def Info: img/RShinkuma.jpg  used on input line 27.
+(pdftex.def)             Requested size: 72.26402pt x 85.25084pt.
+File: img/RShinkuma.jpg Graphic file (type jpg)
+<use img/RShinkuma.jpg>
+Package pdftex.def Info: img/RShinkuma.jpg  used on input line 27.
+(pdftex.def)             Requested size: 72.26402pt x 85.25084pt.
+
+
+File: notaglinelogo.png Graphic file (type png)
+<use notaglinelogo.png>
+Package pdftex.def Info: notaglinelogo.png  used on input line 41.
+(pdftex.def)             Requested size: 91.32pt x 23.1352pt.
+
+LaTeX Font Warning: Font shape `T1/formata/m/sl' undefined
+(Font)              using `T1/formata/m/it' instead on input line 41.
+
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[6 <./img/sano2.jpg> <./img/Watanabe.jpg> <./img/pic_2025.jpg> <./img/rsugano.j
+pg> <./img/RShinkuma.jpg>]
+<img/Gab2.jpg, id=87, 942.52126pt x 1265.72874pt>
+File: img/Gab2.jpg Graphic file (type jpg)
+<use img/Gab2.jpg>
+Package pdftex.def Info: img/Gab2.jpg  used on input line 41.
+(pdftex.def)             Requested size: 67.2632pt x 90.32895pt.
+File: img/Gab2.jpg Graphic file (type jpg)
+<use img/Gab2.jpg>
+Package pdftex.def Info: img/Gab2.jpg  used on input line 41.
+(pdftex.def)             Requested size: 67.2632pt x 90.32895pt.
+)
+File: bullet.png Graphic file (type png)
+<use bullet.png>
+Package pdftex.def Info: bullet.png  used on input line 142.
+(pdftex.def)             Requested size: 5.0pt x 14.6871pt.
+
+
+
+
+
+LaTeX Font Warning: Font shape `T1/formata/m/sl' undefined
+(Font)              using `T1/formata/m/it' instead on input line 144.
+
+File: notaglinelogo.png Graphic file (type png)
+<use notaglinelogo.png>
+Package pdftex.def Info: notaglinelogo.png  used on input line 144.
+(pdftex.def)             Requested size: 91.32pt x 23.1352pt.
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[7
+
+ <./img/Gab2.jpg>] (./main.aux)
+ ***********
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-05-26>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 7386 strings out of 467886
+ 125337 string characters out of 5438218
+ 579147 words of memory out of 5000000
+ 35732 multiletter control sequences out of 15000+600000
+ 722406 words of font info for 192 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 72i,15n,117p,568b,534s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/tex
+live/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2025/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
+./t1-formata-bold.pfb><./t1-formata-condmedium.pfb><./t1-formata-medium.pfb><./
+t1-formata-mediumitalic.pfb><./t1-formata-regular.pfb><./t1-giovannistd-bookita
+lic.pfb><./t1-times-bold.pfb><./t1-times-bolditalic.pfb><./t1-times-italic.pfb>
+<./t1-times.pfb>
+Output written on main.pdf (7 pages, 3645207 bytes).
+PDF statistics:
+ 170 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 206 words of extra memory for PDF output out of 10000 (max. 10000000)
+

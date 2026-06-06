@@ -7,7 +7,8 @@ One popular system for analyzing the activities of workers in an office utilizes
 %3 現状の監視システムの課題2
 In another system, environmental variables and the personal physical and mental parameters of employees in different office environments are measured and compared to determine their correlation with productivity \cite{7106905}. 
   %3-1
-  This system captures biometric data and workplace environmental data through micro-surveys on mobile and web applications. 
+  \revised{Biometric data and workplace environmental data are captured through micro-surveys on mobile and web applications \cite{7106905}.}
+  \deleted{This system captures biometric data and workplace environmental data through micro-surveys on mobile and web applications.} 
 
 %1 オフィス効率モニタリングで記録したいもの
 The office-efficiency monitoring requires recording activities of workers in an office that change over time.
@@ -36,49 +37,69 @@ Prior works focused on identifying human body orientation and general human post
 %2 姿勢認識や身体の向き推定の研究
 Katayama et al. reported that point clouds can be utilized to classify human posture and presented a system for posture recognition and tracking \cite{9767292}. 
     %2-1
+    \revised{Their system acquired point cloud data with a small light detection-and-ranging (LiDAR) unit and classified posture using machine learning on data from a sitting person \cite{9767292}.}
+    \begin{deletedblock}
     Their system used a small light detection-and-ranging (LiDAR) to acquire point cloud data and then classified posture from the point cloud data using machine learning. 
-    %2-2
     In their study, they acquired point cloud data from a sitting person and evaluated human orientation estimation utilizing 2D-CNN. 
+    \end{deletedblock}
+    %2-2
+    \revised{Human orientation estimation was evaluated utilizing two-dimensional convolutional neural network (2D-CNN), not hand-involved desk postures.}
+    \deleted{In their study, they acquired point cloud data from a sitting person and evaluated human orientation estimation utilizing 2D-CNN.}
     %2-3
-    However, their experiments were limited in that only one participant was included. 
+    \revised{The experiments included only one participant.}
+    \deleted{However, their experiments were limited in that only one participant was included.} 
 %3 歩行者の姿勢推定の研究
 Glandon et al. reported that point clouds can be utilized for human identification and presented a system for posture estimation using data captured from walking people \cite{8852370}. 
     %3-1
+    \revised{Their system extracted a silhouette, estimated body joints, and classified posture from joint features using 3D LiDAR videos of walking subjects \cite{8852370}.}
+    \begin{deletedblock}
     Their system extracted a silhouette from a point cloud and then estimates the joints of a body from the silhouette. 
-    %3-2
     Features from each joint are extracted and utilized to classify human posture. 
-    %3-3
-    Although they used 3D LiDAR videos of human subjects walking around a room to perform the human posture classification, the study did not specify that the data was actually captured using LiDAR. 
-    %2-4
-    % This study does not mention that data was actually captured using LiDAR. 
+    Although they used 3D LiDAR videos of human subjects walking around a room to perform the human posture classification, the study did not specify that the data was actually captured using LiDAR.
+    \end{deletedblock}
+    %3-2
+    \revised{Glandon et al. targeted locomotion posture of walking subjects rather than seated hand movements at a desk.}
 %4 先行研究の課題
 The weakness of the prior works is that they cannot perform the hand-movement classification necessary to distinguish elements of the office activities.
   %4-1
-  This is because a classification model is needed to extract the details of the point cloud, as well as to handle multiple people. 
+  \revised{Hand-movement classification requires a classification model that extracts point-cloud details and handles multiple people.}
+  \deleted{This is because a classification model is needed to extract the details of the point cloud, as well as to handle multiple people.} 
   %3-2
   % The classification model is also needed to handle multiple people. 
 
 %Proposed system
-%1st paragraph  Figs.~
-%1提案
-In light of the background, we propose an edge computing system that classifies the postures of people with hand movement in an office by using a LiDAR sensor network. 
-    %1-1取得対象とデータの扱い
-    Specifically, the proposed system captures human postures with hand movement using the LiDAR sensor network, stores the data, and classifies the data that exhibits human posture. 
-    %1-2
-    % The system stores data from the LiDAR sensor network. 
-    %1-3
-    % The system classifies the data that shows human posture. 
-%2評価実験についての概要
+%1st paragraph
+%1
+\revised{An edge computing system is proposed that classifies the postures of people with hand movement in an office by using a LiDAR sensor network.}
+\deleted{In light of the background, we propose an edge computing system that classifies the postures of people with hand movement in an office by using a LiDAR sensor network.}
+  %1-1
+  \revised{The system captures, stores, and classifies human postures with hand movement from the LiDAR sensor network.}
+  \deleted{Specifically, the proposed system captures human postures with hand movement using the LiDAR sensor network, stores the data, and classifies the data that exhibits human posture.}
+%2
+\revised{Experiments use multiple LiDAR sensors to capture posture patterns from multiple subjects; preprocessing and deep-learning classification vary data type, LiDAR placement, features, and clustering method.}
+%3
+The evaluation metric is the ratio of samples correctly classified.
+%4
+Confusion matrices for selected models are presented to show correct-label counts and biases in inferred labels.
+
+%2nd paragraph
+%5
+Section~\ref{sec:related} summarizes related methods.
+%6
+Section~\ref{sec:proposed} presents the system model and methodology.
+%7
+Section~\ref{sec:experiment} describes the experiment setup.
+%8
+Section~\ref{sec:evaluation} reports the results.
+%9
+Section~\ref{sec:conclusion} summarizes the findings.
+\begin{deletedblock}
 The proposed system is evaluated through experiments in which multiple LiDAR sensors were utilized to capture multiple patterns of human posture with hand movement.
-  %2-1前処理
-%   We performed preprocessing (trimming, calibration, feature estimation, clustering, and normalization) before classification and then implemented deep learning to perform classification while varying the data type, LiDAR placement, features used, and clustering method. 
     Preprocessing, i.e., trimming, feature estimation, clustering, and normalization, was performed before classification, and deep learning was then implemented to perform classification while varying the data type, LiDAR placement, features used, and clustering method.
-    %2-2分類
     Classification models were trained for each of the conditions and then evaluated in terms of their classification accuracy.
-%3評価基準について
 The evaluation metric here is the ratio of samples correctly classified. 
-%4混合行列について
 The confusion matrices of a part of the models are presented to clarify the number of correct labels and any biases of the inferred labels.
+\end{deletedblock}
 
 \begin{deletedblock}
 %2nd paragraph

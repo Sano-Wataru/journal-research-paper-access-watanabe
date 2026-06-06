@@ -1,10 +1,4 @@
 %2nd paragraphの階層
-%表の説明
-%|-表から読み取れること
-%|-考察
-
-% 1段落目ではどのような形式、結果の見方の説明を行う。概要でない。2段落目は結果の高い低いの説明をする。3段落目に考察を行う。
-
 %6/27 tb ⇒ t
 \begin{figure}[t]
     \centering
@@ -29,44 +23,31 @@
     \label{valacc}
   \end{figure} 
 
-
-% \begin{spverbatim}
 %1st paragraph
-%1概要
+%1
+\revised{Fig.~\ref{valacc} shows validation accuracy per epoch for each feature type; each subfigure plots three lines for no clustering, DBSCAN, and k-means.}
+\begin{deletedblock}
 Fig.~\ref{valacc} show graphs of the validation per epoch when using each feature. 
-%2各表の折れ線グラフの説明
-% For example, Figure~\ref{valacc}(\subref{valnormal}) shows the graphs when using the normals.
 Each figure has three line graphs, each with no clustering, with DBSCAN, and with k-means. 
+\end{deletedblock}
 
 %2nd paragraph
-%1法線を使った分類モデル
-Fig.~\ref{valacc}\subref{valnormal} shows the accuracies of three types classification models when the normals were used. 
-    %1-1
-    As shown, the overall accuracies are nearly 100\%. 
-%   All models kept generally 90\% accuracies.
-  %1-2
-%   This is because the distribution of points was not much affected by the clustering due to the normals show only one direction.
-%2The dimensionality featuresを使った分類モデル
-Fig.~\ref{valacc}\subref{valdim} shows the accuracies of three types classification models when the dimensionality features were used. 
-    %2-1
-    As shown, the overall accuracies are nearly 100\%. 
-%   The accuracy of the classification model using k-means was slightly lower than the other models.
-%   %2-2
-%   This is because k-means also removed important points, which affected classification using the dimensionality features for multiple orientations.
-%3The proportion of varianceを使った分類モデル
-Fig.~\ref{valacc}\subref{valproportion} shows the accuracies of three types classification models when the proportion of variance was used. 
+%2
+\revised{For normals (Fig.~\ref{valacc}\subref{valnormal}), validation accuracy remained high under all clustering settings.}
+  %2-1
+  \revised{Normal features assign one direction per point and are less sensitive to point distribution changes caused by clustering.}
+%3
+\revised{For dimensionality features (Fig.~\ref{valacc}\subref{valdim}), validation accuracy remained high; k-means showed a slight decrease relative to no clustering and DBSCAN.}
   %3-1
-  As shown, the overall accuracies are nearly 100\%. 
-%   The accuracy of the classification model using k-means also was slightly lower than the other models.
-%   %3-2
-%   This is because the k-means also removed important points, which affected classification using the proportion of variance for multiple orientations.
-%4FPFHの分類モデル
-Fig.~\ref{valacc}\subref{valfpfh} shows the accuracies of three types classification models when the FPFH was used. 
-  %4-1
-  As shown, the overall accuracies are nearly 100\%. 
-%   The change in accuracy of the classification model using DBSCAN is more pronounced than other models.
-%   %1-2
-%   This is because the shape of the point clouds changed slightly and affected the classification due to the number of clusters changes for each point cloud processed by DBSCAN.
+  \revised{k-means can remove points that carry orientation information needed for dimensionality features.}
+%4
+\revised{For proportion of variance (Fig.~\ref{valacc}\subref{valproportion}), validation accuracy remained high with a similar k-means decrease.}
+%5
+\revised{For FPFH (Fig.~\ref{valacc}\subref{valfpfh}), validation accuracy remained high; DBSCAN showed larger epoch-to-epoch variation than the other clustering settings.}
+  %5-1
+  \revised{DBSCAN varies cluster counts across frames and alters the local shape encoded by FPFH.}
 
-%5エポック数の決定
-The training epochs for each classification model were set so that after updating the best accuracy in validation, training would be terminated if there were no updates within 15 epochs. 
+%3rd paragraph
+%6
+\revised{Training terminated if validation accuracy did not improve within 15 epochs after the best epoch.}
+\deleted{The training epochs for each classification model were set so that after updating the best accuracy in validation, training would be terminated if there were no updates within 15 epochs.}

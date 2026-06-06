@@ -1,32 +1,40 @@
 %1トレーニングデータの取得方法
 LiDAR was used to acquire training data on the subject's posture while using the PC to perform four tasks.\footnote{Our experiment was approved by the Ethics Committee of Shibaura Institute of Technology.}
 
-  %blue
-%   First, we captured the posture of the subjects for 30 seconds as they manipulated a mouse to write the alphabet in order from ``A" to ``Z". The capturing was repeated 20 times to acquire training data and performed only once to acquire test data. 
-%2マウス操作の取得方法
+\revised{Table~\ref{dataacquisition} summarizes data acquisition conditions for training data; each capture was repeated 20 times for mouse operation, pad operation, and typing, and 10 times for sitting still.}
+\deleted{Table~\ref{trainacquisition} summarizes training data acquisition conditions; each capture was repeated 20 times for mouse operation, pad operation, and typing, and 10 times for sitting still.}
+\begin{deletedblock}
 As for mouse operation, the posture of the subjects was captured for 30 seconds as they manipulated a mouse to write the alphabet in order from ``A'' to ``Z''. The capturing was repeated 20 times to acquire training data. 
-    %2-1マウス操作の点群
     Fig.~\ref{labels}\subref{pcmouse} shows the point cloud of the mouse operation. 
-
-  %blue
-%   Second, we captured the posture of the subjects for 30 seconds as they performed a pad operation on the PC to write the alphabet in order from ``A" to ``Z". The capturing was repeated 20 times to acquire training data and performed only once to acquire test data. 
-%3パッド操作の取得方法
 As for pad operation, the posture of the subjects was captured for 30 seconds as they performed a pad operation on the PC to write the alphabet in order from ``A'' to ``Z''. The capturing was repeated 20 times to acquire training data. 
-    %3-2パッド操作の点群
     Fig.~\ref{labels}\subref{pcpad} shows the point cloud of the pad operation. 
-
-  %blue
-%4静止状態の取得方法
 As for sitting still, the posture of the subjects was captured for ten  seconds as they sat still without moving and did not touch the PC. The capturing was repeated ten times to acquire training data. 
-    %4-2静止状態の点群
     Fig.~\ref{labels}\subref{pcstay} shows the point cloud of sitting still. 
-
-%5タイピングの取得方法
 As for typing, the posture of the subjects was captured for 30 seconds as they typed the alphabet in order from ``A'' to ``Z''. The capturing was repeated 20 times to acquire training data. 
-    %5-2タイピングの点群
     Fig.~\ref{labels}\subref{pctyp} shows the point cloud of the typing. 
+\end{deletedblock}
 
-% Figure~\ref{eachlidar} depicts the three types of data we obtained from the two LiDAR units, where (\subref{pcleft}) shows the point cloud from the LiDAR on the left as seen from the subject, (\subref{pcright}) shows the point cloud from the LiDAR on the right, and (\subref{pcmerged}) shows the point cloud where the data from both sensors are merged. 
+\begin{revisedblock}
+\begin{table}[b]
+  \centering
+  \revised{\caption{Data acquisition conditions for each posture class.}}
+  \deleted{\caption{Training data acquisition conditions for each posture class.}}
+  \label{dataacquisition}
+  \scalebox{0.9}{
+  \begin{tabular}{l|l|c}
+    \hline
+    Posture class & Task & Duration \\ \hline
+    Mouse operation & Write alphabet A--Z using mouse & 30 s \\
+    Pad operation & Write alphabet A--Z using trackpad & 30 s \\
+    Sitting still & Sit still without moving or touching PC & 10 s \\
+    Typing & Type alphabet A--Z on keyboard & 30 s \\
+    \hline
+  \end{tabular}
+  }
+\end{table}
+\end{revisedblock}
+
+\revised{Fig.~\ref{labels} shows point clouds for each posture class.}
 
 %6トレーニングデータの被験者
 The three subjects in this study are denoted as subjects A, B, and C. 

@@ -1,14 +1,28 @@
-%
+%1st paragraph
+%1
 Table~\ref{accresults} shows the accuracy for all twelve combinations of features and clustering methods used.
-%
+%2
+\revised{Subjects A to AB served as the test dataset for four posture classes; accuracy exceeded the 25\% baseline in all cases.}
+%3
+\revised{Classification accuracy varied across test subjects because point-cloud density and body size differed from the three training subjects.}
+\begin{deletedblock}
 The accuracy is reported with the data from subjects A to AB serving as the test dataset.
-%
 Since we are classifying 4 posture classes, a baseline accuracy of 25\% or higher is expected. 
-%
 In all cases Table~\ref{accresults}, the accuracy exceeded the baseline.
-%
+\end{deletedblock}
+
+%2nd paragraph
+%4
 Regarding the clustering methods, no clustering or DBSCAN tended to achieve higher accuracy than K-means.
-%
+  %4-1
+  \revised{k-means tended to lower accuracy by removing hand-region points required to distinguish typing from pad operation.}
+
+%3rd paragraph
+%5
 In terms of features, normals tended to yield higher accuracy when no clustering or DBSCAN was employed.
-  
+  %5-1
+  \revised{Normals yielded stable test accuracy when no clustering or DBSCAN was applied.}
+  %5-2
+  \revised{Dimensionality features achieved higher accuracy than other features for several subjects outside the training set when local shape resembled training examples.}
+
 \input{tex/evaluation/accuracy/table.tex}

@@ -1,105 +1,76 @@
 %点群を分類するディープラーニングの関連研究
-
 %1st paragraph
-%1 分類の説明
+%1
 Classification estimates which category a given data sample belongs to by associating it with the highest estimated probability.
-%2 深層学習による点群分類の潮流
+%2
 Deep learning models for point cloud classification have attracted interest \cite{grandini2020metrics}.
 
-% %2nd paragraph
-% %1
-% While early models used voxelization \cite{Wu_2015_CVPR,7353481,Qi_2016_CVPR}, Qi et al. presented PointNet, which directly processes point clouds by considering permutation invariance \cite{grandini2020metrics}.
-% %2
-% PointCNN addresses convolution challenges on point clouds using the X-Conv operator to weight and permute input features \cite{NEURIPS2018_f5f8590c}.
-% %3
-% ShellNet extracts features from concentric shells to maintain local structures \cite{Zhang_2019_ICCV}, and A-CNN utilizes annular convolutions for hierarchical feature processing \cite{Komarichev_2019_CVPR}.
-% %4
-% SO-Net models spatial distributions via self-organizing maps (SOM) \cite{Li_2018_CVPR}, while Kd-network employs tree-based partitions for classification without grid reliance \cite{8237361}.
-
 %2nd paragraph
-%1PointNet以前の点群の分類
+%3
 Early approaches relied on voxelization \cite{Wu_2015_CVPR,7353481,Qi_2016_CVPR}.
-%2PointNet
+%4
 Qi et al. presented PointNet \cite{grandini2020metrics}.
-    %2-1深層学習モデルとしての位置づけ
-    The network is a deep learning model for point cloud classification.
-    %2-2共有MLPによる点ごとの特徴抽出
-    PointNet applies shared multilayer perceptrons (MLPs) to each point in a set.
-    %2-3max poolingによる特徴集約
-    The model aggregates per-point features using max pooling.
-    %2-4置換不変性
-    The architecture enforces permutation invariance over the input order.
+  %4-1
+  \revised{PointNet applies shared multilayer perceptrons (MLPs) to each point and aggregates per-point features using max pooling with permutation invariance.}
+  \begin{deletedblock}
+  The network is a deep learning model for point cloud classification.
+  PointNet applies shared multilayer perceptrons (MLPs) to each point in a set.
+  The model aggregates per-point features using max pooling.
+  The architecture enforces permutation invariance over the input order.
+  \end{deletedblock}
 
 %3rd paragraph
-%1CNNを使った点群の分類
+%5
+\revised{Subsequent CNN-based models include PointCNN with permutation-invariant X-Conv \cite{NEURIPS2018_f5f8590c}, ShellNet with concentric-shell ShellConv \cite{Zhang_2019_ICCV}, and A-CNN with annular convolutions on sampled neighborhoods \cite{Komarichev_2019_CVPR}.}
+\begin{deletedblock}
 Point cloud classifiers often adopt convolutional neural networks (CNNs).
-  %1-1PointCNN
   Li et al. presented PointCNN \cite{NEURIPS2018_f5f8590c}.
-    %1-1-1X-Convの導入
     The method introduces X-Conv for point cloud deep learning.
-    %1-1-2置換不変畳み込み
     The operator performs end-to-end permutation-invariant convolution.
-    %1-1-3座標からの階層的局所特徴学習
     The architecture learns hierarchical local features from point coordinates.
-    %1-1-4点属性の利用
     The architecture uses point attributes as additional inputs.
-  %1-2ShellNet
   Zhang et al. presented ShellNet \cite{Zhang_2019_ICCV}.
-    %1-2-1ShellConvによる近傍特徴集約
     The model aggregates neighborhood features using ShellConv.
-    %1-2-2同心円シェル分割
     The operator partitions local point sets into concentric shells.
-    %1-2-3局所構造の保持
     The network extracts hierarchical features to preserve local structures.
-  %1-3A-CNN
   Komarichev et al. presented A-CNN \cite{Komarichev_2019_CVPR}.
-    %1-3-1環状畳み込み
     The method applies annular convolutions on a three-dimensional (3D) point cloud.
-    %1-3-2最遠点サンプリング
     The pipeline uses farthest point sampling (FPS) to select center points.
-    %1-3-3法線入力
     The model takes point normals as inputs.
-    %1-3-4座標入力
     The model takes point coordinates as inputs.
-    %1-3-5近傍からの階層的特徴学習
     The network learns hierarchical features from sampled neighborhoods.
+\end{deletedblock}
 
 %4th paragraph
-%1点群の分類におけるその他のアプローチ
-  %1-1SO-Net
+%6
+\revised{Other approaches encode spatial structure with self-organizing maps in SO-Net \cite{Li_2018_CVPR,58325} or kd-trees in Kd-network \cite{8237361}.}
+\begin{deletedblock}
   Li et al. proposed SO-Net \cite{Li_2018_CVPR}.
-    %1-1-1固定長符号化
     The method encodes a point cloud into a fixed-length representation.
-    %1-1-2SOMによる空間分布モデル化
     The encoder builds a self-organizing map (SOM) over point coordinates \cite{58325}.
-    %1-1-3k-NNによる特徴洗練
     The pipeline refines features using k-nearest neighbor (k-NN) search.
-    %1-1-4max pooling
     The network applies max pooling over the refined features.
-  %1-2Kd-Network
   Klokov et al. proposed Kd-network \cite{8237361}.
-    %1-2-1kd-tree構築
     The architecture constructs a kd-tree over point coordinates.
-    %1-2-2ノード間ベクトルへのアフィン変換
     The model applies affine transforms on inter-node vectors along the tree.
-    %1-2-3MLPによる分類
     The pipeline passes the resulting features through an MLP for classification.
-    %1-2-4グリッド非依存の分類
     The method classifies objects without rasterizing points onto a uniform grid.
+\end{deletedblock}
 
-% \end{spverbatim}
 %5th paragraph
-%1 既存研究の特徴
+%7
 The existing research shown above can be broadly classified into the following two categories:
 \begin{enumerate}
-  %1-1直接分類アーキテクチャ
+  %7-1
   \item Architectures for direct point cloud classification (e.g., PointNet, PointCNN).
-  %1-2局所関係の空間モデリング
+  %7-2
   \item Spatial modeling techniques using local relationships (e.g., ShellNet, SO-Net, A-CNN, Kd-network).
 \end{enumerate}
-%2 本研究の特徴
-Our research targets the fine-grained classification of hand movements in a multi-person office environment.
-%3 本研究との差分 
-Our research differs from the macro-posture or static object classification focused on in the categories above.
-  % %3-1 本研究との差分
-  % The study additionally proposes an edge system for capturing detailed hand movements using a LiDAR sensor network.
+%8
+\revised{The present study targets fine-grained hand-movement classification in a multi-person office environment.}
+\deleted{Our research targets the fine-grained classification of hand movements in a multi-person office environment.}
+%9
+\revised{The present study differs from the macro-posture or static object classification in the categories above.}
+\deleted{Our research differs from the macro-posture or static object classification focused on in the categories above.}
+%10
+\revised{PointNet++ is adopted in the proposed system because hierarchical grouping extracts local geometry from sparse desk-region point clouds without voxelization \cite{DBLP:journals/corr/QiYSG17}.}

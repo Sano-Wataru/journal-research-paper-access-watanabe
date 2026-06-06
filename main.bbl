@@ -60,6 +60,18 @@ J.~G.~C. Laurent, P.~MacNaughton, E.~Jones, A.~S. Young, M.~Bliss, S.~Flanigan,
   study,'' \emph{Environmental Research Letters}, vol.~16, no.~9, p. 094047,
   2021.
 
+\bibitem{6891825}
+C.~Langensiepen, A.~Lotfi, and S.~Puteh, ``Activities recognition and worker
+  profiling in the intelligent office environment using a fuzzy finite state
+  machine,'' in \emph{2014 IEEE International Conference on Fuzzy Systems
+  (FUZZ-IEEE)}, 2014, pp. 873--880.
+
+\bibitem{7106905}
+S.~van~der Valk, T.~Myers, I.~Atkinson, and K.~Mohring, ``Sensor networks in
+  workplaces: Correlating comfort and productivity,'' in \emph{2015 IEEE Tenth
+  International Conference on Intelligent Sensors, Sensor Networks and
+  Information Processing (ISSNIP)}, 2015, pp. 1--6.
+
 \bibitem{9767292}
 H.~Katayama, T.~Mizomoto, H.~Rizk, and H.~Yamaguchi, ``You work we care:
   Sitting posture assessment based on point cloud data,'' in \emph{2022 IEEE
@@ -119,10 +131,22 @@ J.~Li, B.~M. Chen, and G.~H. Lee, ``So-net: Self-organizing network for point
   cloud analysis,'' in \emph{Proceedings of the IEEE Conference on Computer
   Vision and Pattern Recognition (CVPR)}, June 2018.
 
+\bibitem{58325}
+T.~Kohonen, ``The self-organizing map,'' \emph{Proceedings of the IEEE},
+  vol.~78, no.~9, pp. 1464--1480, 1990.
+
 \bibitem{8237361}
 R.~Klokov and V.~Lempitsky, ``Escape from cells: Deep kd-networks for the
   recognition of 3d point cloud models,'' in \emph{2017 IEEE International
   Conference on Computer Vision (ICCV)}, 2017, pp. 863--872.
+
+\bibitem{DBLP:journals/corr/QiYSG17}
+\BIBentryALTinterwordspacing
+C.~R. Qi, L.~Yi, H.~Su, and L.~J. Guibas, ``Pointnet++: Deep hierarchical
+  feature learning on point sets in a metric space,'' \emph{CoRR}, vol.
+  abs/1706.02413, 2017. [Online]. Available:
+  \url{http://arxiv.org/abs/1706.02413}
+\BIBentrySTDinterwordspacing
 
 \bibitem{rs9030277}
 \BIBentryALTinterwordspacing
@@ -207,17 +231,6 @@ R.~B. Rusu, N.~Blodow, and M.~Beetz, ``Fast point feature histograms (fpfh) for
   3d registration,'' in \emph{2009 IEEE International Conference on Robotics
   and Automation}, 2009, pp. 3212--3217.
 
-\bibitem{4795593}
-R.~B. Rusu, Z.~C. Marton, N.~Blodow, and M.~Beetz, ``Learning informative point
-  classes for the acquisition of object model maps,'' in \emph{2008 10th
-  International Conference on Control, Automation, Robotics and Vision}, 2008,
-  pp. 643--650.
-
-\bibitem{4650967}
-R.~B. Rusu, N.~Blodow, Z.~C. Marton, and M.~Beetz, ``Aligning point cloud views
-  using persistent feature histograms,'' in \emph{2008 IEEE/RSJ International
-  Conference on Intelligent Robots and Systems}, 2008, pp. 3384--3391.
-
 \bibitem{ester1996density}
 M.~Ester, H.-P. Kriegel, J.~Sander, and X.~Xu, ``A density-based algorithm for
   discovering clusters in large spatial databases with noise.'' in \emph{kdd},
@@ -227,14 +240,6 @@ M.~Ester, H.-P. Kriegel, J.~Sander, and X.~Xu, ``A density-based algorithm for
 J.~A. Hartigan and M.~A. Wong, ``Algorithm as 136: A k-means clustering
   algorithm,'' \emph{Journal of the royal statistical society. series c
   (applied statistics)}, vol.~28, no.~1, pp. 100--108, 1979.
-
-\bibitem{DBLP:journals/corr/QiYSG17}
-\BIBentryALTinterwordspacing
-C.~R. Qi, L.~Yi, H.~Su, and L.~J. Guibas, ``Pointnet++: Deep hierarchical
-  feature learning on point sets in a metric space,'' \emph{CoRR}, vol.
-  abs/1706.02413, 2017. [Online]. Available:
-  \url{http://arxiv.org/abs/1706.02413}
-\BIBentrySTDinterwordspacing
 
 \bibitem{Mid70}
 \BIBentryALTinterwordspacing
@@ -262,6 +267,10 @@ Nvidia, ``Jetson xavier nx developer kit, --- nvidia developer,'' accessed on
   June 23 2025. [Online]. Available:
   \url{https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/jetson-orin/nano-super-developer-kit/}
 \BIBentrySTDinterwordspacing
+
+\bibitem{zhou2018open3d}
+Q.-Y. Zhou, J.~Park, and V.~Koltun, ``Open3d: A modern library for 3d data
+  processing,'' \emph{arXiv preprint arXiv:1801.09847}, 2018.
 
 \bibitem{pytorchpointnet++}
 \BIBentryALTinterwordspacing

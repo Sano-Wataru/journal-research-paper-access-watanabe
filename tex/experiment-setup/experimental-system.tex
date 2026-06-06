@@ -1,15 +1,33 @@
 % \begin{spverbatim}
-%1システムモデルに基づいた実験システム
-We developed an experimental system based on the proposed system shown in Fig.~\ref{system}. 
-
-%2実験に使用した機具
-% The experimental system consisted of two sets of LiDAR units (Mid-70 \cite{Mid70} units), two edge devices (Jetson nano \cite{Jetsonnano} units), an edge computer (Jetson Xavier NX \cite{JetsonNX}), and a regular keyboard. 
-%blue
+%1st paragraph
+%1
+\revised{An experimental system was built from the model in Fig.~\ref{system}.}
+\deleted{We developed an experimental system based on the proposed system shown in Fig.~\ref{system}.}
+%2
 The experimental system consisted of two sets of LiDAR units (Mid-70 units), two edge devices (Jetson nano units), an edge computer (Jetson Xavier NX and Jetson Orin nano), and a regular keyboard \cite{Mid70,Jetsonnano,JetsonNX,Jetsonorinnano}.
-  %3-1/実験機器の表
-  Table~\ref{experiment} lists the specifications of the experiment. 
-% \end{spverbatim}
+  %2-1
+  \revised{The experiment was conducted at 14Q32, 14F, Shibaura Institute of Technology, Toyosu, Koto-ku, Tokyo.}
+  %2-2
+  \revised{Two Livox Mid-70 LiDAR units were deployed at a sensor frame rate of 10 fps.}
+  %2-3
+  \revised{Two NVIDIA Jetson nano edge devices were used.}
+  %2-4
+  \revised{An NVIDIA Jetson Xavier NX edge computer was used for training data and test data A, B, and C acquisition.}
+  %2-5
+  \revised{An NVIDIA Jetson Orin nano edge computer was used for test data A to AB acquisition.}
+\deleted{Table~\ref{experiment} lists the specifications of the experiment.}
 
+%2nd paragraph
+%3
+\revised{Training data and test data A, B, and C were acquired on 9 December 2022.}
+%4
+\revised{Test data A to AB were acquired on 12 December 2024.}
+%5
+\revised{3 contributors provided training data.}
+%6
+\revised{28 contributors provided test data.}
+
+\begin{deletedblock}
 \begin{table}[b]
 	\caption{Specifications of experiment.}
 	\label{experiment}
@@ -41,3 +59,5 @@ The experimental system consisted of two sets of LiDAR units (Mid-70 units), two
  \end{tabular}
  }
 \end{table}
+\end{deletedblock}
+% \end{spverbatim}

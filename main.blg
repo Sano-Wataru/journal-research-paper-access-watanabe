@@ -14,45 +14,45 @@ Database file #1: ref.bib
 ** IEEEtran BST control entry "IEEEexample:BSTcontrol" detected.
 
 Done.
-You've used 42 entries,
+You've used 44 entries,
             4087 wiz_defined-function locations,
-            1076 strings with 16844 characters,
-and the built_in function-call counts, 29503 in all, are:
-= -- 2320
-> -- 758
-< -- 173
-+ -- 404
-- -- 155
-* -- 1400
-:= -- 4424
-add.period$ -- 84
-call.type$ -- 42
-change.case$ -- 52
-chr.to.int$ -- 381
-cite$ -- 42
-duplicate$ -- 2192
-empty$ -- 2501
-format.name$ -- 183
-if$ -- 6916
+            1085 strings with 17104 characters,
+and the built_in function-call counts, 30543 in all, are:
+= -- 2412
+> -- 774
+< -- 179
++ -- 412
+- -- 158
+* -- 1447
+:= -- 4610
+add.period$ -- 88
+call.type$ -- 44
+change.case$ -- 54
+chr.to.int$ -- 390
+cite$ -- 44
+duplicate$ -- 2278
+empty$ -- 2587
+format.name$ -- 187
+if$ -- 7154
 int.to.chr$ -- 0
-int.to.str$ -- 41
-missing$ -- 430
-newline$ -- 178
-num.names$ -- 43
-pop$ -- 1084
+int.to.str$ -- 43
+missing$ -- 444
+newline$ -- 184
+num.names$ -- 45
+pop$ -- 1112
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 4
-skip$ -- 2316
+skip$ -- 2399
 stack$ -- 0
-substring$ -- 1031
-swap$ -- 1662
-text.length$ -- 46
+substring$ -- 1054
+swap$ -- 1722
+text.length$ -- 49
 text.prefix$ -- 0
 top$ -- 6
-type$ -- 42
+type$ -- 44
 warning$ -- 0
-while$ -- 110
-width$ -- 43
-write$ -- 439
+while$ -- 115
+width$ -- 45
+write$ -- 458
 is.kanji.str$ -- 0

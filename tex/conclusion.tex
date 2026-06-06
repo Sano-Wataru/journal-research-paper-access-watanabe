@@ -1,85 +1,53 @@
-%1提案のまとめ
-This paper proposed an edge computing system that classifies the postures of people with hand movement working in offices by using a LiDAR sensor network. 
-  %1-1新規性
-  By properly selecting the features used in classification, fine movements such as hands can be classified. 
-  % The system captured human posture in an office using the LiDAR sensor network. 
-  %1-2Advantage
-  The proposed model is capable of classifying even detailed hand movements by a classification model that focuses on features that pseudo-represent the shape of the point cloud and the details of the point cloud. 
-  % The system stored data from the LiDAR sensor network. 
-  %1-3
-  % The system classified the data that shows human posture. 
-
-%2評価のまとめ
-To examine its effectiveness, we acquired real data with LiDAR and performed classification for the data.
-  Multiple LiDAR sensors were utilized to capture multiple patterns of human posture from multiple people, and preprocessing, including trimming, feature estimation, clustering, and normalization, was performed before classification.
-  % We obtained data from multiple people. 
-  % We performed preprocessing including trimming, calibration, feature estimation, clustering and normalization before classification. 
-  %2-2分類
-  Deep learning was implemented to perform classification while varying the data type, LiDAR placement, features used, and clustering method.
-  %2-3分類モデルの作成と表か
-  We created classification models from training for each of the conditions and evaluated their classification accuracy. 
-% We evaluated the models in terms of classification accuracy. 
-%3評価方法
-We defined the evaluation metric as the ratio of correctly classified samples and presented confusion matrices of models to show the number of correct labels and the biases of the inferred labels. 
-  %3-2
-  % We presented confusion matrices of a part of models to show a number of correct labels and biases of predicted labels.
+%1st paragraph
+%1
+\revised{An edge computing system was proposed that classifies the postures of people with hand movement working in offices by using a LiDAR sensor network.}
+\deleted{This paper proposed an edge computing system that classifies the postures of people with hand movement working in offices by using a LiDAR sensor network.}
+  %1-1
+  \revised{Fine hand movements are classified by selecting appropriate point-cloud features.}
+  \deleted{By properly selecting the features used in classification, fine movements such as hands can be classified.}
+  %1-2
+  \revised{The classification model focuses on features that represent point-cloud shape and local geometry.}
+  \deleted{The proposed model is capable of classifying even detailed hand movements by a classification model that focuses on features that pseudo-represent the shape of the point cloud and the details of the point cloud.}
 
 %2nd paragraph
-%1
-% We conducted the experiment with the actual implementation of the proposed system in this paper. 
-%1Validation accuracy
-We compared accuracies in each epoch of vadidation using each of classification models. 
-    %1-1結果のまとめ
-    The accuracy of all models was generally high. 
-    %1-1
-    However, there were some differences in the accuracies among the clustering methods.
-%2Test accuracy
-We compared accuracies of each of classification models. 
-    %2-1結果のまとめ
-    Depending on the features and the clustering methods, the classification accuracy was stable or varied in the accuracies from test data to test data. 
-    %2-2特徴的な結果
-    In particular, the classification using the normals was stable in accuracy, and the dimensionality features resulted in the higher accuracies even for subjects that were different from the training data. 
-% The results showed that high classification accuracy could be achieved when there was little difference in the shapes of the training data and test data. 
-% Conversely, accuracy decreased when there was a large gap between the densities of points of the training data and test data. 
-%3Confusion matrices
-% The confusion matrices of the classification model with low accuracy demonstrated that the models had incorrect predictions due to failure to detect parts of the point cloud that indicated a hand. 
-We compared confusion matrices of each of classification models and each of test data. 
-    %3-1結果のまとめ
-    Classification of four posture classes using subjects A to AB as a test set yielded accuracy significantly above the 25\% baseline across various feature and clustering method combinations.
-    %
-    Among clustering techniques, no clustering or DBSCAN tended to achieve higher accuracy than K-means.
-    %
-    The noise in the test data and the removal of important points by the clustering methods often caused one label to bias the prediction toward wrong labels.
-    %3-2結果のまとめ
-    Confusion matrices for a representative high-accuracy case (normals without clustering) and a representative lower-accuracy case (normals with k-means) revealed distinct misclassification patterns. 
-    %
-    The high-accuracy case showed good agreement between inferred and ground truth labels, with occasional confusion between typing and pad operation likely due to similar hand placements. 
-    %
-    Conversely, the lower-accuracy case exhibited bidirectional confusion between typing and pad operation, indicating greater difficulty in distinguishing these postures.
-    %
-    In particular, pad operation and typing often resulted in the  prediction as wrong labels.
-  %1-3
-%   When we performed classification again while excluding the sitting still classification label, the accuracies increased due to mouse and pad operations are successfully captured when the density of point clouds was high. 
-    %1-3-1
-    % The classification accuracies increased due to a reduction in misclassification of sitting still when the density of point clouds was high. 
-    %1-3-2
-    % Conversely, the accuracies decreased due to an increase in misclassification to sitting still and predicted labels when the density of point clouds was low. 
+%2
+\revised{Experiments acquired real LiDAR data from 28 test subjects and three training subjects; preprocessing and deep-learning classification varied data type, LiDAR placement, features, and clustering method.}
+\begin{deletedblock}
+To examine its effectiveness, we acquired real data with LiDAR and performed classification for the data.
+  Multiple LiDAR sensors were utilized to capture multiple patterns of human posture from multiple people, and preprocessing, including trimming, feature estimation, clustering, and normalization, was performed before classification.
+  Deep learning was implemented to perform classification while varying the data type, LiDAR placement, features used, and clustering method.
+  We created classification models from training for each of the conditions and evaluated their classification accuracy. 
+We defined the evaluation metric as the ratio of correctly classified samples and presented confusion matrices of models to show the number of correct labels and the biases of the inferred labels. 
+\end{deletedblock}
 
-% \begin{spverbatim}
 %3rd paragraph
-% %1
-% There remain two issues in this study. 
-% % This study has two limitations. 
-% The first relates to downsampling. 
-%   %1-1
-%   We performed downsampling to randomly remove points but found that a different number of points were removed for each process, so the distribution of points within the point cloud differed depending on the process. 
-%   %1-2
-%   This made it difficult to ensure stable classification. 
-%   %1-3
-%   To resolve this problem, we need to perform downsampling that can remove points while taking into account the distribution of points within the point cloud. 
-% %2
-% The second issue relates to the classification. 
-%   %2-1
-%   In this study, we used a classification model that processes multiple groups consisting of selected points in a point cloud and surrounding points, but due to the nature of the classification model, it was difficult to grasp the entire point cloud, and the training data and shape were not always the same. This made it difficult to extract features correctly when processing different test data. 
-%   %2-2
-%   To resolve this problem, we need to extract information from multiple groups consisting of the entire point cloud and a portion of the person, and then perform classification by combining the two types of information. 
+%3
+\revised{Validation accuracy reached nearly 100\% for all feature and clustering combinations, with minor differences among clustering methods.}
+  %3-1
+  \revised{High validation accuracy indicates that PointNet++ learned discriminative patterns from the selected point features under each preprocessing configuration.}
+\begin{deletedblock}
+We compared accuracies in each epoch of vadidation using each of classification models. 
+    The accuracy of all models was generally high. 
+    However, there were some differences in the accuracies among the clustering methods.
+We compared accuracies of each of classification models. 
+    Depending on the features and the clustering methods, the classification accuracy was stable or varied in the accuracies from test data to test data. 
+    In particular, the classification using the normals was stable in accuracy, and the dimensionality features resulted in the higher accuracies even for subjects that were different from the training data. 
+We compared confusion matrices of each of classification models and each of test data. 
+    Classification of four posture classes using subjects A to AB as a test set yielded accuracy significantly above the 25\% baseline across various feature and clustering method combinations.
+    Among clustering techniques, no clustering or DBSCAN tended to achieve higher accuracy than K-means.
+    The noise in the test data and the removal of important points by the clustering methods often caused one label to bias the prediction toward wrong labels.
+    Confusion matrices for a representative high-accuracy case (normals without clustering) and a representative lower-accuracy case (normals with k-means) revealed distinct misclassification patterns. 
+    The high-accuracy case showed good agreement between inferred and ground truth labels, with occasional confusion between typing and pad operation likely due to similar hand placements. 
+    Conversely, the lower-accuracy case exhibited bidirectional confusion between typing and pad operation, indicating greater difficulty in distinguishing these postures.
+    In particular, pad operation and typing often resulted in the  prediction as wrong labels.
+\end{deletedblock}
+
+%4th paragraph
+%4
+\revised{Test accuracy exceeded the 25\% baseline for four posture classes across feature and clustering combinations; normals without clustering or DBSCAN yielded stable accuracy, and no clustering or DBSCAN outperformed k-means.}
+  %4-1
+  \revised{Test accuracy above the 25\% baseline confirms generalization beyond the three training subjects for four desk postures.}
+%5
+\revised{Misclassification between typing and pad operation occurred when both hands rested near the keyboard and trackpad with similar point-cloud layouts.}
+  %5-1
+  \revised{Clustering methods that discarded sparse hand points increased label bias toward incorrect posture classes.}

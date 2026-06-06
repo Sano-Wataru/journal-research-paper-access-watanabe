@@ -1,63 +1,61 @@
 %点群のディープラーニングの精度を向上させる点特徴
-
-% \begin{spverbatim}
 %1st paragraph
-%1点特徴の概要
+%1
+\revised{Point features encode relationships between points and local shape characteristics and are used as inputs to machine learning along with point coordinates \cite{rs9030277,9132746,8490990}.}
+\begin{deletedblock}
 Point features comprise information extracted from point clouds that indicate the relationships between points and the likelihood of the shape of a point cloud. 
-  %1-1
   The features can be extracted in various ways. 
-%2点特徴の使われ方
 They are used as input data for machine learning and are typically treated as input data along with the point coordinates. 
-  % %2-1
-  % Our study also examines several preprocessing methods to improve classification results as the related works introduced below did. 
+\end{deletedblock}
 
 %2nd paragraph
-%1点群の共分散の固有値を使った点特徴
-In some approaches, eigenvalues are obtained from the covariance matrix of a point group consisting of neighboring points and then used for \cite{rs9030277, 9132746, 8490990}.
-  %1-1
+%2
+\revised{Eigenvalue-based descriptors derive features such as eigenvalue entropy and omnivariance from neighborhood covariance matrices \cite{rs9030277,9132746,8490990}.}
+  %2-1
+  \revised{Eigenvalue entropy indicates local orderliness of a point cloud region.}
+  %2-2
+  \revised{Omnivariance separates linear structure points from surrounding objects.}
+\begin{deletedblock}
+In some approaches, eigenvalues are obtained from the covariance matrix of a point group consisting of neighboring points and then used for \cite{rs9030277,9132746,8490990}.
   The features here are the entropy of the eigenvalues and the omnivariance, which is the square root of 3 of the total powers of the eigenvalues. 
-    %1-1-1固有値のエントロピー
     Entropy of eigenvalues indicates the orderliness of a point cloud region. 
-    %1-1-2Omnivarianceと呼ばれる特徴
     Omnivariance can separate tracking points and linear structure points from surrounding objects. 
+\end{deletedblock}
+
 %3rd paragraph
-%1凸包
+%3
+\revised{Convex-hull descriptors assign features based on each point's position relative to the hull \cite{9353594}.}
+\begin{deletedblock}
 There is also a method of capturing the shape of an object with a point cloud using a convex hull. 
-  %1-1
   Lv et al. proposed a method using a new feature descriptor based on a convex hull that utilizes convex hulls to generate features \cite{9353594}. 
-    %1-1-1
     This method surrounds an object with a convex hull and determines the characteristics of each point by means of its position. 
-    %1-1-3
-    % For example, if the point is at the vertex of the convex hull, the point features are the average normal of the adjacent triangles. 
     If the point is at the vertex of the convex hull, the point features are the average normal of the adjacent triangles. 
-  %1-2
   Lv et al. compared four types of features to investigate which ones are suitable for classifying trees. 
+\end{deletedblock}
 
 %4th paragraph
-%1高次元の特徴
+%4
+\revised{Higher-dimensional descriptors include Signature of Histograms of Orientations (SHOT) \cite{SALTI2014251} and Position and Orientation Distribution (POD) \cite{10.1145/2671188.2749380} for object recognition and 3D shape retrieval.}
+\begin{deletedblock}
 There are also higher dimensional features that can provide more detail on point-to-point relationships. 
-%2
 We introduce two of them here. 
-  %2-1SHOT
   The first is called Signature of Histograms of Orientations (SHOT), as presented by Salti et al \cite{SALTI2014251}. 
-    %2-1-1
     The unique feature of SHOT is that it seamlessly integrates multiple cues in a descriptor to improve distinctiveness. 
-    %2-1-2
     SHOT can be utilized for object recognition and 3D reconstruction. 
-  %2-2POD
   The second feature is called Position and Orientation Distribution (POD), as presented by Furuya et al \cite{10.1145/2671188.2749380}.
-    %2-2-1
     POD utilizes a new feature aggregation algorithm called Diffusion on Manifold (DM) that attempts to consider the structure of nonlinear manifolds formed by a set of local features by means of diffusion distance. 
-    %2-2-2
     Furuya et al. also presented local 3D shape features defined for orientation points set from the viewpoints of 3D shape search. 
-    %2-2-3
     These make it possible to obtain a shape-based 3D model. 
+\end{deletedblock}
 
-% \end{spverbatim}
 %5th paragraph
-%1 既存研究の特徴
+%5
 The existing research shown above focuses on geometric feature descriptors for shape recognition.
-%2 本研究の特徴
-Our research applies point feature preprocessing to support fine-grained hand movement classification in a multi-person office environment.
-%3 本研究との差分
-The existing research above target static object shape recognition, tree classification, or three-dimensional (3D) shape retrieval rather than fine-grained dynamic hand movements.
+%6
+\revised{The present study applies point feature preprocessing to support fine-grained hand movement classification in a multi-person office environment.}
+\deleted{Our research applies point feature preprocessing to support fine-grained hand movement classification in a multi-person office environment.}
+%7
+\revised{The existing research above targets static object shape recognition rather than fine-grained dynamic hand movements.}
+\deleted{The existing research above target static object shape recognition, tree classification, or three-dimensional (3D) shape retrieval rather than fine-grained dynamic hand movements.}
+%8
+\revised{The proposed system evaluates normals, dimensionality features, proportion of variance, and fast point feature histograms (FPFH) because each descriptor encodes a distinct aspect of local hand-region geometry relevant to desk postures.}

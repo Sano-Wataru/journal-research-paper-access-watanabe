@@ -1,177 +1,150 @@
 % \begin{spverbatim}
-%1秋山さんとLiさんのLiDARネットワークを使ってデータ取得
-In the proposed system, 3D data is acquired using the system presented by Akiyama et al. and Li et al. \cite{9789786,9507455}.
-  %1-1LiDARに向けたキャリブレーション
+%1st paragraph
+%1
+\revised{3D data is acquired using the system presented by Akiyama et al. and Li et al. \cite{9789786,9507455}.}
+\deleted{In the proposed system, 3D data is acquired using the system presented by Akiyama et al. and Li et al. \cite{9789786,9507455}.}
+  %1-1
+  \revised{Multiple LiDAR calibrations merge streams by rotating and translating 3D data according to predetermined angles and distances.}
+  \begin{deletedblock}
   Multiple LiDAR calibrations are performed for merging and the angles and distances are determined. 
-    %1-1-1空間的なキャリブレーションのため、点群の座標を回転
     The axis of the 3D data is rotated based on the angles, and the 3D data is translated based on the distances.
-    %1-2-3
-    % We translate the 3D data based on the distances. 
+  \end{deletedblock}
 
-%2トリミング
+%2nd paragraph
+%2
 The point cloud of each frame of the aggregated 3D data is trimmed.
-  %2-1 トリミングの方法
+  %2-1
+  \revised{Vertices of each person's region are determined manually under a fixed-seating office layout.}
+  \begin{deletedblock}
   Here, the coordinates of the vertices of a region where a person is located are determined manually, and the region is cut out. 
-    %2-1-1 手動決定の前提
     The manual determination assumes a fixed-seating office environment, where the location of each person's workspace is pre-determined and known in advance.
-  %2-2トリミング前（rawdata）と後（trimdata）の画像
-  Fig.\ref{trimdata} shows examples of \deleted{a raw point cloud and} a trimmed point cloud.
+  \end{deletedblock}
 
-% %3  
-% Next, we calibrate the training and the test data in the trimmed point cloud. 
-%   %3-1
-%   All training data and all test data are merged into one dataset each. 
-%   %3-2
-%   We generate normals and Fast Point Feature Histograms (FPFH) \cite{5152473} to generate a transformation matrix \cite{10.1007/978-3-319-46475-6_47} \cite{7271006}. 
-%   %3-3
-%   Specifically, we use Random Sample Consensus (RANSAC) \cite{10.1145/358669.358692} with the normals and the FPFH to obtain the transformation matrix. 
-%   %3-4 
-%   We then manually adjust the transformation matrix using ICP \cite{924423}. 
-%   %3-5
-%   % We use ICP \cite{924423} to adjust the transformation matrix \cite{10.1007/978-3-319-46475-6_47} \cite{7271006}. 
-
-%3使用する特徴の概要
-% We extract four types of features from the calibrated point clouds: normals, dimensionality features, proportion of variance, and FPFH. 
+%3rd paragraph
+%3
+\revised{Four feature types were selected to capture complementary geometric properties of hand-region point clouds.}
+  %3-1
+  \revised{Normals encode local surface orientation of hands and forearms.}
+  %3-2
+  \revised{Dimensionality features distinguish linear, planar, and volumetric local structures.}
+  %3-3
+  \revised{Proportion of variance summarizes eigenvalue distribution within each neighborhood.}
+  %3-4
+  \revised{FPFH encodes pairwise angular relationships among neighboring points.}
+%4
 Four types of features are extracted from the trimmed point clouds: normals, dimensionality features, proportion of variance, and FPFH. 
-
-  %3-1法線
+  %4-1
+  \revised{For normals, dimensionality features, and proportion of variance, the k-nearest neighbor algorithm (KNN) uses search radius 100 and maximum 30 neighbors to build covariance matrices at each point.}
+  \deleted{The k-nearest neighbor algorithm (KNN) is implemented using the determined parameters.}
+  %4-2
   \textit{Normals.} 
-    %3-1-1KNNのパラメータ
-    The k-nearest neighbor algorithm (KNN) is implemented using the determined parameters. 
-      %3-1-1-1探索半径
+    %4-2-1
+    \revised{Eigenvectors of the smallest eigenvalue in each covariance matrix serve as normals (Fig.~\ref{features}\subref{normal}).}
+    \begin{deletedblock}
       The search radius was 100. 
-      %3-1-1-2近傍点数の上限
       The maximum number of neighbors was 30. 
-      % %3-1-1-3法線推定
-      % Open3D hybrid KD-tree search estimated normals at each point. 
-      % %3-1-1-4共分散推定
-      % Open3D hybrid KD-tree search estimated covariance matrices at each point. 
-    %3-1-2共分散作成
     Covariance matrices are generated from each point in the point cloud based on KNN. 
-    %3-1-3共分散の固有ベクトルを利用
     Eigenvectors corresponding to the smallest eigenvalue in the covariance matrices are used as the normals. 
-    %3-1-4法線付きの点群
     Fig.~\ref{features}\subref{normal} shows the data with the normals. 
-
-  %3-2Dimensionality features
+    \end{deletedblock}
+  %4-3
   \textit{Dimensionality features} \cite{isprs-archives-XXXVIII-5-W12-97-2011,YANG201319}.
-    %3-2-1KNNのパラメータ
+    %4-3-1
+    \revised{Eigenvalues ${\lambda}_i$, $i=[1, 3]$ yield $a_{1D}=\frac{\sqrt{{\lambda}_1}-\sqrt{{\lambda}_2}}{\sqrt{{\lambda}_1}}$, $a_{2D}=\frac{\sqrt{{\lambda}_2}-\sqrt{{\lambda}_3}}{\sqrt{{\lambda}_1}}$, and $a_{3D}=\frac{\sqrt{{\lambda}_3}}{\sqrt{{\lambda}_1}}$ \cite{isprs-archives-XXXVIII-5-W12-97-2011,YANG201319} (Fig.~\ref{features}\subref{dimensionality}).}
+    \begin{deletedblock}
     KNN is performed using the determined parameters. 
-    %3-2-2共分散作成
     Covariance matrices are generated from each point in the point cloud based on KNN. 
-    %3-2-3共分散の固有値を使った、特徴の計算方法
     Eigenvalues are defined as ${\lambda}_i$, $i=[1, 3]$ and the dimensionality features are calculated as $a_{1D}=\frac{\sqrt{{\lambda}_1}-\sqrt{{\lambda}_2}}{\sqrt{{\lambda}_1}}$, $a_{2D}=\frac{\sqrt{{\lambda}_2}-\sqrt{{\lambda}_3}}{\sqrt{{\lambda}_1}}$, and $a_{3D}=\frac{\sqrt{{\lambda}_3}}{\sqrt{{\lambda}_1}}$\cite{isprs-archives-XXXVIII-5-W12-97-2011,YANG201319}. 
-    %3-2-4特徴が点の色で表している点群
     Fig.~\ref{features}\subref{dimensionality} shows the data with the dimensionality features. 
-
-  %3-3Proportion of variance
+    \end{deletedblock}
+  %4-4
   \textit{Proportion of variance} \cite{BRODU2012121}. 
-    %3-3-1KNNのパラメータ
+    %4-4-1
+    \revised{Proportion of variance is $\boldsymbol{v_i}=\frac{{\lambda}_i}{{\lambda}_1+{\lambda}_2+{\lambda}_3}(i=[1, 3])$ (Fig.~\ref{features}\subref{proportion}).}
+    \begin{deletedblock}
     KNN is performed using the determined parameters. 
-    %3-3-2共分散作成
     Covariance matrices are generated from each point in the point cloud based on the KNN. 
-    %3-3-3共分散の固有値を使った、特徴の計算方法
     Eigenvalues are defined as ${\lambda}_i$, $i=[1, 3]$ and the proportion of variance is calculated as $\boldsymbol{v_i}=\frac{{\lambda}_i}{{\lambda}_1+{\lambda}_2+{\lambda}_3}(i=[1, 3])$. 
-    %3-3-4特徴が点の色で表している点
     Fig.~\ref{features}\subref{proportion} shows the data with the proportion of variance. 
-
-  %3-4FPFH
+    \end{deletedblock}
+  %4-5
   \textit{FPFH} \cite{5152473}. 
-    %3-4-1点の選択
+    %4-5-1
+    \revised{Two adjacent points per center point define a Darboux frame; FPFH is computed from frame-based angular relations and concatenated; principal component analysis (PCA) with randomized singular value decomposition reduces the 33-dimensional FPFH to three dimensions (Fig.~\ref{features}\subref{fpfh}).}
+    \begin{deletedblock}
     Two points in a set of points adjacent to each point in the point cloud are chosen on the basis of the parameters \cite{4795593,4650967}. 
-    %3-4-2Darboux frameを使用
     The Darboux frame $u$, $v$, and $w$ are defined by using the two points and normals. 
-    %3-4-3 3つの変数
     Three variables are defined. 
-      %3-4-3-1 1つ目
       The first variable is a dot product vector between the one of the normal and the frame $v$. 
-      %3-4-3-2 2つ目
       The second variable is a unit vector of a dot product vector between the one of a distance vector of two points and the frame $v$. 
-      %3-4-3-3 3つ目
       The third variable is an arctangent function consisting of a dot product vector between the one of the normal and the frame $u$, and a dot product vector between the one of the normal and the frame $w$. 
-      %3-4-4 最終的な特徴抽出
       The FPFH is generated from combinations of a center point and the surrounding points in the point cloud and then several FPFHs are concatenated. 
-    %3-4-5 次元削減
     PCA is used to reduce the dimensions of the FPFH. 
-      %3-4-5-1主成分数・次元削減内容
       PCA is used to reduce the 33-dimensional FPFH to three dimensions.
-      %3-4-5-2SVDソルバ
       The randomized SVD solver is used. 
-    %3-4-6特徴が点の色で表している点
     Fig.~\ref{features}\subref{fpfh} shows the data with the FPFH. 
+    \end{deletedblock}
 
-%4クラスタリング
+%4th paragraph
+%5
 Next, clustering is performed for the point clouds using the point features. 
-
-  %4-1 DBSCAN
+  %5-1
+  \revised{DBSCAN ($\varepsilon=100$, minimum 10 points on 3D coordinates) and k-means ($k=3$) each remove outliers and extraneous clusters \cite{ester1996density,hartigan1979algorithm}.}
+  %5-2
+  \revised{DBSCAN removes isolated noise points from background objects and sensor reflections.}
+  %5-3
+  \revised{k-means partitions the point cloud into fixed spatial groups; extraneous partitions are discarded.}
+  %5-4
+  \revised{Aggressive cluster removal can delete sparse finger points and degrade classification of fine hand postures.}
+  \begin{deletedblock}
   DBSCAN is used to determine the parameters for DBSCAN so as to remove noise in the point cloud and then align circles to each point in the point cloud on the basis of the parameters \cite{ester1996density}.
-    %4-1-1 パラメータ設定
-    The parameters for DBSCAN are set as follows:
-      %4-1-1-1 近傍半径
       The neighborhood radius $\varepsilon$ is 100. 
-      %4-1-1-2 最小点数
       The minimum number of points is 10. 
-      %4-1-1-3 適用座標
       DBSCAN is applied to the three-dimensional coordinates of each point. 
-    %4-1-2コア点と到達可能点
     Points that have more than a certain number of points in the circle centered at the point are defined as ``core'' and points within the radii of the circles that the cores have are defined as ``reachable points''. 
-    %4-1-3外れ値
     Points that are not near to any cores are considered outliers. 
-    %4-1-4外れ値の除去
     The outliers and some of the clusters are removed. 
-
-  %4-2k-means
   k-means is used to determine the number of clusters for k-means so as to remove noise in the point cloud \cite{hartigan1979algorithm}. 
-    %4-2-1クラスタ数
     The number of clusters $k$ was 3.
-    %4-2-2初期化とそのあとの処理
     Each point in the point cloud is randomly assigned to a cluster, and as long as the cluster changes, the following process is repeated. 
-      %4-2-2-1終了までに繰り返す処理
       Specifically, the centroids of each cluster are determined and the cluster to which each point belongs is changed in accordance with the nearest center of the centroids. 
-      %5-2-1-2
-      % We change the cluster to which each point belongs according to the nearest center of the centroids. 
-    %4-2-3余計な点の除去
     The outliers and some of the clusters are removed. 
+  \end{deletedblock}
 
-%5ダウンサンプリング
+%5th paragraph
+%6
 Downsampling is performed for the clustered point clouds. 
 
-%6正規化
+%6th paragraph
+%7
+\revised{Downsampled training point clouds are normalized so that the distance from the center of gravity to the farthest point equals 1.0.}
+\begin{deletedblock}
 Normalization is performed for the downsampled point clouds for the training data. 
-  %6-1重心から一番遠い点の距離
   Here, 1.0 is set as the distance from the center of gravity to the farthest point. 
-  %6-2処理
   The downsampled point clouds are normalized on the basis of this distance. 
+\end{deletedblock}
 
-% %8
-% We perform normalization for the downsampled point clouds to create the evaluation data. 
-%   %8-1
-%   Normalization in the evaluation is adjusted based on the average of the person's height in each item of the training data. 
+%7th paragraph
+%8
+\revised{PointNet++ classifies normalized point clouds by repeatedly selecting points, grouping neighborhoods, and processing each group with PointNet and a fully connected layer \cite{DBLP:journals/corr/QiYSG17}.}
+  %8-1
+  \revised{Two-level grouping in PointNet++ captures hand-scale local structures that distinguish mouse operation, pad operation, typing, and sitting still.}
+\deleted{Classification is performed for the normalized point clouds utilizing PointNet++ to determine the parameters for PointNet++ so as to determine size of the data to process \cite{DBLP:journals/corr/QiYSG17}.}
+  \deleted{The following process is repeated twice: a few points in each point cloud are first chosen, a group formed from each selected point and the surrounding points is created, and then each group is processed using PointNet and a fully connected layer.}
 
-%7PointNet++
-Classification is performed for the normalized point clouds utilizing PointNet++ to determine the parameters for PointNet++ so as to determine size of the data to process \cite{DBLP:journals/corr/QiYSG17}. 
-    %9-1処理
-    The following process is repeated twice: a few points in each point cloud are first chosen, a group formed from each selected point and the surrounding points is created, and then each group is processed using PointNet and a fully connected layer. 
-  
 % \end{spverbatim}
 %6/27 tb ⇒ t
-% \begin{figure}[t]
-%   \centering
-%   {\includegraphics[width=\linewidth]{img/rawdata.png}}
-%   \caption{Raw LiDAR data.}
-%   \label{rawdata}
-% \end{figure}
-
-%6/27 tb ⇒ t
+\begin{deletedblock}
 \begin{figure}[t]
   \centering
   {\includegraphics[width=\linewidth]{img/cutdata.png}}
   \caption{Trimmed data.}
   \label{trimdata}
 \end{figure}
- 
+\end{deletedblock}
+
 %6/27 tb ⇒ t
- \begin{figure}[t]
+\begin{figure}[t]
   \centering
   \subfloat[Normals]{
     \includegraphics[width=.45\linewidth]{img/normal.png}
@@ -192,4 +165,4 @@ Classification is performed for the normalized point clouds utilizing PointNet++
   }
   \caption{Point clouds with each of four types of feature.}
   \label{features}
-\end{figure} 
+\end{figure}

@@ -10,12 +10,17 @@ In another system, environmental variables and the personal physical and mental 
   \revised{Biometric data and workplace environmental data are captured through micro-surveys on mobile and web applications \cite{7106905}.}
   \deleted{This system captures biometric data and workplace environmental data through micro-surveys on mobile and web applications.} 
 
+%1-2 背景から課題への橋渡し
+\revised{Productivity monitoring and employee monitoring require records of desk-work states that change over time.}
+\revised{Desk-work states include mouse operation, trackpad operation, typing, and sitting still without hand movement.}
+\revised{The systems above do not classify these desk-work states from sensor observations of seated workers.}
+
 %1 オフィス効率モニタリングで記録したいもの
-The office-efficiency monitoring requires recording activities of workers in an office that change over time.
+\revised{Office-efficiency monitoring requires recording desk-work activities of workers that change over time.}
 %2 姿勢推定の不十分性
-It is insufficient to monitor only gross postures or presence.
+\revised{Gross postures and presence cannot distinguish mouse operation, trackpad operation, typing, and sitting still at a desk.}
 %3 手元分類の必要性
-Hand-movement classification is necessary for recording the office activities.
+\revised{Hand-movement classification is necessary to record these desk-work activities.}
   %3-1
   Desk work is central to the office activities.
   %3-2
@@ -25,11 +30,10 @@ Hand-movement classification is necessary for recording the office activities.
 %3 手元分類の有用性
 Fine-grained classification of hand movements distinguishes hand-involved work states.
   %3-1
-  The hand-movement classification can distinguish elements of the office activities as follows.
+  \revised{The hand-movement classification supports identification of task switching among desk-work states.}
     %3-1-1 タスク切り替え
-    The distinction supports identification of task switching.
     %3-1-2 実際の仕事時間
-    The distinction supports estimation of actual work duration.
+    \revised{The hand-movement classification supports estimation of actual work duration for each desk-work state.}
 
 %Prior works
 %1 先行研究の取り組み
@@ -70,17 +74,17 @@ The weakness of the prior works is that they cannot perform the hand-movement cl
 %Proposed system
 %1st paragraph
 %1
-\revised{An edge computing system is proposed that classifies the postures of people with hand movement in an office by using a LiDAR sensor network.}
+\revised{This paper proposes a system that classifies the postures of people with hand movement in an office by using a LiDAR sensor network.}
 \deleted{In light of the background, we propose an edge computing system that classifies the postures of people with hand movement in an office by using a LiDAR sensor network.}
   %1-1
   \revised{The system captures, stores, and classifies human postures with hand movement from the LiDAR sensor network.}
   \deleted{Specifically, the proposed system captures human postures with hand movement using the LiDAR sensor network, stores the data, and classifies the data that exhibits human posture.}
 %2
-\revised{Experiments use multiple LiDAR sensors to capture posture patterns from multiple subjects; preprocessing and deep-learning classification vary data type, LiDAR placement, features, and clustering method.}
+\revised{Experiments use multiple LiDAR sensors to capture posture patterns from multiple subjects; preprocessing and deep-learning classification vary point features and clustering method.}
 %3
 The evaluation metric is the ratio of samples correctly classified.
 %4
-Confusion matrices for selected models are presented to show correct-label counts and biases in inferred labels.
+\revised{Test accuracy is reported for twelve combinations of point features and clustering methods.}
 
 %2nd paragraph
 %5

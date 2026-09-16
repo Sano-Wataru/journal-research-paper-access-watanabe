@@ -45,7 +45,7 @@ SCORE: 4 (conditional accept)
 This paper proposes a system that uses a LiDAR sensor network to classify the posture—including hand movements—of people working in an office. Although the reviewer recognizes this paper deals with a useful technology,it has some ambiguous descriptions and some key statements are missing. Please revise the manuscript in the following points.
 
 
-C.1-1
+C.1-1（原稿反映完了）
 1. This study uses LiDAR to investigate movements of human hands. Whilst the introduction mentions the need to measure movements of human hands, it does not refers to the advantages of using LiDAR. Please add descriptions to justify the use of LiDAR for this objective.
 [原因]
 LiDARの技術的背景の記述が欠けている。背景もなく突然、先行研究でLiDARを用いていることが述べられ、査読者はLiDAR採用の妥当性が十分に示されていないと判断した。
@@ -75,7 +75,7 @@ LiDARの技術的背景の記述が欠けている。背景もなく突然、先
 "Their system acquired point cloud data with a small LiDAR unit and classified posture using machine learning on data from a sitting person \cite{9767292}."
 
 
-C.1-2
+C.1-2（原稿反映完了）
 2. The term ‘participants’ is used as subjests. Please revise to modify them to 'experiment participants’.
 [原因]
 実験協力者の呼称を論文中ではsubjectsとしている。一部participantsとなっており、統一もされていない。
@@ -132,7 +132,7 @@ C.1-2
 修正後:
 "The experiments included only one experiment participant."
 
-C.1-3
+C.1-3（原稿反映完了）
 3. In section 4.1, the terms ‘A’ and ‘AB’ are used to refer to test data; these represent data from the experimental participants respectively. Plase add descriptions on how the authors acquired these test data before referring to them.
 [原因]
 記号A-ABは被験者ラベルだが、その定義を行う前にデータセットのラベルとして参照している。査読者は初出時にデータセットのラベルとして扱われた記号が、いつの間にか被験者のラベルとしてつかわれていることを指摘している。

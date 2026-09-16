@@ -11,7 +11,8 @@
 
 %2nd paragraph
 %2
-\revised{Experiments acquired real LiDAR data from 28 test subjects and three training subjects; preprocessing and deep-learning classification varied point features and clustering method.}
+\deleted{Experiments acquired real LiDAR data from 28 test subjects and three training subjects; preprocessing and deep-learning classification varied point features and clustering method.}
+\revised{Experiments acquired real LiDAR data from 28 test experiment participants and three training experiment participants; preprocessing and deep-learning classification varied point features and clustering method.}
 \begin{deletedblock}
 To examine its effectiveness, we acquired real data with LiDAR and performed classification for the data.
   Multiple LiDAR sensors were utilized to capture multiple patterns of human posture from multiple people, and preprocessing, including trimming, feature estimation, clustering, and normalization, was performed before classification.
@@ -45,14 +46,18 @@ We compared confusion matrices of each of classification models and each of test
 %4th paragraph
 %4
 \revised{Test accuracy exceeded the 25\% baseline for four posture classes across all feature and clustering combinations in Table~\ref{accresults}.}
-\revised{Depending on the feature and clustering combination, test accuracy was stable or varied across test subjects in Table~\ref{accresults}.}
-\revised{For normals, no clustering or DBSCAN tended to achieve higher accuracy than k-means across test subjects.}
+\deleted{Depending on the feature and clustering combination, test accuracy was stable or varied across test subjects in Table~\ref{accresults}.}
+\revised{Depending on the feature and clustering combination, test accuracy was stable or varied across test experiment participants in Table~\ref{accresults}.}
+\deleted{For normals, no clustering or DBSCAN tended to achieve higher accuracy than k-means across test subjects.}
+\revised{For normals, no clustering or DBSCAN tended to achieve higher accuracy than k-means across test experiment participants.}
 \revised{Classification using normals yielded comparatively stable test accuracy in Table~\ref{accresults}.}
-\revised{Dimensionality features resulted in higher accuracies than the other three feature types for several test subjects outside the training set in Table~\ref{accresults}.}
+\deleted{Dimensionality features resulted in higher accuracies than the other three feature types for several test subjects outside the training set in Table~\ref{accresults}.}
+\revised{Dimensionality features resulted in higher accuracies than the other three feature types for several test experiment participants outside the training set in Table~\ref{accresults}.}
 \deleted{Test accuracy exceeded the 25\% baseline for four posture classes across feature and clustering combinations; normals without clustering or DBSCAN yielded stable accuracy, and no clustering or DBSCAN outperformed k-means.}
   %4-1
-  \revised{Test accuracy remained below 1.0 for several test subjects and preprocessing combinations in Table~\ref{accresults}.}
-  \deleted{Test accuracy above the 25\% baseline confirms generalization beyond the three training subjects for four desk postures.}
+  \deleted{Test accuracy remained below 1.0 for several test subjects and preprocessing combinations in Table~\ref{accresults}.}
+  \revised{Test accuracy remained below 1.0 for several test experiment participants and preprocessing combinations in Table~\ref{accresults}.}
+  \deleted{Test accuracy above the 25\% baseline confirms generalizattion beyond the three training subjects for four desk postures.}
 %5
 \deleted{Misclassification between typing and pad operation occurred when both hands rested near the keyboard and trackpad with similar point-cloud layouts.}
   %5-1

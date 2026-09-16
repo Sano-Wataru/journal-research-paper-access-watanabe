@@ -39,13 +39,28 @@ Fine-grained classification of hand movements distinguishes hand-involved work s
     \revised{The hand-movement classification supports estimation of actual work duration for each desk-work state.}
 
 %4th paragraph
+%1 LiDARが室内の人・物体の動きを3D取得
+\begin{revisedblock}
+Light detection-and-ranging (LiDAR) acquires 3D data for recognizing indoor movements of people and objects \cite{9795869,oka2021spatial,10159661}.
+%2 複数LiDARの利点
+Multiple LiDAR sensors provide the following benefits \cite{oka2021spatial,10159661}.
+  %2-1 死角なし
+  The sensors cover indoor spaces without blind spots.
+  %2-2 点密度
+  Integration of multi-view point-cloud data increases point density.
+  %2-3 全面
+  Multi-view integration captures the full surface of a person.
+\end{revisedblock}
+
+%5th paragraph
 %Prior works
 %1 先行研究の取り組み
 Prior works focused on identifying human body orientation and general human postures.
 %2 姿勢認識や身体の向き推定の研究
 Katayama et al. reported that point clouds can be utilized to classify human posture and presented a system for posture recognition and tracking \cite{9767292}. 
     %2-1
-    \revised{Their system acquired point cloud data with a small light detection-and-ranging (LiDAR) unit and classified posture using machine learning on data from a sitting person \cite{9767292}.}
+    \deleted{Their system acquired point cloud data with a small light detection-and-ranging (LiDAR) unit and classified posture using machine learning on data from a sitting person \cite{9767292}.}
+    \revised{Their system acquired point cloud data with a small LiDAR unit and classified posture using machine learning on data from a sitting person \cite{9767292}.}
     \begin{deletedblock}
     Their system used a small light detection-and-ranging (LiDAR) to acquire point cloud data and then classified posture from the point cloud data using machine learning. 
     In their study, they acquired point cloud data from a sitting person and evaluated human orientation estimation utilizing 2D-CNN. 
@@ -54,19 +69,22 @@ Katayama et al. reported that point clouds can be utilized to classify human pos
     \revised{Human orientation estimation was evaluated utilizing two-dimensional convolutional neural network (2D-CNN), not hand-involved desk postures.}
     \deleted{In their study, they acquired point cloud data from a sitting person and evaluated human orientation estimation utilizing 2D-CNN.}
     %2-3
-    \revised{The experiments included only one participant.}
+    \deleted{The experiments included only one participant.}
+    \revised{The experiments included only one experiment participant.}
     \deleted{However, their experiments were limited in that only one participant was included.} 
 %3 歩行者の姿勢推定の研究
 Glandon et al. reported that point clouds can be utilized for human identification and presented a system for posture estimation using data captured from walking people \cite{8852370}. 
     %3-1
-    \revised{Their system extracted a silhouette, estimated body joints, and classified posture from joint features using 3D LiDAR videos of walking subjects \cite{8852370}.}
+    \deleted{Their system extracted a silhouette, estimated body joints, and classified posture from joint features using 3D LiDAR videos of walking subjects \cite{8852370}.}
+    \revised{Their system extracted a silhouette, estimated body joints, and classified posture from joint features using 3D LiDAR videos of walking experiment participants \cite{8852370}.}
     \begin{deletedblock}
     Their system extracted a silhouette from a point cloud and then estimates the joints of a body from the silhouette. 
     Features from each joint are extracted and utilized to classify human posture. 
     Although they used 3D LiDAR videos of human subjects walking around a room to perform the human posture classification, the study did not specify that the data was actually captured using LiDAR.
     \end{deletedblock}
     %3-2
-    \revised{Glandon et al. targeted locomotion posture of walking subjects rather than seated hand movements at a desk.}
+    \deleted{Glandon et al. targeted locomotion posture of walking subjects rather than seated hand movements at a desk.}
+    \revised{Glandon et al. targeted locomotion posture of walking experiment participants rather than seated hand movements at a desk.}
 %4 先行研究の課題
 The weakness of the prior works is that they cannot perform the hand-movement classification necessary to distinguish elements of the office activities.
   %4-1
@@ -76,7 +94,7 @@ The weakness of the prior works is that they cannot perform the hand-movement cl
   % The classification model is also needed to handle multiple people. 
 
 %Proposed system
-%5th paragraph
+%6th paragraph
 %1
 \revised{This paper proposes a system that classifies the postures of people with hand movement in an office by using a LiDAR sensor network.}
 \deleted{In light of the background, we propose an edge computing system that classifies the postures of people with hand movement in an office by using a LiDAR sensor network.}
@@ -84,7 +102,8 @@ The weakness of the prior works is that they cannot perform the hand-movement cl
   \revised{The system captures, stores, and classifies human postures with hand movement from the LiDAR sensor network.}
   \deleted{Specifically, the proposed system captures human postures with hand movement using the LiDAR sensor network, stores the data, and classifies the data that exhibits human posture.}
 %2
-\revised{Experiments use multiple LiDAR sensors to capture posture patterns from multiple subjects; preprocessing and deep-learning classification vary point features and clustering method.}
+\deleted{Experiments use multiple LiDAR sensors to capture posture patterns from multiple subjects; preprocessing and deep-learning classification vary point features and clustering method.}
+\revised{Experiments use multiple LiDAR sensors to capture posture patterns from multiple experiment participants; preprocessing and deep-learning classification vary point features and clustering method.}
 %3
 The evaluation metric is the ratio of samples correctly classified.
 %4

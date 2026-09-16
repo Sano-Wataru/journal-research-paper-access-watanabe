@@ -48,19 +48,32 @@ This paper proposes a system that uses a LiDAR sensor network to classify the po
 C.1-1
 1. This study uses LiDAR to investigate movements of human hands. Whilst the introduction mentions the need to measure movements of human hands, it does not refers to the advantages of using LiDAR. Please add descriptions to justify the use of LiDAR for this objective.
 [原因]
-1節「Introduction」は手元分類の必要性を述べ、提案で LiDAR sensor network を使うと宣言している。LiDAR を選ぶ利点（カメラとの差、照明、プライバシー、3次元形状の取得など）は書かれていない。
+LiDARの技術的背景の記述が欠けている。背景もなく突然、先行研究でLiDARを用いていることが述べられ、査読者はLiDAR採用の妥当性が十分に示されていないと判断した。
 
-1節「Introduction」3段落目
-"Hand-movement classification is necessary to record these desk-work activities."
-手元分類の必要性
+1節「Introduction」3段落目末尾（手分類の必要性）、4段落目先頭の間にLiDARの技術的背景がない。
 
-1節「Introduction」5段落目
-"This paper proposes a system that classifies the postures of people with hand movement in an office by using a LiDAR sensor network."
-LiDAR sensor networkを使うことの宣言
+[修正案]
+以下をLiDARの技術背景として追記する。
+・死角をカバーできる
+・点群の高密度を確保できる
+・物体の全面を捉えられる
+
+略語展開を追記段落へ移す。
+
+1節「Introduction」3段落目末尾と4段落目先頭の間
+新段落として追記:
+"Light detection-and-ranging (LiDAR) acquires 3D data for recognizing indoor movements of people and objects \cite{9795869,oka2021spatial,10159661}."
+"Multiple LiDAR sensors provide the following benefits \cite{oka2021spatial,10159661}."
+  "The sensors cover indoor spaces without blind spots."
+  "Integration of multi-view point-cloud data increases point density."
+  "Multi-view integration captures the full surface of a person."
 
 1節「Introduction」4段落目
-"Their system acquired point cloud data with a small light detection-and-ranging (LiDAR) unit and classified posture using machine learning on data from a sitting person."
-ここは先行研究の手法紹介であり、本研究が LiDAR を採用する根拠ではない。
+修正前:
+"Their system acquired point cloud data with a small light detection-and-ranging (LiDAR) unit and classified posture using machine learning on data from a sitting person \cite{9767292}."
+修正後:
+"Their system acquired point cloud data with a small LiDAR unit and classified posture using machine learning on data from a sitting person \cite{9767292}."
+
 
 C.1-2
 2. The term ‘participants’ is used as subjests. Please revise to modify them to 'experiment participants’.
@@ -83,63 +96,129 @@ C.1-2
 "The experiments included only one participant."
 表記ゆれ: participant
 
+[修正案]
+実験協力者の呼称を experiment participants に統一する。
+・subjects を experiment participants に置換する
+・contributors を experiment participants に置換する
+・participant を experiment participant に置換する
+
+4節「Experiment setup」subsection「Data acquisition」subsubsection「Training data acquisition」4段落目
+修正前:
+"The three subjects in this study are denoted as subjects A, B, and C."
+"Training data with subjects A, B, and C is called training data A, B, and C."
+修正後:
+"The three experiment participants in this study are denoted as experiment participants A, B, and C."
+"Training data with experiment participants A, B, and C is called training data A, B, and C."
+
+4節「Experiment setup」subsection「Data acquisition」subsubsection「Test data acquisition」2段落目
+修正前:
+"The 28 subjects in this study are denoted as subjects A to AB."
+"Test data with subjects A to AB is called test data A to AB."
+修正後:
+"The 28 experiment participants in this study are denoted as experiment participants A to AB."
+"Test data with experiment participants A to AB is called test data A to AB."
+
+4節「Experiment setup」subsection「Experimental system」2段落目
+修正前:
+"3 contributors provided training data."
+"28 contributors provided test data."
+修正後:
+"3 experiment participants provided training data."
+"28 experiment participants provided test data."
+
+1節「Introduction」4段落目
+修正前:
+"The experiments included only one participant."
+修正後:
+"The experiments included only one experiment participant."
+
 C.1-3
 3. In section 4.1, the terms ‘A’ and ‘AB’ are used to refer to test data; these represent data from the experimental participants respectively. Plase add descriptions on how the authors acquired these test data before referring to them.
 [原因]
-"A" / "AB" が、取得方法の説明より先に出ている。4.1 で装置と日付の説明に "test data A, B, and C" と "test data A to AB" を使い、誰のどのデータかは 4.3.2 まで書かれない。
+記号A-ABは被験者ラベルだが、その定義を行う前にデータセットのラベルとして参照している。査読者は初出時にデータセットのラベルとして扱われた記号が、いつの間にか被験者のラベルとしてつかわれていることを指摘している。
 
 4節「Experiment setup」subsection「Experimental system」1段落目
 "An NVIDIA Jetson Xavier NX edge computer was used for training data and test data A, B, and C acquisition."
 "An NVIDIA Jetson Orin nano edge computer was used for test data A to AB acquisition."
-4節「Experiment setup」subsection「Experimental system」2段落目
-"Training data and test data A, B, and C were acquired on 9 December 2022."
-"Test data A to AB were acquired on 12 December 2024."
-用語の初出位置。A, B, C...が被験者であることは明示されていない。単にデータの名称として扱われている。
+記号A-ABの初出。この位置にデータセットラベルとして、記号A-ABを使うのは誤り。
 
-取得の定義は後続の 4節「Experiment setup」subsection「Data acquisition」subsubsection「Test data acquisition」2段落目
+4節「Experiment setup」subsection「Data acquisition」subsubsection「Test data acquisition」2段落目
 "The 28 subjects in this study are denoted as subjects A to AB."
 "Test data with subjects A to AB is called test data A to AB."
-ここで被験者であることが明示される。
+ここで初めて被験者ラベルとして記号A-ABを使うべき。
+
+[修正案]
+4.1では記号A-ABをデータセットラベルとして使わない。人数も識別子にしない。
+・装置の説明では日付で区別する
+・日付の説明では取得対象（training / test）と日付で区別する
+
+被験者数と被験者ラベルの初出は4.3に残す。呼称はC.1-2に従う。
+
+4節「Experiment setup」subsection「Experimental system」1段落目
+修正前:
+"An NVIDIA Jetson Xavier NX edge computer was used for training data and test data A, B, and C acquisition."
+"An NVIDIA Jetson Orin nano edge computer was used for test data A to AB acquisition."
+修正後:
+"An NVIDIA Jetson Xavier NX edge computer was used for training data and test data acquisition on 9 December 2022."
+"An NVIDIA Jetson Orin nano edge computer was used for test data acquisition on 12 December 2024."
+
+4節「Experiment setup」subsection「Experimental system」2段落目
+修正前:
+"Training data and test data A, B, and C were acquired on 9 December 2022."
+"Test data A to AB were acquired on 12 December 2024."
+修正後:
+"Training data and test data were acquired on 9 December 2022."
+"Test data were acquired on 12 December 2024."
+
+4節「Experiment setup」subsection「Experimental system」2段落目
+修正前:
+"3 contributors provided training data."
+"28 contributors provided test data."
+修正後:
+削除する。人数は4.3のラベル定義に残す。
 
 C.1-4
 4. In Section 4.5 ‘Evaluation metric’, the classification models were trained using data obtained from three experimental participants; however, there are no descriptionis on how these three participants were selected. Please add details on the criteria of participants selection with the discussions on whether changing to other criteria would affect the results.
 [原因]
-データを取得した被験者の選定基準がない。基準を変えた場合に結果が変わるかの議論もない。
-
-4節「Experiment setup」subsection「Evaluation metric」1段落目
-"The classification models trained using the augmented data from three subjects were evaluated using the test data from twenty-eight subjects."
-コメントで指摘されている箇所
-
-4節「Experiment setup」subsection「Data acquisition」subsubsection「Training data acquisition」4段落目
-"The three subjects in this study are denoted as subjects A, B, and C."
-"Training data with subjects A, B, and C is called training data A, B, and C."
-データ取得の箇所
+テストデータ28名に対して、学習データ3名は人数が少なく、選定基準の影響があると査読者は判断した。そのため、査読者は学習データ3名の選定基準を求めている。
 
 4節「Experiment setup」subsection「Experimental system」2段落目
-"3 contributors provided training data. 28 contributors provided test data."
-training data, test dataの初出箇所
+"3 contributors provided training data."
+3人の被験者の初出。ここに選定基準の記述がない。
 
-いずれも人数のみの記述となっていて、選定基準に関する記述はない。
+[修正案]
+協力者31名の選定基準を明示する。
+・年齢帯は20代
+・日常的にPCを使うこと
+学習データ3名は31名から無作為抽出とする。
+呼称はC.1-2に従う。
 
+4節「Experiment setup」subsection「Data acquisition」冒頭（subsubsection「Training data acquisition」の前）
+新段落として追記:
+"We selected 31 experiment participants."
+  "The 31 experiment participants were in their 20s."
+  "The 31 experiment participants used a PC daily."
+
+4節「Experiment setup」subsection「Data acquisition」subsubsection「Training data acquisition」4段落目
+修正前:
+"The three subjects in this study are denoted as subjects A, B, and C."
+"Training data with subjects A, B, and C is called training data A, B, and C."
+修正後:
+"We randomly sampled three experiment participants from the 31 experiment participants."
+"The three experiment participants in this study are denoted as experiment participants A, B, and C."
+"Training data with experiment participants A, B, and C is called training data A, B, and C."
 
 C.1-5
 5. The positions of Figure 5 (c) ‘Proportion of variances’ and (d) ‘FPFH’ are reversed. Please swap them.
 [原因]
-5節「Evaluation」subsection「Validation results」の Figure 5 の並びが (a),(b),(d),(c)となっている。
- が対象。査読者は (c) と (d) の位置が逆だと判断した。
+5節「Evaluation」subsection「Validation results」右ページの Figure 5 の並びが 上から(a),(b),(d),(c)となっている。図とラベルは対応しているが、順番通りになっていない。
+査読者はラベルを順番通りにするように指摘している。
 
-5節「Evaluation」subsection「Validation results」Figure 5 キャプション
-"(c) Proportion of variances"
-"(d) FPFH"
-"Classification accuracies of validation."
-
-現行ソースでは (c) に Accuracies_of_validation_POV.png、(d) に Accuracies_of_validation_FPFH.png を割り当てている。本文の言及順も (c) POV → (d) FPFH。
-
-5節「Evaluation」subsection「Validation results」2段落目
-"For proportion of variance (Fig. 5(c)), validation accuracy remained high with a similar k-means decrease."
-"For FPFH (Fig. 5(d)), validation accuracy remained high; DBSCAN showed larger epoch-to-epoch variation than the other clustering settings."
-
-指摘は組版後 PDF での (c)/(d) の見え方、または投稿版での図の割り当てに対するもの。
+[修正案]
+5節「Evaluation」subsection「Validation results」Figure 5
+Figure 5 の下段で (c) と (d) の位置を入れ替える。
+・図とキャプションの対応は変えない
+・本文の Fig. 5(c) / Fig. 5(d) の参照は変えない
 
 C.1-6
 In addtion, in discussions of these results, please clarify the level of accuracy that would be considered sufficient to indicate that the model has been sufficiently trained.
@@ -175,6 +254,9 @@ C.1-7
 [原因]
 5節「Evaluation」末尾
 5節で参照した表の後に、6節「Conclusion」を置くようにしているため、5節の末尾に空白が生じている。査読者はこの空白が不適切であると判断した。
+
+[修正案]
+6節「Conclusion」を5節本文の直後から開始し、5ページ右段の空白を埋める。
 
 ----------------------- REVIEW 2 ---------------------
 
@@ -216,39 +298,54 @@ It should be correctly "4:1 training/validation split is performed randomly over
 "4:1 training/validation split is performed randomly over frames, overload trials, and subjects."
 に相当する情報がない。
 
+[修正案]
+以下を記述する。
+・分割はフレーム単位である。
+・3人の被験者それぞれでフレームの 4/5 を training、1/5 を validation に分ける。
+
+4節「Experiment setup」subsection「Processing of proposed system」2段落目
+修正前:
+"Data were split 4:1 for training and validation; multi-scale grouping (MSG) formed PointNet++ groups."
+修正後:
+"We split frames of each of the three experiment participants at a ratio of 4:1."
+  "Four fifths of the frames were used for training."
+  "One fifth of the frames were used for validation."
+"Multi-scale grouping (MSG) formed PointNet++ groups."
+
 C.2-3
 - Please explain whether validation data includes the same subjects as the training data.  Although the validation accuracy in Fig. 5 is nearly 100%, the test accuracy in table 2 is much lower and varies across subjects.
 [原因]
-validation が学習と同一の 3 被験者由来かが明示されていない。分割は学習用データに対する 4:1 であり、test は 28 名で精度が下がる。この差の説明がない。
-
-4節「Experiment setup」subsection「Processing of proposed system」1段落目
-"PointCutMix augmented normalized training data by replacing the top λ% of nearest-neighbor-matched points between three point clouds A, B, and C"
+validationに用いたデータが明示されていない。
+査読者はvalidationがほぼ100%に対して、testの精度が低く被験者ごとにばらついている。そのため、trainingとvalidationが同じ被験者ではないかと推測している。
 
 4節「Experiment setup」subsection「Processing of proposed system」2段落目
 "Data were split 4:1 for training and validation;"
-この直前までが A, B, C の学習データ処理なので、validation も同一 3 名からの分割と読める。同一被験者を含むかは書いていない。
+Dataが指しているのが学習データの3名なのかが不明。査読者は学習用3名のデータを分けたと判断した。
 
-5節「Evaluation」subsection「Validation results」1段落目
-"Fig. 5 shows validation accuracy per epoch for each feature type; each subfigure plots three lines for no clustering, DBSCAN, and k-means."
-validationの精度は各特徴でほぼ100%に近い。
+[修正案]
+C.2-2の修正で対応可能
 
 C.2-4
 - Although the current comparison shows which feature/clustering combination works better, it does not show whether the proposed feature extraction and clustering are necessary.
 Please add at least one stronger baseline method, for example, pointnet++ using raw XYZ coordinates without additional features or PointNet/PointNet++ without clustering would be appropriate.
 [原因]
-比較は 4 特徴 × 3 クラスタリング（None / DBSCAN / k-means）の 12 条件で行っている。査読者の指摘する特徴抽出なしの raw XYZ、および PointNet（++ でない）の baseline がない。baselineがないため、特徴量、PointNet++の有効性が示せていないと判断された。
-None はクラスタリングなしであり、追加特徴抽出なしではない。
+比較は追加4特徴 × 3クラスタリング（None / DBSCAN / k-means）の12条件である。12条件はすべて追加特徴付きであり、raw XYZ入力の条件はない。12条件を比較の全体として出しており、raw XYZを置かない理由もない。Noneはクラスタリングなしであり、追加特徴なしではない。
 
-5節「Evaluation」subsection「Accuracy」1段落目
-"Table 2 shows the accuracy for all twelve combinations of features and clustering methods used."
+4節「Experiment setup」subsection「Processing of proposed system」1段落目
+"Processing followed Section 3: two vertices defined each person region for trimming; Open3D extracted normals, dimensionality features, proportion of variance, and FPFH."
+（実験入力が4特徴だと書いてあり、raw XYZ条件も省略理由もない）
 
-3節「Proposed system」subsection「Methodology」3段落目
-"Four types of features are extracted from the trimmed point clouds: normals, dimensionality features, proportion of variance, and FPFH."
-raw XYZ のみの条件はない。
+[修正案]
+点座標のみは評価しないと追記する。理由は、既存研究で点座標と点特徴を併用した方が点座標のみより精度が高いことがすでに示されているため。
 
-2節「Related works」subsection「Model architecture」5段落目
-"PointNet++ is adopted in the proposed system because hierarchical grouping extracts local geometry from sparse desk-region point clouds without voxelization."
-分類器は PointNet++ に固定。PointNet との比較はない。
+4節「Experiment setup」subsection「Processing of proposed system」1段落目
+修正前:
+"Processing followed Section 3.2: two vertices defined each person region for trimming; Open3D extracted normals, dimensionality features, proportion of variance, and FPFH."
+修正後:
+"Processing followed Section 3.2: two vertices defined each person region for trimming; Open3D extracted normals, dimensionality features, proportion of variance, and FPFH."
+"We do not evaluate point coordinates only on the basis of the comparison in existing research \cite{DBLP:journals/corr/QiYSG17}."
+  "The research evaluated point coordinates only and point coordinates with point features."
+  "The research reported higher accuracy with point coordinates and point features than with point coordinates only."
 
 Additional comments:
 
@@ -257,6 +354,14 @@ C.2-5
 [原因]
 論文冒頭　著者名・論文末尾 biography
 査読者は著者名が"Trovator"となっており、biographyの"Trovato" が食い違っていると指摘。原稿上の著者名のスペルミス。
+
+[修正案]
+論文冒頭の著者リストを修正する。
+
+修正前:
+"GABRIELE TROVATOR"
+修正後:
+"GABRIELE TROVATO"
 
 C.2-6
 - some typos and english grammar existed in the manuscript.
@@ -277,6 +382,36 @@ Expeirmental -> Experimental
 Electric/Electrical
 学部名の綴りが論文内で一致していない。
 
+[修正案]
+誤綴りと表記ゆれを直す。原稿全体も再校する。
+・著者名 Trovator は C.2-5 に従う
+・4.1 の見出し Expeirmental を Experimental にする
+・biography の大学院名を Electrical Engineering and Computer Science に統一する
+
+4節「Experiment setup」subsection「Experimental system」見出し
+修正前:
+"Expeirmental system"
+修正後:
+"Experimental system"
+
+論文末尾 biography 1番目（Wataru Sano）
+修正前:
+"Graduate School of Electric Engineering and Computer Science"
+修正後:
+"Graduate School of Electrical Engineering and Computer Science"
+
+論文末尾 biography 3番目（Haruma Shiraishi）
+修正前:
+"Graduate School of Electric Engineering and Computer Science"
+修正後:
+"Graduate School of Electrical Engineering and Computer Science"
+
+論文末尾 biography 4番目（Ryusei Sugano）
+修正前:
+"Graduate School of Electric Engineering and Computer Science"
+修正後:
+"Graduate School of Electrical Engineering and Computer Science"
+
 C.2-7
 - check again the reference, in section 2.1, the authors stated "... presented PointNet [11]. But the reference [11] is not the PointNet paper.
 [原因]
@@ -289,3 +424,8 @@ PointNet の初出引用が PointNet 論文ではない。[11]は多クラス分
 2節「Related works」subsection「Model architecture」5段落目
 "PointNet++ is adopted in the proposed system because hierarchical grouping extracts local geometry from sparse desk-region point clouds without voxelization [21]."
 ここでの引用は正しくPointNet++の論文を引用している。
+
+[修正案]
+2節「Related works」subsection「Model architecture」2段落目
+"Qi et al. presented PointNet [11]."
+PointNet の初出引用を PointNet 論文に差し替える。

@@ -2,6 +2,12 @@
 %1st paragraph
 %1
 \revised{Processing followed Section~\ref{sec:method}: two vertices defined each person region for trimming; Open3D extracted normals, dimensionality features, proportion of variance, and FPFH \cite{zhou2018open3d}.}
+  %1-1 点座標のみは評価しない
+  \revised{We do not evaluate point coordinates only on the basis of the comparison in existing research \cite{DBLP:journals/corr/QiYSG17}.}
+    %1-1-1
+    \revised{The research evaluated point coordinates only and point coordinates with point features.}
+    %1-1-2
+    \revised{The research reported higher accuracy with point coordinates and point features than with point coordinates only.}
 \begin{deletedblock}
 In our experiment, the proposed system was processed according to the methodology described in Section~\ref{sec:method}.
   Two vertices of the region where a person is located were determined and then the point clouds were trimmed. 
@@ -10,7 +16,7 @@ The features were generated using the process explained in Section~\ref{sec:meth
   The covariances were generated and then the dimensionality features and the proportion of variance were calculated. 
   The FPFH estimator from Open3D was utilized and the FPFH values were stored in a separate file from the coordinate data. 
 \end{deletedblock}
-  %1-1
+  %1-2
   \revised{DBSCAN and k-means removed outliers as in Section~\ref{sec:method}; point counts were adjusted to 4,096 after clustering and downsampling \cite{pytorchpointnet++}.}
   \begin{deletedblock}
   The data were clustered using the process explained in Section~\ref{sec:method}. 
@@ -18,11 +24,11 @@ The features were generated using the process explained in Section~\ref{sec:meth
     Some clusters were also removed after performing k-means. 
   After the clustering and downsampling, the number of points in each point cloud was adjusted to 4,096, which is the default value of the Github repository \cite{pytorchpointnet++}. 
   \end{deletedblock}
-  %1-2
-  Normalization was performed using different values for each point cloud dataset used for the training. 
   %1-3
+  Normalization was performed using different values for each point cloud dataset used for the training. 
+  %1-4
   \revised{PointCutMix augmented normalized training data by replacing the top $\lambda$\% of nearest-neighbor-matched points between three point clouds A, B, and C, with $\lambda$ drawn from a beta distribution \cite{ZHANG202258}.}
-  %1-3-1
+  %1-4-1
   \deleted{PointCutMix increases shape diversity among training samples and improves robustness to subject-dependent point-cloud density.}
   \revised{PointCutMix increases shape diversity among training samples and improves robustness to experiment-participant-dependent point-cloud density.}
   \begin{deletedblock}
@@ -40,7 +46,16 @@ The features were generated using the process explained in Section~\ref{sec:meth
 
 %2nd paragraph
 %2
-\revised{Data were split 4:1 for training and validation; multi-scale grouping (MSG) formed PointNet++ groups \cite{pytorchpointnet++,PytorchPointnetPointnet2}.}
+\deleted{Data were split 4:1 for training and validation; multi-scale grouping (MSG) formed PointNet++ groups \cite{pytorchpointnet++,PytorchPointnetPointnet2}.}
+\begin{revisedblock}
+We split frames of each of the three experiment participants at a ratio of 4:1.
+  %2-1
+  Four fifths of the frames were used for training.
+  %2-2
+  One fifth of the frames were used for validation.
+%3
+Multi-scale grouping (MSG) formed PointNet++ groups \cite{pytorchpointnet++,PytorchPointnetPointnet2}.
+\end{revisedblock}
 \begin{deletedblock}
 The remaining data were split into 4:1 for the training and validation. 
 Multi-scale grouping (MSG) was used to create groups in PointNet++, as based on prior methods \cite{pytorchpointnet++,PytorchPointnetPointnet2}.

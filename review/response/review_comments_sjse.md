@@ -74,6 +74,21 @@ LiDARの技術的背景の記述が欠けている。背景もなく突然、先
 修正後:
 "Their system acquired point cloud data with a small LiDAR unit and classified posture using machine learning on data from a sitting person \cite{9767292}."
 
+R.1-1
+We have added the technical background of LiDAR and the advantages of multiple LiDAR sensors. We have modified the expansion of the LiDAR abbreviation.
+We have added the fourth paragraph in Section 1. We have modified the fifth paragraph in Section 1.
+We made this modification because the justification for using LiDAR was insufficient.
+
+(Fourth paragraph, Section 1)
+Light detection-and-ranging (LiDAR) acquires 3D data for recognizing indoor movements of people and objects [9], [10], [11].
+Multiple LiDAR sensors provide the following benefits [10], [11].
+The sensors cover indoor spaces without blind spots.
+Integration of multi-view point-cloud data increases point density.
+Multi-view integration captures the full surface of a person.
+[9] Z. Sun, Q. Ke, H. Rahmani, M. Bennamoun, G. Wang, and J. Liu, ‘‘Human action recognition from various data modalities: A review,’’ IEEE Transactions on Pattern Analysis and Machine Intelligence, pp. 1–20, 2022.
+[10] M. Oka, R. Shinkuma, T. Sato, E. Oki, T. Iwai, K. Nihei, E. Takahashi, D. Kanetomo, and K. Satoda, ‘‘Spatial feature-based prioritization for transmission of point cloud data in 3D-image sensor networks,’’ IEEE Sensors Journal, vol. 21, no. 20, pp. 23145–23161, 2021.
+[11] K. Akiyama, K. Azuma, R. Shinkuma, and J. Shiomi, ‘‘Real-Time Adaptive Data Transmission Against Various Traffic Load in Multi-LIDAR Sensor Network for Indoor Monitoring,’’ IEEE Sensors Journal, vol. 23, no. 15, pp. 17676–17689, 2023.
+
 
 C.1-2（原稿反映完了）
 2. The term ‘participants’ is used as subjests. Please revise to modify them to 'experiment participants’.
@@ -132,6 +147,22 @@ C.1-2（原稿反映完了）
 修正後:
 "The experiments included only one experiment participant."
 
+R.1-2
+We have modified the terms subjects, participants, and contributors to experiment participants.
+We have modified the fifth paragraph in Section 1, the fourth paragraph in Section 4.3.1, and the second paragraph in Section 4.3.2.
+We made this modification because the terminology referring to experiment participants was not unified.
+
+(Fifth paragraph, Section 1)
+The experiments included only one experiment participant.
+
+(Fourth paragraph, Section 4.3.1)
+The three experiment participants in this study are denoted as experiment participants A, B, and C.
+Training data with experiment participants A, B, and C is called training data A, B, and C.
+
+(Second paragraph, Section 4.3.2)
+The 28 experiment participants in this study are denoted as experiment participants A to AB.
+Test data with experiment participants A to AB is called test data A to AB.
+
 C.1-3（原稿反映完了）
 3. In section 4.1, the terms ‘A’ and ‘AB’ are used to refer to test data; these represent data from the experimental participants respectively. Plase add descriptions on how the authors acquired these test data before referring to them.
 [原因]
@@ -177,7 +208,20 @@ C.1-3（原稿反映完了）
 修正後:
 削除する。人数は4.3のラベル定義に残す。
 
-C.1-4
+R.1-3
+We have modified the descriptions of training data and test data in to distinguish the data by acquisition dates. We have deleted the labels A to AB from the descriptions of the data.
+We have modified the first paragraph and the second paragraph in Section 4.1.
+We made this modification because it was ambiguous whether the labels A to AB referred to datasets or to experiment participants.
+
+(First paragraph, Section 4.1)
+An NVIDIA Jetson Xavier NX edge computer was used for training data and test data acquisition on 9 December 2022.
+An NVIDIA Jetson Orin nano edge computer was used for test data acquisition on 12 December 2024.
+
+(Second paragraph, Section 4.1)
+Training data and test data were acquired on 9 December 2022.
+Test data were acquired on 12 December 2024.
+
+C.1-4（原稿反映完了）
 4. In Section 4.5 ‘Evaluation metric’, the classification models were trained using data obtained from three experimental participants; however, there are no descriptionis on how these three participants were selected. Please add details on the criteria of participants selection with the discussions on whether changing to other criteria would affect the results.
 [原因]
 テストデータ28名に対して、学習データ3名は人数が少なく、選定基準の影響があると査読者は判断した。そのため、査読者は学習データ3名の選定基準を求めている。
@@ -193,7 +237,7 @@ C.1-4
 学習データ3名は31名から無作為抽出とする。
 呼称はC.1-2に従う。
 
-4節「Experiment setup」subsection「Data acquisition」冒頭（subsubsection「Training data acquisition」の前）
+4節「Experiment setup」subsection「Data acquisition」subsubsection「Training data acquisition」1段落目の前
 新段落として追記:
 "We selected 31 experiment participants."
   "The 31 experiment participants were in their 20s."
@@ -208,7 +252,34 @@ C.1-4
 "The three experiment participants in this study are denoted as experiment participants A, B, and C."
 "Training data with experiment participants A, B, and C is called training data A, B, and C."
 
-C.1-5
+4節「Experiment setup」subsection「Data acquisition」subsubsection「Test data acquisition」2段落目
+修正前:
+"The 28 experiment participants in this study are denoted as experiment participants A to AB."
+"Test data with experiment participants A to AB is called test data A to AB."
+修正後:
+"We used 28 experiment participants from the 31 experiment participants."
+  "The 28 experiment participants were not sampled for training."
+"The 28 experiment participants in this study are denoted as experiment participants A to AB."
+"Test data with experiment participants A to AB is called test data A to AB."
+
+R.1-4
+We have added the selection criteria for the 31 experiment participants. We have added that three experiment participants for training were randomly sampled from the 31 experiment participants. We have added that the 28 experiment participants for testing were not sampled for training.
+We have added the first paragraph in Section 4.3.1. We have modified the fifth paragraph in Section 4.3.1. We have modified the second paragraph in Section 4.3.2.
+We made this modification because the selection criteria were unclear. The impact of the selection criteria on the results was difficult to judge.
+
+(First paragraph, Section 4.3.1)
+We selected 31 experiment participants.
+The 31 experiment participants were in their 20s.
+The 31 experiment participants used a PC daily.
+
+(Fifth paragraph, Section 4.3.1)
+We randomly sampled three experiment participants from the 31 experiment participants.
+
+(Second paragraph, Section 4.3.2)
+We used 28 experiment participants from the 31 experiment participants.
+The 28 experiment participants were not sampled for training.
+
+C.1-5（原稿反映完了）
 5. The positions of Figure 5 (c) ‘Proportion of variances’ and (d) ‘FPFH’ are reversed. Please swap them.
 [原因]
 5節「Evaluation」subsection「Validation results」右ページの Figure 5 の並びが 上から(a),(b),(d),(c)となっている。図とラベルは対応しているが、順番通りになっていない。
@@ -219,6 +290,11 @@ C.1-5
 Figure 5 の下段で (c) と (d) の位置を入れ替える。
 ・図とキャプションの対応は変えない
 ・本文の Fig. 5(c) / Fig. 5(d) の参照は変えない
+
+R.1-5
+We have modified the positions of Figure 5 (c) and (d).
+We have modified Figure 5 in Section 5.1.
+We made this modification because the positions of Figure 5 (c) and (d) were reversed.
 
 C.1-6
 In addtion, in discussions of these results, please clarify the level of accuracy that would be considered sufficient to indicate that the model has been sufficiently trained.
@@ -249,7 +325,40 @@ In addtion, in discussions of these results, please clarify the level of accurac
 "Test accuracy remained below 1.0 for several test subjects and preprocessing combinations in Table 2."
 上限未達の事実であり、十分性の定義ではない。
 
-C.1-7
+[修正案]
+3クラスの結果（pad/typingは似ているため区別せず、3クラスで分類を実施）
+3クラスの結果を網羅的かつ簡潔に本文に追記する。（表の追加は不要）。
+
+5節「Evaluation」subsection「Accuracy」（表の直後に新段落）
+"We treated pad operation and typing as one posture class."
+  "Pad operation and typing are similar in hand placements near the keyboard and trackpad."
+"We evaluated three posture classes: mouse operation, pad-or-typing, and sitting still."
+"The mean three-class accuracy reached 0.90."
+  "Normals with DBSCAN reached a mean three-class accuracy of 0.94."
+"The results indicate that separation of pad operation and typing was difficult in four-class classification."
+
+6節「Conclusion」（4段落目末尾に追記）
+"The mean three-class accuracy reached 0.90."
+"The results indicate that separation of pad operation and typing was difficult in four-class classification."
+
+R.1-6
+We have added three-class classification results that treat pad operation and typing as one posture class. We have added the mean three-class accuracy and the mean three-class accuracy.
+We have added a paragraph after Table 2 in Section 5.2. We have modified the fourth paragraph in Section 6.
+We made this modification because we could not clearly show that sufficient model training had been achieved.
+
+(Paragraph after Table 2, Section 5.2)
+We treated pad operation and typing as one posture class.
+Pad operation and typing are similar in hand placements near the keyboard and trackpad.
+We evaluated three posture classes: mouse operation, pad-or-typing, and sitting still.
+The mean three-class accuracy reached 0.90.
+Normals with DBSCAN reached a mean three-class accuracy of 0.94.
+The results indicate that separation of pad operation and typing was difficult in four-class classification.
+
+(Fourth paragraph, Section 6)
+The mean three-class accuracy reached 0.90.
+The results indicate that separation of pad operation and typing was difficult in four-class classification.
+
+C.1-7（原稿反映完了）
 6. There are blank lines on the right-hand side of page 5. Please adjust the layout of the manuscript to remove them, such as moving 5.Conclusion to the page 5.
 [原因]
 5節「Evaluation」末尾
@@ -257,6 +366,11 @@ C.1-7
 
 [修正案]
 6節「Conclusion」を5節本文の直後から開始し、5ページ右段の空白を埋める。
+
+R.1-7
+We have modified the starting position of Section 6.
+We have modified the layout on page 5.
+We made this modification because blank lines remained on the right-hand side of page.
 
 ----------------------- REVIEW 2 ---------------------
 
@@ -285,7 +399,43 @@ Accuracyの定義。どのクラスをどのクラスに間違えたかという
 "Table 2 shows the accuracy for all twelve combinations of features and clustering methods used."
 Table 2 の値は被験者ごとの Accuracy のみ。
 
-C.2-2
+[修正案]
+混同行列を回答レターに貼り付ける。本文に重要結果のみTP, TN, FP, FNを載せ
+る（査読者の指摘ポイント、読者にとって考察の必要と思われる箇所）
+3クラス分類・4クラス分類両方とも含める。
+
+5節「Evaluation」subsection「Accuracy」（C.1-6 の3クラス段落の直後）
+"We report four-class and three-class confusion counts on test data A."
+"For normals without clustering, pad operation yielded 172 false predictions as mouse operation."
+  "Typing yielded 103 false predictions as pad operation."
+"For normals with DBSCAN, pad operation yielded 30 false predictions as mouse operation."
+  "Typing yielded 230 false predictions as pad operation."
+"For normals without clustering, pad-or-typing yielded 189 false predictions as mouse operation."
+"For normals with DBSCAN, pad-or-typing yielded 30 false predictions as mouse operation."
+"Full four-class and three-class confusion matrices for all twelve preprocessing configurations appear in the response letter."
+
+6節「Conclusion」（4段落目、R.1-6追記の直前に1文）
+"Four-class confusion counts showed frequent false predictions of typing as pad operation."
+
+R.2-1
+We have added four-class and three-class confusion counts. We have added four-class and three-class confusion matrices for all twelve preprocessing configurations to this reply letter.
+We have added a paragraph after Table 2 in Section 5.2. We have modified the fourth paragraph in Section 6.
+We made this modification because accuracy alone did not show which posture classes were confused with one another.
+
+(Paragraph after Table 2, Section 5.2)
+We report four-class and three-class confusion counts on test data A.
+For normals without clustering, pad operation yielded 172 false predictions as mouse operation.
+Typing yielded 103 false predictions as pad operation.
+For normals with DBSCAN, pad operation yielded 30 false predictions as mouse operation.
+Typing yielded 230 false predictions as pad operation.
+For normals without clustering, pad-or-typing yielded 189 false predictions as mouse operation.
+For normals with DBSCAN, pad-or-typing yielded 30 false predictions as mouse operation.
+Full four-class and three-class confusion matrices for all twelve preprocessing configurations appear in the response letter.
+
+(Fourth paragraph, Section 6)
+Four-class confusion counts showed frequent false predictions of typing as pad operation.
+
+C.2-2（原稿反映完了）
 - Section 4.4 states that: "data were split 4.1 for training and validation.
 It should be correctly "4:1 training/validation split is performed randomly over frames, overload trials, and subjects." Please revise this expression to a correctv one.
 [原因]
@@ -312,7 +462,17 @@ It should be correctly "4:1 training/validation split is performed randomly over
   "One fifth of the frames were used for validation."
 "Multi-scale grouping (MSG) formed PointNet++ groups."
 
-C.2-3
+R.2-2
+We have modified the description to state that the training and validation split was performed at the frame level.
+We have modified the second paragraph in Section 4.4.
+We made this modification because the unit of the 4:1 split was not clearly specified and reproducibility was insufficient.
+
+(Second paragraph, Section 4.4)
+We split frames of each of the three experiment participants at a ratio of 4:1.
+Four fifths of the frames were used for training.
+One fifth of the frames were used for validation.
+
+C.2-3（原稿反映完了）
 - Please explain whether validation data includes the same subjects as the training data.  Although the validation accuracy in Fig. 5 is nearly 100%, the test accuracy in table 2 is much lower and varies across subjects.
 [原因]
 validationに用いたデータが明示されていない。
@@ -325,7 +485,10 @@ Dataが指しているのが学習データの3名なのかが不明。査読者
 [修正案]
 C.2-2の修正で対応可能
 
-C.2-4
+R.2-3
+The modification in R.2-2 addresses this comment.
+
+C.2-4（原稿反映完了）
 - Although the current comparison shows which feature/clustering combination works better, it does not show whether the proposed feature extraction and clustering are necessary.
 Please add at least one stronger baseline method, for example, pointnet++ using raw XYZ coordinates without additional features or PointNet/PointNet++ without clustering would be appropriate.
 [原因]
@@ -347,9 +510,20 @@ Please add at least one stronger baseline method, for example, pointnet++ using 
   "The research evaluated point coordinates only and point coordinates with point features."
   "The research reported higher accuracy with point coordinates and point features than with point coordinates only."
 
+R.2-4
+We have added a qualitative justification based on existing research for not evaluating point coordinates only.
+We have added three sentences in the first paragraph in Section 4.4.
+We made this modification because existing research already reported the point-coordinates-only baseline. The fact was not stated in the manuscript.
+
+(First paragraph, Section 4.4)
+We do not evaluate point coordinates only on the basis of the comparison in existing research [21].
+The research evaluated point coordinates only and point coordinates with point features.
+The research reported higher accuracy with point coordinates and point features than with point coordinates only.
+[21] C. R. Qi, L. Yi, H. Su, and L. J. Guibas, ‘‘PointNet++: Deep hierarchical feature learning on point sets in a metric space,’’ CoRR, vol. abs/1706.02413, 2017.
+
 Additional comments:
 
-C.2-5
+C.2-5（原稿反映完了）
 - the authors should be careful when writing the manuscript. For example, the author name is : "...Trovator" but the biography is "...Trovato". Which one is correct?
 [原因]
 論文冒頭　著者名・論文末尾 biography
@@ -363,7 +537,14 @@ C.2-5
 修正後:
 "GABRIELE TROVATO"
 
-C.2-6
+R.2-5
+We have modified the author name from Trovator to Trovato.
+We made this modification because the spelling of the author name did not match the biography.
+
+(Author list)
+GABRIELE TROVATO
+
+C.2-6（原稿反映完了）
 - some typos and english grammar existed in the manuscript.
 [原因]
 原稿全体に英語の誤り・不自然な表現が残っている。
@@ -412,7 +593,21 @@ Electric/Electrical
 修正後:
 "Graduate School of Electrical Engineering and Computer Science"
 
-C.2-7
+R.2-6
+We have modified the subsection heading Expeirmental system to Experimental system. We have modified Electric to Electrical in the author biographies. 
+We have modified the subsection heading in Section 4.1. We have modified the biographies of Haruma Shiraishi, and Ryusei Sugano.
+We made this modification because typos and inconsistent English spelling remained in the manuscript.
+
+(Subsection heading, Section 4.1)
+Experimental system
+
+(Biography of Haruma Shiraishi)
+Graduate School of Electrical Engineering and Computer Science
+
+(Biography of Ryusei Sugano)
+Graduate School of Electrical Engineering and Computer Science
+
+C.2-7（原稿反映完了）
 - check again the reference, in section 2.1, the authors stated "... presented PointNet [11]. But the reference [11] is not the PointNet paper.
 [原因]
 PointNet の初出引用が PointNet 論文ではない。[11]は多クラス分類の指標解説である。PointNet++の論文は[21]である。
@@ -429,3 +624,12 @@ PointNet の初出引用が PointNet 論文ではない。[11]は多クラス分
 2節「Related works」subsection「Model architecture」2段落目
 "Qi et al. presented PointNet [11]."
 PointNet の初出引用を PointNet 論文に差し替える。
+
+R.2-7
+We have modified the citation of PointNet to the PointNet paper.
+We have modified the second paragraph in Section 2.1.
+We made this modification because the previous citation did not point to the PointNet paper.
+
+(Second paragraph, Section 2.1)
+Qi et al. presented PointNet [21].
+[21] C. R. Qi, H. Su, K. Mo, and L. J. Guibas, ‘‘PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation,’’ CoRR, vol. abs/1612.00593, 2016.

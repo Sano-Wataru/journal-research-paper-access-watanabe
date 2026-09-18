@@ -27,10 +27,11 @@ The features were generated using the process explained in Section~\ref{sec:meth
   %1-3
   Normalization was performed using different values for each point cloud dataset used for the training. 
   %1-4
-  \revised{PointCutMix augmented normalized training data by replacing the top $\lambda$\% of nearest-neighbor-matched points between three point clouds A, B, and C, with $\lambda$ drawn from a beta distribution \cite{ZHANG202258}.}
+  \deleted{PointCutMix augmented normalized training data by replacing the top $\lambda$\% of nearest-neighbor-matched points between three point clouds A, B, and C, with $\lambda$ drawn from a beta distribution \cite{ZHANG202258}.}
+  \revised{PointCutMix augmented normalized training data by replacing the top $\lambda$\% of nearest-neighbor-matched points among three point clouds, with $\lambda$ drawn from a beta distribution \cite{ZHANG202258}.}
   %1-4-1
   \deleted{PointCutMix increases shape diversity among training samples and improves robustness to subject-dependent point-cloud density.}
-  \revised{PointCutMix increases shape diversity among training samples and improves robustness to experiment-participant-dependent point-cloud density.}
+  \revised{PointCutMix increases shape diversity among training samples and improves robustness to experiment-participant-dependent point cloud density.}
   \begin{deletedblock}
   Data augmentation was performed on the normalized data. 
     For data augmentation, PointCutmix was used\cite{ZHANG202258}. 

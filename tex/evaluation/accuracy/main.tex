@@ -18,7 +18,7 @@ In all cases Table~\ref{accresults}, the accuracy exceeded the baseline.
 
 %2nd paragraph
 %4
-Regarding the clustering methods, no clustering or DBSCAN tended to achieve higher accuracy than K-means.
+Regarding the clustering methods, no clustering or DBSCAN tended to achieve higher accuracy than k-means.
   %4-1
   \revised{k-means tended to achieve lower accuracy than no clustering or DBSCAN for the same feature type.}
   \deleted{k-means tended to lower accuracy by removing hand-region points required to distinguish typing from pad operation.}
@@ -39,19 +39,15 @@ In terms of features, normals tended to yield higher accuracy when no clustering
 %4th paragraph (C.2-1; after C.1-6 three-class paragraph when present)
 \begin{revisedblock}
 %6
-We report four-class and three-class confusion counts on test data A.
+We report four-class and three-class confusion counts for experiment participant A.
 %7
-For normals without clustering, pad operation yielded 172 false predictions as mouse operation.
+For normals with no clustering, pad operation yielded 172 false predictions as mouse operation.
   %7-1
   Typing yielded 103 false predictions as pad operation.
 %8
 For normals with DBSCAN, pad operation yielded 30 false predictions as mouse operation.
-  %8-1
-  Typing yielded 230 false predictions as pad operation.
 %9
-For normals without clustering, pad-or-typing yielded 189 false predictions as mouse operation.
+For normals with no clustering, pad-or-typing yielded 189 false predictions as mouse operation.
 %10
-For normals with DBSCAN, pad-or-typing yielded 30 false predictions as mouse operation.
-%11
-Full four-class and three-class confusion matrices for all twelve preprocessing configurations appear in the response letter.
+Full confusion matrices for all twelve preprocessing configurations appear in the response letter.
 \end{revisedblock}

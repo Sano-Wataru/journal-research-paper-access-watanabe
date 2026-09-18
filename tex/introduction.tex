@@ -14,14 +14,16 @@ In another system, environmental variables and the personal physical and mental 
 %2nd paragraph
 %1 背景から課題への橋渡し
 \revised{Productivity monitoring and employee monitoring require records of desk-work states that change over time.}
-\revised{Desk-work states include mouse operation, trackpad operation, typing, and sitting still without hand movement.}
+\deleted{Desk-work states include mouse operation, trackpad operation, typing, and sitting still without hand movement.}
+\revised{Desk-work states include mouse operation, pad operation, typing, and sitting still without hand movement.}
 \revised{The systems above do not classify these desk-work states from sensor observations of seated workers.}
 
 %3rd paragraph
 %1 オフィス効率モニタリングで記録したいもの
 \revised{Office-efficiency monitoring requires recording desk-work activities of workers that change over time.}
 %2 姿勢推定の不十分性
-\revised{Gross postures and presence cannot distinguish mouse operation, trackpad operation, typing, and sitting still at a desk.}
+\deleted{Gross postures and presence cannot distinguish mouse operation, trackpad operation, typing, and sitting still at a desk.}
+\revised{Gross postures and presence cannot distinguish mouse operation, pad operation, typing, and sitting still at a desk.}
 %3 手元分類の必要性
 \revised{Hand-movement classification is necessary to record these desk-work activities.}
   %3-1
@@ -33,21 +35,21 @@ In another system, environmental variables and the personal physical and mental 
 %3 手元分類の有用性
 Fine-grained classification of hand movements distinguishes hand-involved work states.
   %3-1
-  \revised{The hand-movement classification supports identification of task switching among desk-work states.}
+  \revised{The hand movement classification supports identification of task switching among desk-work states.}
     %3-1-1 タスク切り替え
     %3-1-2 実際の仕事時間
-    \revised{The hand-movement classification supports estimation of actual work duration for each desk-work state.}
+    \revised{The hand movement classification supports estimation of actual work duration for each desk-work state.}
 
 %4th paragraph
 %1 LiDARが室内の人・物体の動きを3D取得
 \begin{revisedblock}
-Light detection-and-ranging (LiDAR) acquires 3D data for recognizing indoor movements of people and objects \cite{9795869,oka2021spatial,10159661}.
+Light detection and ranging (LiDAR) acquires 3D data for recognizing indoor movements of people and objects \cite{9795869,oka2021spatial,10159661}.
 %2 複数LiDARの利点
 Multiple LiDAR sensors provide the following benefits \cite{oka2021spatial,10159661}.
   %2-1 死角なし
   The sensors cover indoor spaces without blind spots.
   %2-2 点密度
-  Integration of multi-view point-cloud data increases point density.
+  Integration of multi-view point cloud data increases point density.
   %2-3 全面
   Multi-view integration captures the full surface of a person.
 \end{revisedblock}
@@ -86,9 +88,9 @@ Glandon et al. reported that point clouds can be utilized for human identificati
     \deleted{Glandon et al. targeted locomotion posture of walking subjects rather than seated hand movements at a desk.}
     \revised{Glandon et al. targeted locomotion posture of walking experiment participants rather than seated hand movements at a desk.}
 %4 先行研究の課題
-The weakness of the prior works is that they cannot perform the hand-movement classification necessary to distinguish elements of the office activities.
+The weakness of the prior works is that they cannot perform the hand movement classification necessary to distinguish elements of the office activities.
   %4-1
-  \revised{Hand-movement classification requires a classification model that extracts point-cloud details and handles multiple people.}
+  \revised{Hand movement classification requires a classification model that extracts point cloud details and handles multiple people.}
   \deleted{This is because a classification model is needed to extract the details of the point cloud, as well as to handle multiple people.} 
   %3-2
   % The classification model is also needed to handle multiple people. 
